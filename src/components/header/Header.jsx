@@ -62,7 +62,7 @@ const Header = () => {
           ))}
           <img src={expand} alt="expand-more" />
         </div>
-
+          {/*gadavaketo navbarad*/}
         <div className="countries">
           <div>
             <p>English, USD</p>

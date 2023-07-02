@@ -1,0 +1,19 @@
+.banner-wrapper{
+    width:82%;
+    background-color: #FFFFFF;
+    border:solid #DEE2E7 1px;
+    display:flex;
+    align-items:center;
+    margin:auto;
+}
+
+.category-list{
+    padding:20px 0 20px 14px;   
+    
+    li{
+        padding:11px 0 10px 10px;
+        cursor: pointer;
+        color:#505050;
+        font-size:16px;
+    }
+}
