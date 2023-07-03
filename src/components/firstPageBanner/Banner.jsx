@@ -2,8 +2,18 @@ import "./BannerStyle.scss";
 import { list } from "./BannerData";
 import banner from "../../assets/banner.png";
 import user from "../../assets/user-avatar.png";
+import { useState } from "react";
+import { JoinPopUp } from "./popup/JoinPopUp";
 
 const Banner = () => {
+
+    const [join, setJoin] = useState(false);
+
+    const handleClick=()=>{
+        setJoin(true)
+    };
+
+
   return (
     <div className="banner-wrapper">
       <div className="category-list">
@@ -35,7 +45,7 @@ const Banner = () => {
             </div>
           </div>
           <div className="user-btns">
-            <button className="join-now">Join now</button>
+            <button className="join-now" onClick={()=>handleClick()}>Join now</button>
             <button className="log-in">Log in</button>
           </div>
         </div>
@@ -50,6 +60,7 @@ const Banner = () => {
           <p>preferences</p>
         </div>
       </div>
+      {join && <JoinPopUp setJoin={setJoin}/>}
     </div>
   );
 };
