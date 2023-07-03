@@ -4,15 +4,20 @@ import banner from "../../assets/banner.png";
 import user from "../../assets/user-avatar.png";
 import { useState } from "react";
 import { JoinPopUp } from "./popup/JoinPopUp";
+import { LoginPopUp } from "./popup/LogInPopUp";
 
 const Banner = () => {
 
     const [join, setJoin] = useState(false);
+    const [login, setLogin] = useState(false);
 
     const handleClick=()=>{
         setJoin(true)
     };
 
+    const handleLogIn =()=>{
+        setLogin(true)
+    }
 
   return (
     <div className="banner-wrapper">
@@ -46,7 +51,7 @@ const Banner = () => {
           </div>
           <div className="user-btns">
             <button className="join-now" onClick={()=>handleClick()}>Join now</button>
-            <button className="log-in">Log in</button>
+            <button className="log-in" onClick={()=>handleLogIn()}>Log in</button>
           </div>
         </div>
         <div className="orange-card">
@@ -61,6 +66,7 @@ const Banner = () => {
         </div>
       </div>
       {join && <JoinPopUp setJoin={setJoin}/>}
+      {login && <LoginPopUp setLogin={setLogin}/>}
     </div>
   );
 };

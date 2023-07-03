@@ -58,7 +58,7 @@ const JoinPopUp = ({ setJoin }) => {
           <input type="email" placeholder="Your email" required />
         </div>
         <div>
-          <button onClick={() => handleSubmit()}>Submit</button>
+          <button onClick={() => handleSubmit()}>Join</button>
         </div>
       </form>
     </div>
