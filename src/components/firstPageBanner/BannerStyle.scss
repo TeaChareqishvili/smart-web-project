@@ -4,8 +4,9 @@
     border:solid #DEE2E7 1px;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    margin:auto;
+    margin: 0 auto 33px;
     padding:17px 20px 10px 14px;
+    border-radius:6px;
 }
 
 .category-list{
@@ -17,16 +18,22 @@
         color:#505050;
         font-size:16px;   
     }
+
+    li:hover{
+        color:#0D6EFD;
+    }
 }
 
 .banner-img{
     position: relative;
+    // margin:0 19px;
 
     img{
         max-width:664px;
         width:100%;
     }
 
+  
     
     .banner-text{
         position: absolute;
@@ -58,6 +65,9 @@
             cursor: pointer;
             align-items: center;
         }
+        .bannerbtn:hover{
+            color:#0D6EFD;
+        }
     }
 }
 
@@ -70,8 +80,6 @@
     div{
         display: flex;
         align-items: center;
-
-    
     }
 
     .user-text{
@@ -124,6 +132,16 @@
             background-color: #FFFFFF;
             border-radius:6px;
         }
+
+        .log-in:hover{
+            background-color:#0D6EFD;
+            color:#FFFFFF;
+        }
+
+        .join-now:hover{
+            background-color: #FFFFFF;
+            color:#0D6EFD;
+        }
     }
 }
 
@@ -132,6 +150,7 @@
     border-radius:6px;
     padding:16px 16px 22px 16px;
     margin-bottom:10px;
+    cursor: pointer;
 
     p{
         color:#FFF;
@@ -140,11 +159,15 @@
 
     }
 }
+.orange-card:hover{
+    background-color:#d16f29 ;
+}
 
 .blue-card{
     background-color:#55BDC3;
     border-radius:6px;
     padding:16px 16px 22px 16px;
+    cursor: pointer;
 
     p{
         color:#FFF;
@@ -152,4 +175,7 @@
         font-weight:400;
 
     }
+}
+.blue-card:hover{
+    background-color:#419b9f;
 }
