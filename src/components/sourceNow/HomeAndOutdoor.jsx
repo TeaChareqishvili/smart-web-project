@@ -16,9 +16,11 @@ const HomeAndOutdoor = () => {
         <div key={item.id} className="home-items">
           <div className="about-item">
             <p className="item-title">{item.title}</p>
-            <p className="item-price">{item.price}</p>
+            <p className="item-price">from <br/>{item.price}</p>
           </div>
-          <img className="item-imgs" src={item.image} alt="item" />
+          <div className="item-imgs-wrapper">
+            <img className="item-imgs" src={item.image} alt="item" />
+          </div>
         </div>
       ))}
     </div>

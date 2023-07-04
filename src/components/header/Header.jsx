@@ -21,7 +21,7 @@ const Header = () => {
           <img src={brandimg} alt="brand" />
         </div>
         <form>
-          <div>
+          <div className="input-wrapper">
             <input
               type="text"
               placeholder="Search"
@@ -39,12 +39,12 @@ const Header = () => {
               <option value="Machinery tools">Machinery tools</option>
               <option value="Machinery tools">Machinery tools</option>
             </select>
+            <button>Search</button>
           </div>
-          <button>Search</button>
         </form>
         <div className="icons">
-          {icons.map((item) => (
-            <div key={item.id}>
+          {icons.map((item, id) => (
+            <div key={id}>
               <img src={item.icon} alt="icon" />
               <p>{item.title}</p>
             </div>
@@ -55,14 +55,14 @@ const Header = () => {
       <div className="category-wrapper">
         <div className="categories">
           <img src={menu} alt="menu" />
-          {categories.map((item) => (
-            <div className="category" key={item.id}>
+          {categories.map((item, id) => (
+            <div className="category" key={id}>
               <p>{item.title}</p>
             </div>
           ))}
           <img src={expand} alt="expand-more" />
         </div>
-          {/*gadavaketo navbarad*/}
+        {/*gadavaketo navbarad*/}
         <div className="countries">
           <div>
             <p>English, USD</p>

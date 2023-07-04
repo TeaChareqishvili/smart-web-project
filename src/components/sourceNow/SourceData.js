@@ -21,49 +21,49 @@ const homeItems = [
     {
         image:chair,
         title:'Soft chairs',
-        price:'from USD 19',
+        price:' USD 19',
         type:'home'
     },
     {
         image:lamp,
         title:'Sofa & chair',
-        price:'from USD 19',
+        price:' USD 19',
         type:'home'
     },
     {
         image:dishes,
         title:'Kitchen dishes',
-        price:'from USD 19',
+        price:' USD 19',
         type:'home'
     },
     {
         image:dish,
         title:'Smart watches',
-        price:'from USD 19',
+        price:' USD 19',
         type:'home'
     },
     {
         image:mixer,
         title:'Kitchen mixer',
-        price:'from USD 100',
+        price:' USD 100',
         type:'home'
     },
     {
         image:blender,
         title:'Blenders',
-        price:'from USD 39',
+        price:' USD 39',
         type:'home'
     },
     {
         image:homeAppliance,
         title:'Home appliance',
-        price:'from USD 19',
+        price:' USD 19',
         type:'home'
     },
     {
         image:plant,
         title:'Coffee maker',
-        price:'from USD 10',
+        price:' USD 10',
         type:'home'
     },
 ]
@@ -74,49 +74,49 @@ const electroinics =[
     {
         image:sourceWatch,
         title:'Smart watches',
-        price:'from USD 19',
+        price:' USD 19',
         type:'electronic'
     },
     {
         image:sourceCamera,
         title:'Cameras',
-        price:'from USD 89',
+        price:' USD 89',
         type:'electronic'
     },
     {
         image:headphonesSource,
         title:'Headphones',
-        price:'from USD 10',
+        price:' USD 10',
         type:'electronic'
     },
     {
         image:coffesMaker,
         title:'Smart watches',
-        price:'from USD 90',
+        price:'USD 90',
         type:'electronic'
     },
     {
         image:sourceHeadphones,
         title:'Gaming set',
-        price:'from USD 35',
+        price:' USD 35',
         type:'electronic'
     },
     {
         image:sourceLeptop,
         title:'Leptop & PC',
-        price:'from USD 340',
+        price:' USD 340',
         type:'electronic'
     },
     {
         image:sourceMobile,
         title:'Smartphones',
-        price:'from USD 19',
+        price:' USD 19',
         type:'electronic'
     },
     {
         image:sourceMobile2,
         title:'Electric kattle',
-        price:'from USD 240',
+        price:' USD 240',
         type:'electronic'
     },
 ];

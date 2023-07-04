@@ -1,8 +1,8 @@
 import "../dealAndOffers/DealAndOffersStyle.scss";
 import React, { useState, useEffect } from "react";
-//  import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import { offers } from "./OffersData";
-import 'swiper/css';
+import "swiper/css";
 
 const DealAndOffers = () => {
   const [days, setDays] = useState(4);
@@ -62,18 +62,19 @@ const DealAndOffers = () => {
           </div>
         </div>
       </div>
-      <div className="slide-wrapper">
-      
-      {offers.map((item)=>(
-        <div key={item.id} className="tech">
-           <img src={item.image} alt="tech"/>
-           <p>{item.title}</p>
-           <span>{item.price}</span>
-        </div>
-      ))}
-
-   
-      </div>
+      <Swiper
+        className="slide-wrapper"
+        slidesPerView="auto"
+        // spaceBetween={16}
+      >
+        {offers.map((item) => (
+          <SwiperSlide key={item.id} className="tech">
+            <img src={item.image} alt="tech" />
+            <p>{item.title}</p>
+            <span>{item.price}</span>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

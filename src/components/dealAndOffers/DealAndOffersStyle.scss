@@ -1,5 +1,5 @@
 .offer-wrapper{
-    border:solid #DEE2E7 1px;
+    // border:solid #DEE2E7 1px;
     background-color: #FFFFFF;
     width:82%;
     margin:auto;
@@ -12,7 +12,7 @@
 
 
     .time-wrapper{
-      
+    
         h4{
             font-size:20px;
             font-weight:600;
@@ -65,16 +65,21 @@
         display:flex;
         align-items: center;
         margin-left:43px;
-
         .tech{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-left:20px;
-            padding:8px 0 0  20px;
-          
-
+            // margin-left:20px;
+            // padding:8px 0 0  20px;
+            width: 179px;
+            transition: 0.5s;
+            transform: scale(1);
+            cursor: pointer;
+            :hover{
+                transform: scale(1.1);
+                transition: 0.5s;
+            }
             p{
                 font-size:16px;
                 color:#1C1C1C;

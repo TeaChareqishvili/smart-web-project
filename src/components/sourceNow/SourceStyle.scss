@@ -6,7 +6,6 @@
     grid-template-rows: auto auto; 
     position:relative;
     border-radius:0 4px 4px 0;//
-
     grid-template-areas: 
     'main-img home-items home-items home-items home-items'
      'main-img home-items home-items home-items home-items ';
@@ -63,15 +62,10 @@
         grid-template-rows: auto 1fr;
         border:1px solid #E0E0E0;
         background-color:#FFFFFF;
-         padding:20px 0 0 16px;
-         display: flex;
-         justify-content: space-between;
-
+        padding:20px 0 0 16px;
+        display: flex;
+        justify-content: space-between;
          .about-item{
-            // display: flex;
-            // align-items: flex-start;
-            // flex-direction: column;
-
             .item-title{
                 font-size:16px;
                 color:#1C1C1C;
@@ -80,23 +74,18 @@
             .item-price{
                 font-size:13px;
                 color:#8B96A5;
-               
             }
-        
-             
-                .item-imgs{
+        }
+            .item-imgs-wrapper{
                     display: flex;
+                    justify-content: flex-end;
                     align-items: flex-end;
-                    max-width:75px;
-                    max-height:74px;
-                    height:100%;
-                    width:100%;
-                  // misaxedia fotos zomebi
-                }
-              
-            
-
-         }
+                    padding: 8px;
+                    // max-width:75px;
+                    // max-height:74px;
+                    // height:100%;
+                    // width:100%;
+             }
       }
     
 }
