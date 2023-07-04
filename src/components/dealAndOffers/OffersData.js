@@ -5,6 +5,8 @@ import leptop from "../../assets/leptop.png";
 import mobile from "../../assets/mobile.png";
 import watch from "../../assets/watch.png";
 
+
+
 const offers = [
     {
        image:watch,
