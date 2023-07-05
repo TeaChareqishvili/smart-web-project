@@ -1,6 +1,6 @@
 import "../suppliers/SuppliersStyle.scss";
 import supply from "../../assets/supply.png";
-// import expand from "../../assets/expand_more.png";
+
 
 const Suppliers = () => {
   return (
@@ -15,18 +15,17 @@ const Suppliers = () => {
         <form>
             <h4>Send quote to suppliers</h4>
             <div>
-                <input className="text" type="text" placeholder="What item you need?"/>
-            </div>
-            <div className="text">
-            <textarea className="text" cols="30" rows="4" placeholder="Type more details"></textarea>
+                <input type="text" placeholder="What item you need?"/>
             </div>
             <div>
-              <input type="number" placeholder="Quantity"/>
-              <input type='number' placeholder="Pcs"/>
-              {/* <img src={expand} alt="expand" class="input-icon" /> */}
+            <textarea className="text" cols="40" rows="3" placeholder="Type more details"></textarea>
+            </div>
+            <div className="quantity">
+              <input type="number" className="number" placeholder="Quantity"/>
+              <input type='number' className="pcs" placeholder="Pcs"/>
             </div>
             <div>
-                <button>Send inquiry</button>
+                <button className="sendbtn">Send inquiry</button>
             </div>
         </form>
       </div>

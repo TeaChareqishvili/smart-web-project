@@ -28,6 +28,7 @@
         }
         p{
             max-width:390px;
+            font-family:"Inter";
             width:100%;
             color:#FFFFFF;
             font-size:16px;
@@ -58,7 +59,8 @@
      max-width:491px;
      width:100%;
 
-    h4{
+    h4{ 
+        font-family:'Inter-bold';
         color:#1C1C1C;
         font-size:20px;
         font-weight:600;
@@ -70,13 +72,68 @@
     form{
         input{
             padding:11px 0 10px 10px;
+            max-width:440px;
+            width:100%;
+            outline: none;
+            border:solid 1px #DEE2E7;
+            color:#1C1C1C;
+            font-size: 16px;
+            font-family: 'Inter';
+            font-weight: 400;  
+            margin-bottom:20px;
+            border-radius:6px;    
         }
         .text{
-            max-width:420px;
+             max-width:440px;
+             max-height:73px;
+             height:100%;
+             width:100%;
+             margin-bottom:20px;
+             padding:11px;
+             border-radius:6px;
+             outline: none;
+             border:solid 1px #DEE2E7;
+             color:#8B96A5;
+             font-size: 16px;
+             font-family: 'Inter';
+        }
+
+        .quantity{
+            display:flex;
+
+            .number{
+                max-width:206px;
+                width:100%;
+                padding:11px;
+                font-size: 16px;
+                font-family: 'Inter';
+                color:#1C1C1C;
+            }
+            .pcs{
+                max-width:111px;
+                width:100%;
+                margin-left:8px;
+                background-image: url("../../assets/expand_more.png");
+                background-repeat: no-repeat;
+                background-position: calc(100% - 10px);
+                cursor: pointer;
+                font-size: 16px;
+                font-family: 'Inter';
+                color:#1C1C1C;
+            }
+        }
+        .sendbtn{
+            background: linear-gradient(0deg, #127FFF 0%,#0067FF 100%);
+            padding:0 16px;
+            color:#FFFFFF;
+            font-size: 16px;
+            font-family: 'Inter-bold';
+            max-width:128px;
+            height:40px;
             width:100%;
-            margin-bottom:20px;
-            // border-radius:4px;
-            // border:solid 1px #DEE2E7;
+            border:none;
+            border-radius:6px;
+            cursor: pointer;
         }
     }
   }
