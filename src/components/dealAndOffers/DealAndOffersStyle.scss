@@ -1,17 +1,17 @@
 .offer-wrapper{
-    // border:solid #DEE2E7 1px;
+     border:solid #DEE2E7 1px;
     background-color: #FFFFFF;
     width:82%;
     margin:auto;
     display: flex;
-    // align-items: center;
     background-color:#FFFFFF;
-     padding:8px 19px 17px 20px;
     justify-content:space-evenly;
     border-radius:4px;
+    z-index:-1;
 
 
     .time-wrapper{
+        padding:8px 19px 17px 20px;
     
         h4{
             font-size:20px;
@@ -30,6 +30,7 @@
         .time{
             display: flex;
             align-items: center;
+           
           
            
             div{
@@ -65,13 +66,17 @@
         display:flex;
         align-items: center;
         margin-left:43px;
+        z-index:0;
+       
+      
         .tech{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            // margin-left:20px;
-            // padding:8px 0 0  20px;
+            border-left:solid 1px #DEE2E7 ;
+            padding:8px 19px 17px 20px;
+         
             width: 179px;
             transition: 0.5s;
             transform: scale(1);

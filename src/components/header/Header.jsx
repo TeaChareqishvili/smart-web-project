@@ -29,7 +29,7 @@ const Header = () => {
               onChange={(event) => setSelectedCategory(event.target.value)}
             />
             <select value={selectedCategory} onChange={handleCategoryChange}>
-              <option value="all category">All category</option>
+              <option  value="all category">All category</option>
               <option value="Automobiles">Automobiles</option>
               <option value="Clothes and wear">Clothes and wear</option>
               <option value="Computer and tech">Computer and tech</option>
@@ -57,12 +57,13 @@ const Header = () => {
           <img src={menu} alt="menu" />
           {categories.map((item, id) => (
             <div className="category" key={id}>
-              <p>{item.title}</p>
+              <ul>
+                <li>{item.title}</li>
+              </ul>
             </div>
           ))}
           <img src={expand} alt="expand-more" />
         </div>
-        {/*gadavaketo navbarad*/}
         <div className="countries">
           <div>
             <p>English, USD</p>

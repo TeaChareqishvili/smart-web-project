@@ -20,6 +20,7 @@ const DealAndOffers = () => {
     };
   }, []);
 
+  
   useEffect(() => {
     if (seconds < 0) {
       if (minutes > 0) {
@@ -65,7 +66,6 @@ const DealAndOffers = () => {
       <Swiper
         className="slide-wrapper"
         slidesPerView="auto"
-        // spaceBetween={16}
       >
         {offers.map((item) => (
           <SwiperSlide key={item.id} className="tech">
