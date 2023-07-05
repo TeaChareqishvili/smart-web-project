@@ -3,6 +3,7 @@
     margin:0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
 }
 
 body, .App{
@@ -18,7 +19,7 @@ body, .App{
 
   @font-face {
     font-family: "Inter-bold";
-    src: url("../src/fonts/Inter-Medium.ttf");
+    src: url("../src/fonts/Inter-Regular.ttf");
   }
 
   @font-face {
