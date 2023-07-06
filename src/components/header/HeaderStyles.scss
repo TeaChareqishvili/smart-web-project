@@ -27,6 +27,7 @@
         max-width: 420px;
         width: 100%;
         max-width: 420px;
+        font-family:'Inter'
        }
        ::placeholder{
         color: #8B96A5;
@@ -47,6 +48,7 @@
         max-width: 145px;
         width: 100%;
         outline: none;
+        font-family:'Inter';
        }
       
        button{
@@ -59,6 +61,7 @@
         max-width: 100px;
         border: none;
         cursor: pointer;
+        font-family:'Inter-bold';
        }
      
     }
@@ -83,6 +86,7 @@
             margin-top:7px;
             font-size:12px;
             color:#8B96A5;
+            font-family:"Inter";
         }
        }
     }
@@ -120,6 +124,7 @@
                 color: #1C1C1C;
                 margin-left: 25px;  
                 cursor: pointer;
+                font-family:'Inter-bold';
             }
             li:hover{
                 color:#0067FF;
@@ -133,7 +138,16 @@
     div{
         display: flex;
         align-items: center;
-        margin-left:32px;;
+        margin-left:32px;
+
+        p{
+            font-size: 16px;
+            font-family: 'Inter-bold';
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+        }
+
 
         .flag{
             margin:0 9px 0 6px;

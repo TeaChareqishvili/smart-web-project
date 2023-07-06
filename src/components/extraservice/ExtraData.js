@@ -1,4 +1,4 @@
-import extraimg from "../../assets/image 104.png";
+import extraimg from "../../assets/image333.png";
 import extraimg2 from "../../assets/image 106.png";
 import extraimg3 from "../../assets/image 107.png";
 import extraimg4 from "../../assets/image 108.png";
@@ -9,22 +9,22 @@ import inventory from "../../assets/inventory_2.svg";
 
 const extra =[
     {
-        image: extraimg,
+        image: extraimg4,
         title:"Source from Industry Hubs",
         icon:search
     },
     {
-        image: extraimg2,
+        image: extraimg,
         title:"Customize Your Products",
         icon:inventory
     },
     {
-        image: extraimg3,
+        image: extraimg2,
         title:"Fast, reliable shipping by ocean or air",
         icon:send
     },
     {
-        image: extraimg4,
+        image: extraimg3,
         title:"Product monitoring and inspection",
         icon:security
     },

@@ -19,12 +19,14 @@
             letter-spacing:-0.2px; 
             line-height: 28px;
             color:#1C1C1C;
+            font-family:'Inter-bold';
         }
         p{
             font-size:16px;
             color:#8B96A5;
             font-weight:400;
             margin-bottom:18px;
+            font-family:"Inter";
         }
 
         .time{
@@ -51,6 +53,7 @@
                 font-weight:400;
                 margin-bottom:0;
                 text-align: center;
+                font-family:"Inter";
             }
 
             span{
@@ -58,6 +61,7 @@
                 color:#FFFFFF;
                 font-weight:700;
                 text-align: center;
+                font-family:'Inter-bold';
             }
         }
     }
