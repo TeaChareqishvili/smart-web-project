@@ -1,0 +1,101 @@
+.home-offer-wrapper{
+    width:82%;
+    margin:25px auto 23px;
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr); 
+    grid-template-rows: auto auto; 
+    position:relative;
+    border-radius:0 4px 4px 0;
+    grid-template-areas: 
+    'main-img home-items home-items home-items home-items'
+     'main-img home-items home-items home-items home-items ';
+
+     .main-img{
+        grid-area: main-img;
+        position:relative;
+        max-height:260px;
+      
+       
+        img{
+            height:100%;
+            border-radius:4px 0 0 4px;
+        }
+     }
+
+    .home-text{
+        position: absolute;
+        top:20px;
+        left:20px;
+        
+        h4{
+            color:#1C1C1C;
+            font-size:20px;
+            font-weight:600;
+            line-height:26px;
+            letter-spacing: -0.2px;
+            max-width:130px;
+            width:100%;
+            margin-bottom:18px;
+        }
+
+        button{
+            color:#1C1C1C;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;
+            border-radius:6px;
+            padding: 0 16px;
+            border:1px solid #FFFFFF;
+            background-color: #FFFFFF;
+            height: 40px;
+            cursor: pointer;
+
+        }
+        button:hover{
+            color:#0D6EFD;
+        }
+    }
+
+    .home-items {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        border:1px solid #E0E0E0;
+        background-color:#FFFFFF;
+        padding:20px 0 0 16px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+       
+      
+        .about-item:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+         .about-item{
+         
+            .item-title{
+                font-size:16px;
+                color:#1C1C1C;
+                margin-bottom:9px;
+            }
+            .item-price{
+                font-size:13px;
+                color:#8B96A5;
+            }
+        }
+            .item-imgs-wrapper{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    padding: 8px;
+                    
+                    .item-imgs:hover{
+                        transform: scale(1.1);
+                        transition: 0.5s;
+                    }
+                   
+             }
+      }
+   // TODO items border-radius
+}
