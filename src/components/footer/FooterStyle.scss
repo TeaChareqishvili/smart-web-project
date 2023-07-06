@@ -1,0 +1,137 @@
+.footer-wrapper{
+    width:82%;
+    margin:auto;
+    padding:40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+    .media{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p{
+            font-family: "Inter";
+             margin:15px 0;
+            color:#505050;
+            font-size:16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            max-width:276px;
+            width:100%;
+        }
+    }
+
+    .media-icons{
+        display: flex;
+        align-items: center;
+        
+
+        .icons{
+           margin-right:8px;
+           margin-bottom:19px;
+
+        }
+      
+    }
+
+    .footer-info{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+       div{
+        margin:0 49px;
+
+        .footer-title{
+            font-family: 'Inter-bold';
+            color:#1C1C1C;
+            font-size:16px;
+            font-weight:500;
+            line-height:22px;
+            margin-bottom:12px;
+        }
+          p{
+            font-family: 'Inter';
+            margin-bottom:3px;
+            color:#8B96A5;
+            line-height:24px;
+            font-size:16px;
+            letter-spacing: -0.2px;
+            cursor: pointer;
+            
+          }
+
+          p:hover{
+            color:#EB001B;
+          }
+       }
+       
+    }
+
+    .get-app{
+
+        p{
+            font-size: 16px;
+            font-family:'inter-bold';
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+            color:#1C1C1C;
+            margin-bottom:15px;
+        }
+
+       div{
+        margin-bottom:6px;
+        cursor: pointer;
+         img{
+            border-radius:6px;
+         }
+       }
+    }
+}
+
+.ecommerce-wrapper{
+    background-color:#EFF2F4;
+    padding:23px 0 21px;
+
+    .ecommerce{
+        margin: auto;
+        width:82%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .ecommerce-text{
+        font-size: 16px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color:#606060;
+    }
+
+    .language{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            cursor: pointer;
+        }
+
+        p{
+            font-size: 16px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color:#606060;
+            margin-left:6px;
+        }
+    }
+}

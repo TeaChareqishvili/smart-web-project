@@ -1,0 +1,112 @@
+.offer-wrapper{
+     border:solid #DEE2E7 1px;
+    background-color: #FFFFFF;
+    width:82%;
+    margin:auto;
+    display: flex;
+    background-color:#FFFFFF;
+    justify-content:space-evenly;
+    border-radius:4px;
+    z-index:-1;
+
+
+    .time-wrapper{
+        padding:8px 19px 17px 20px;
+    
+        h4{
+            font-size:20px;
+            font-weight:600;
+            letter-spacing:-0.2px; 
+            line-height: 28px;
+            color:#1C1C1C;
+            font-family:'Inter-bold';
+        }
+        p{
+            font-size:16px;
+            color:#8B96A5;
+            font-weight:400;
+            margin-bottom:18px;
+            font-family:"Inter";
+        }
+
+        .time{
+            display: flex;
+            align-items: center;
+           
+          
+           
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #606060;
+                border-radius:6px;
+                padding:8px;
+                margin-right:6px;
+                max-width:45px;
+                width:100%;
+            }
+            p{
+                color:#FFFFFF;
+                font-size:12px;
+                font-weight:400;
+                margin-bottom:0;
+                text-align: center;
+                font-family:"Inter";
+            }
+
+            span{
+                font-size:16px;
+                color:#FFFFFF;
+                font-weight:700;
+                text-align: center;
+                font-family:'Inter-bold';
+            }
+        }
+    }
+
+    .slide-wrapper{
+        display:flex;
+        align-items: center;
+        margin-left:43px;
+        z-index:0;
+       
+      
+        .tech{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-left:solid 1px #DEE2E7 ;
+            padding:8px 19px 17px 20px;
+         
+            width: 179px;
+            transition: 0.5s;
+            transform: scale(1);
+            cursor: pointer;
+            :hover{
+                transform: scale(1.1);
+                transition: 0.5s;
+            }
+            p{
+                font-size:16px;
+                color:#1C1C1C;
+                line-height:24px;
+                letter-spacing: -0.2px;
+                margin-top:11px;
+            }
+
+            span{
+                background-color:#FFE3E3;
+                color:#EB001B;
+                padding: 3px 13px 4px 13px;
+                border-radius:29px;
+                font-size:14px;
+                font-weight:500;
+                letter-spacing: -0.2px;
+            }
+        }
+
+    }
+}
