@@ -1,4 +1,5 @@
 import { DealAndOffers } from "../dealAndOffers/DealAndOffers";
+import { ExtraService } from "../extraservice/ExtraService";
 import { Banner } from "../firstPageBanner/Banner";
 import { Items} from "../recommendedItems/Items";
 import { ElectorinicsSource } from "../sourceNow/ElectronicsSource";
@@ -18,6 +19,7 @@ const FirstPage = () => {
         <ElectorinicsSource />
         <Suppliers />
         <Items/>
+        <ExtraService/>
         <Regions />
       </div>
       <div>
