@@ -12,8 +12,8 @@ const HomeAndOutdoor = () => {
           <button>Source now</button>
         </div>
       </div>
-      {homeItems.map((item) => (
-        <div key={item.id} className="home-items">
+      {homeItems.map((item,id) => (
+        <div key={id} className="home-items">
           <div className="about-item">
             <p className="item-title">{item.title}</p>
             <p className="item-price">from <br/>{item.price}</p>

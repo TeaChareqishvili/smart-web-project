@@ -67,8 +67,8 @@ const DealAndOffers = () => {
         className="slide-wrapper"
         slidesPerView="auto"
       >
-        {offers.map((item) => (
-          <SwiperSlide key={item.id} className="tech">
+        {offers.map((item,id) => (
+          <SwiperSlide key={id} className="tech">
             <img src={item.image} alt="tech" />
             <p>{item.title}</p>
             <span>{item.price}</span>
