@@ -6,6 +6,9 @@ import { categories } from "./HeaderData";
 import menu from "../../assets/menu.svg";
 import expand from "../../assets/expand_more.png";
 import flag from "../../assets/flag.png";
+import card from "../../assets/shopping_cart.svg";
+import person from "../../assets/person-mobile.svg";
+import search from "../../assets/mobilesearch.svg";
 
 const Header = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -18,6 +21,7 @@ const Header = () => {
     <>
       <div className="header-wrapper">
         <div className="logo">
+          <img className="mobile-menu" src={menu} alt="menu" />
           <img src={brandimg} alt="brand" />
         </div>
         <form>
@@ -29,7 +33,7 @@ const Header = () => {
               onChange={(event) => setSelectedCategory(event.target.value)}
             />
             <select value={selectedCategory} onChange={handleCategoryChange}>
-              <option  value="all category">All category</option>
+              <option value="all category">All category</option>
               <option value="Automobiles">Automobiles</option>
               <option value="Clothes and wear">Clothes and wear</option>
               <option value="Computer and tech">Computer and tech</option>
@@ -44,12 +48,22 @@ const Header = () => {
         </form>
         <div className="icons">
           {icons.map((item, id) => (
-            <div key={id}>
+            <div key={id} className="desktop-icons">
               <img src={item.icon} alt="icon" />
               <p>{item.title}</p>
             </div>
           ))}
         </div>
+        <div className="mobile-icons">
+          <img src={card} alt="card" />
+          <img src={person} alt="person" />
+        </div>
+      </div>
+      <div className="mobile-form">
+        <form>
+          <input type="text" placeholder="Search" />
+          <img src={search} alt="search"/>
+        </form>
       </div>
       <div className="border"></div>
       <div className="category-wrapper">
@@ -82,3 +96,5 @@ const Header = () => {
 };
 
 export { Header };
+
+// TODO menu -mobile

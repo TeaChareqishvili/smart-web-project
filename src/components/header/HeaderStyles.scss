@@ -3,9 +3,13 @@
     display:flex;
     justify-content:space-between;
    margin:auto;
+   align-items: center;
    padding:22px 0 24px 0;
     width:82%;
-
+   
+.mobile-menu{
+    display:none;
+}
  
  
     form{
@@ -26,7 +30,6 @@
         padding: 10px 11px;
         max-width: 420px;
         width: 100%;
-        max-width: 420px;
         font-family:'Inter'
        }
        ::placeholder{
@@ -74,6 +77,9 @@
     .icons{
         display:flex;
         align-items: center;
+        justify-content: center;
+
+      
     
        div{
         display:flex;
@@ -90,6 +96,10 @@
         }
        }
     }
+    .mobile-icons{
+        display:none;
+    }
+   
 }
 
 .border{
@@ -104,6 +114,8 @@
     margin:auto;
     padding:17px 0;
     width:82%;
+   
+   
 }
 
     .categories{
@@ -158,3 +170,97 @@
         }
     }
 }
+.mobile-form{
+    display: none;
+}
+
+
+@media (max-width: 1024px){
+    .header-wrapper{
+        padding: 10px 0;
+        form {
+            .input-wrapper {
+              display: none;
+            }
+          }
+          .icons{    
+               .desktop-icons{
+                margin-left:30px;
+               }
+          }
+         
+            .mobile-menu{
+                margin-right:18px;
+              } 
+             
+    }
+    .category-wrapper{
+        display:none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+      .mobile-menu {
+        display: block;
+      }
+    }
+  
+    .header-wrapper {
+      
+
+      form {
+        .input-wrapper {
+          display: none;
+        }
+      }
+      .icons{
+        display: none;
+      }
+      .mobile-icons{
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      
+        img{
+            margin-left:20px;
+        }
+      }
+    }
+    .border{
+        display: none;
+    }
+    .mobile-form{
+        display: block;
+            
+        form{
+           
+            max-width:330px;
+            width:100%;
+            margin:auto;
+            position: relative;
+          
+            input{
+                max-width:330px;
+                width:100%;
+                 padding:9px 36px;
+                border-radius:6px;
+                outline:none;
+                border: 1px solid #DEE2E7;
+                font-size: 16px;
+                font-family: 'Inter';
+                color:#8B96A5;
+    
+            }
+            img{
+                position:absolute;
+                top:28%;
+                left:2.5%;
+            }
+        } 
+    }
+  }
+  
+ 
