@@ -178,6 +178,7 @@
 @media (max-width: 1024px){
     .header-wrapper{
         padding: 10px 0;
+        width:95%;
         form {
             .input-wrapper {
               display: none;
@@ -234,16 +235,15 @@
     }
     .mobile-form{
         display: block;
+        width:95%;
+        margin:auto;
             
         form{
-           
-            max-width:330px;
-            width:100%;
+             width:100%;
             margin:auto;
             position: relative;
           
             input{
-                max-width:330px;
                 width:100%;
                  padding:9px 36px;
                 border-radius:6px;

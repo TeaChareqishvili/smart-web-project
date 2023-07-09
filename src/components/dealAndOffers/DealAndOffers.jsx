@@ -42,10 +42,13 @@ const DealAndOffers = () => {
   return (
     <div className="offer-wrapper">
       <div className="time-wrapper">
+        <div>
         <h4>Deals and offers</h4>
-        <p>Hygiene equipments</p>
+        <p className="desktop">Hygiene equipments</p>
+        <p className="mobile">Electronic equipments</p>
+        </div>
         <div className="time">
-          <div>
+          <div className="day">
             <span>{days}</span>
             <p>Days</p>
           </div>
@@ -62,7 +65,7 @@ const DealAndOffers = () => {
             <p>Sec</p>
           </div>
         </div>
-      </div>
+      </div> 
       <Swiper
         className="slide-wrapper"
         slidesPerView="auto"

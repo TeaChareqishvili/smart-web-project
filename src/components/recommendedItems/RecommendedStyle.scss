@@ -16,7 +16,7 @@
  .wrapper{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+   //  align-items: center;
     justify-content: space-between;
    
  }
@@ -24,7 +24,7 @@
     .cloth-items{
        display: flex;
        flex-direction: column;
-    //  align-items: center;
+       align-items: center;
        justify-content: center;
        background-color: #FFFFFF;
        border-radius:6px;
@@ -76,3 +76,28 @@
     }
 }
 
+@media (max-width:768px){
+  .items-wrapper{
+     width:100%;
+     margin:0;
+     padding:0 12px;
+
+     h3{
+      font-size: 18px;
+     }
+
+     .wrapper{
+        width:100%;
+     }
+  }
+}
+
+@media(max-width:465px){
+   .items-wrapper{
+
+      .wrapper{
+         justify-content: center;
+         align-items: center;
+      }
+   }
+}

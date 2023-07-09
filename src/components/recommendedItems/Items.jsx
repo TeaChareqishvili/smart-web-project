@@ -5,7 +5,6 @@ const Items = () => {
   return (
     <div className="items-wrapper">
       <h3>Recommended items</h3>
-
       <div className="wrapper">
         {items.map((item, id) => (
           <div key={id} className="cloth-items">
