@@ -1,7 +1,7 @@
 import "./HeaderStyles.scss";
 import brandimg from "../../assets/logo-colored.svg";
 import { icons } from "./HeaderData";
-import { useState } from "react";
+import { useState,useRef, useEffect } from "react";
 import { categories } from "./HeaderData";
 import menu from "../../assets/menu.svg";
 import expand from "../../assets/expand_more.png";
@@ -9,21 +9,42 @@ import flag from "../../assets/flag.png";
 import card from "../../assets/shopping_cart.svg";
 import person from "../../assets/person-mobile.svg";
 import search from "../../assets/mobilesearch.svg";
+import { MenuBar } from "./MenuBar";
 
 const Header = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
+ const [burgerMenu, setBurgerMenu] = useState(false)
 
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
 
+   const menuRef = useRef(null)
+ 
+  useEffect(()=>{
+       const handleMenu = (e)=>{
+         if(menuRef.current){
+           if(menuRef.current.contains(e.target)){
+            setBurgerMenu(true)
+            console.log('nia')
+           }
+         }
+       }
+       document.addEventListener("click", handleMenu);
+
+       return () => {
+         document.removeEventListener("click", handleMenu);
+       };
+  },[])
+
   return (
     <>
       <div className="header-wrapper">
         <div className="logo">
-          <img className="mobile-menu" src={menu} alt="menu" />
+          <img ref={menuRef} className="mobile-menu" src={menu} alt="menu" />
           <img src={brandimg} alt="brand" />
         </div>
+        {burgerMenu && <MenuBar setBurgerMenu={setBurgerMenu}/>}
         <form>
           <div className="input-wrapper">
             <input
@@ -97,4 +118,3 @@ const Header = () => {
 
 export { Header };
 
-// TODO menu -mobile
