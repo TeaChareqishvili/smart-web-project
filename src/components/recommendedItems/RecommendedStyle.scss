@@ -76,28 +76,31 @@
     }
 }
 
+@media(max-width:1124px){
+   .items-wrapper{
+      width:100%;
+      margin:0;
+      padding:0 12px;
+
+   }
+}
+
 @media (max-width:768px){
   .items-wrapper{
-     width:100%;
-     margin:0;
-     padding:0 12px;
-
+   
      h3{
       font-size: 18px;
      }
 
      .wrapper{
         width:100%;
+        justify-content: space-around;
+        align-items: center;
+      
+        .cloth-items{
+         margin-left:4px;
+        }
      }
   }
 }
 
-@media(max-width:465px){
-   .items-wrapper{
-
-      .wrapper{
-         justify-content: center;
-         align-items: center;
-      }
-   }
-}

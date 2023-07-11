@@ -16,7 +16,7 @@
         display:flex;
         align-items: center;
         justify-content: space-between;
-       
+        flex-wrap: wrap;
      
 
         .extra{
@@ -24,6 +24,7 @@
               border-radius:6px;
               position:relative;
               padding-bottom:20px;
+              margin: 0 4px 10px 0;
 
             .img{
                 border-radius:6px 6px 0 0;
@@ -57,4 +58,15 @@
 
      
        }
+}
+
+@media(max-width:1124px){
+    .extra-service-wrapper{
+        width:100%;
+        padding: 0 12px;
+
+        .extra-wrapper{
+            justify-content: space-around;
+        }
+    }
 }
