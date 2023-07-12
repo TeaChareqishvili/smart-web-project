@@ -1,9 +1,13 @@
 import "../sourceNow/SourceStyle.scss";
 import home from "../../assets/home.png";
 import { homeItems } from "./SourceData";
+import arrowRight from "../../assets/arrow_forward.svg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const HomeAndOutdoor = () => {
   return (
+   
     <div className="home-offer-wrapper">
       <div className="main-img">
         <img src={home} alt="home" />
@@ -23,7 +27,24 @@ const HomeAndOutdoor = () => {
           </div>
         </div>
       ))}
+      <div className="mobile-wrapper">
+       <h5>Home and outdoor</h5>
+       <Swiper  slidesPerView="auto" className="mobile-slide">
+        {homeItems.map((item,id)=>(
+          <SwiperSlide key={id} className='mobile-item'>
+          <img src={item.image} alt="furniture"/>
+          <p className="title">{item.title}</p>
+          <p className="price">from {item.price}</p>
+          </SwiperSlide>
+        ))}
+       </Swiper>
+       <div className="source">
+           <p>Source now</p>
+           <img src={arrowRight} alt="arrow"/>
+        </div>
+      </div>
     </div>
+    
   );
 };
 

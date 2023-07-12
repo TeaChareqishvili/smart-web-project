@@ -4,35 +4,37 @@ import clear from "../../assets/clear.png";
 import { userMenu, userMenuAdd } from "./HeaderData";
 import { useRef, useEffect } from "react";
 
+const MenuBar = ({ setBurgerMenu }) => {
+  const divRef = useRef(null);
+  const imgRef = useRef(null);
+  const wrapperRef = useRef(null);
 
-const MenuBar = ({setBurgerMenu}) => {
-     const divRef = useRef(null)
-    const imgRef = useRef(null)
-     const wrapperRef = useRef(null)
+  useEffect(() => {
+    const close = (e) => {
+      if (divRef.current && imgRef.current && wrapperRef.current) {
+        if (
+          divRef.current.contains(e.target) &&
+          !wrapperRef.current.contains(e.target)
+        ) {
+          setBurgerMenu(false);
+          console.log("nia");
+        }
+        if (imgRef.current.contains(e.target)) {
+          setBurgerMenu(false);
+          console.log("nia2");
+        }
+      }
+    };
 
-    useEffect(()=>{
-        const close = (e) => {
-            if (divRef.current && imgRef.current && wrapperRef.current) {
-              if (divRef.current.contains(e.target)&& !wrapperRef.current.contains(e.target)) {
-                setBurgerMenu(false);
-                console.log("nia");
-              }
-              if (imgRef.current.contains(e.target)) {
-                setBurgerMenu(false);
-                console.log("nia2");
-              } 
-            }
-          };
-          
-          document.addEventListener("click", close);
+    document.addEventListener("click", close);
 
-          return () => {
-            document.removeEventListener("click", close);
-          };
-    },[setBurgerMenu])
+    return () => {
+      document.removeEventListener("click", close);
+    };
+  }, [setBurgerMenu]);
   return (
     <div className="burger-bar-wrapper" ref={divRef}>
-      <div className="menu-wrapper" ref={wrapperRef}> 
+      <div className="menu-wrapper" ref={wrapperRef}>
         <div className="avatar">
           <div>
             <img src={avatar} alt="avatar" />
