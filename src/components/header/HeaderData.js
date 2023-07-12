@@ -4,6 +4,14 @@ import messageIcon from "../../assets/message.png";
 import heartIcon from '../../assets/heart.png';
 import cardIcon from '../../assets/busket.png';
 
+import home from "../../assets/home.svg";
+import list from "../../assets/list.svg";
+import heart from "../../assets/favorite_border.svg";
+import order from "../../assets/inventorybar.svg";
+import language from "../../assets/language.svg";
+import headset from "../../assets/headset_mic.svg";
+import about from "../../assets/business.svg";
+
 const icons = [
     {
         icon:personIcon,
@@ -47,3 +55,46 @@ const categories = [
 ];
 
 export {categories}
+
+
+
+const userMenu = [
+    {
+        icon:home,
+        title:'Home'
+    },
+    {
+        icon:list,
+        title:"Categories"
+    },
+    {
+        icon:heart,
+        title:'Favorites'
+    },
+    {
+        icon:order,
+        title:"My orders"
+    }
+];
+
+export {userMenu}
+
+const userMenuAdd = [
+    {
+       icon:language,
+       title:"English | USD"
+    },
+    {
+        icon:headset,
+        title:"Contact us"
+    },
+    {
+        icon:about,
+        title:'About'
+    }
+]
+
+export {userMenuAdd}
+
+
+

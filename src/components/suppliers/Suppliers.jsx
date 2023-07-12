@@ -10,6 +10,9 @@ const Suppliers = () => {
       <div className="supply-text">
         <h2>An easy way to send requests to all suppliers</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+        <div className="desktop">
+                <button className="sendbtn">Send inquiry</button>
+            </div>
       </div>
       <div className="supply-form">
         <form>

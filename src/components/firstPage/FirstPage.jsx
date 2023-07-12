@@ -1,7 +1,7 @@
 import { DealAndOffers } from "../dealAndOffers/DealAndOffers";
 import { ExtraService } from "../extraservice/ExtraService";
 import { Banner } from "../firstPageBanner/Banner";
-import { Items} from "../recommendedItems/Items";
+import { Items } from "../recommendedItems/Items";
 import { ElectorinicsSource } from "../sourceNow/ElectronicsSource";
 import { HomeAndOutdoor } from "../sourceNow/HomeAndOutdoor";
 import { Subscribe } from "../subscribe/Subscribe";
@@ -18,8 +18,8 @@ const FirstPage = () => {
         <HomeAndOutdoor />
         <ElectorinicsSource />
         <Suppliers />
-        <Items/>
-        <ExtraService/>
+        <Items />
+        <ExtraService />
         <Regions />
       </div>
       <div>

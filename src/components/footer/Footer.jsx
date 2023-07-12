@@ -4,36 +4,37 @@ import { footerInfo, link } from "./FooterData";
 import google from "../../assets/market-button.svg";
 import apple from "../../assets/apple.svg";
 import Usa from "../../assets/USA.png";
-// import German from "../../assets/flag.png";
-import expandLess from "../../assets/expand_less.svg";
-import expandMore from "../../assets/expand_more.png";
-import { useState } from "react";
+import German from "../../assets/flag.png";
+import expandUp from "../../assets/expand_less.svg";
+import expandDown from "../../assets/expand_more.png";
+import { useState, useRef, useEffect } from "react";
 
 const Footer = () => {
-  //  const moreRef = useRef(null)
-  //  const lessRef = useRef(null)
-  const [expand, setExpand] = useState(false);
+  const [arrowUp, setArrowUp] = useState(true);
+  const [arrowDown, setArrowDown] = useState(false);
 
-  // useEffect(()=>{
-  //     const checkRef = (e) => {
-  //         if (lessRef.current && moreRef.current) {
-  //           if (lessRef.current.contains (e.target)) {
-  //             setExpand(true);
-  //             console.log('less')
-  //           } else if (moreRef.current.contains(e.target)) {
-  //             setExpand(false);
-  //             console.log('More')
-  //           }
-  //         }
-  //       };
-  //       document.addEventListener("click", checkRef);
+  const arrowUpRef = useRef(null);
+  const arrowDownRef = useRef(null);
 
-  //       return () => {
-  //         document.removeEventListener("click", checkRef);
-  //       };
-  // },[])
+  useEffect(() => {
+    const click = (e) => {
+      if (arrowUpRef.current && arrowDownRef) {
+        if (arrowUpRef.current.contains(e.target)) console.log("cool");
+        setArrowUp(false);
+        setArrowDown(true);
+      } else if (arrowDownRef.current.contains(e.target)) {
+        console.log("nia");
+        setArrowDown(false);
+        setArrowUp(true);
+      }
+    };
 
-  //TODO გასასწორებელია
+    document.addEventListener("click", click);
+
+    return () => {
+      document.removeEventListener("click", click);
+    };
+  }, []);
 
   return (
     <>
@@ -80,13 +81,23 @@ const Footer = () => {
             <p>© 2023 Ecommerce. </p>
           </div>
           <div className="language">
-            <img src={Usa} alt="flag" />
-            <p>English</p>
+            {arrowUp ? (
+              <img src={Usa} alt="flag" />
+            ) : (
+              <img src={German} alt="flag" />
+            )}
+
+            {arrowUp ? <p>English</p> : <p>German</p>}
             <div>
-              {expand ? (
-                <img  src={expandMore} alt="arrow" />
-              ) : (
-                <img  src={expandLess} alt="arrow" />
+              {arrowUp && (
+                <div ref={arrowUpRef}>
+                  <img src={expandUp} alt="arrow" />
+                </div>
+              )}
+              {arrowDown && (
+                <div ref={arrowDownRef}>
+                  <img src={expandDown} alt="arrow" />
+                </div>
               )}
             </div>
           </div>
