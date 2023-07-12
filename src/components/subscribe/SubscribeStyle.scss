@@ -88,3 +88,38 @@
     }
 
 }
+
+@media(max-width:768px){
+    .subscribe-wrapper{
+
+        .subscribe{
+            h4{
+                font-size:18px;
+                line-height: normal;
+            }
+    
+            p{
+                font-size:13px;
+                line-height: normal;
+            }
+
+
+            .email-input{
+                form{
+                    input{
+                        font-size:13px;
+                        ::placeholder{
+                            font-size:13px;
+                        }
+                    }
+                    button{
+                        font-size:13px;
+                    }
+                }
+              
+            }
+
+        }
+    }
+   
+}

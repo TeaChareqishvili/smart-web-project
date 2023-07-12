@@ -46,3 +46,47 @@
     }
   }
 }
+
+@media (max-width:1024px){
+    .region-wrapper{
+        width:100%;
+        padding:0 12px 10px;
+        h3{
+            font-size:20px;
+        }
+
+        .regions{
+           margin-left:6px;
+            .region{
+               margin:6px 0;
+
+                .country-name{
+                    font-size: 13px;
+                    line-height: normal;
+                  
+                }
+            }
+
+        }
+    }
+}
+
+@media(max-width:768px){
+    .region-wrapper{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+        .regions{
+         flex-wrap: wrap;
+         align-items: center;
+         
+         .region{
+            .country-name{
+                font-size: 10px;
+                line-height: normal;   
+            }
+         }    
+        }
+    }
+}

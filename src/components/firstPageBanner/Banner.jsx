@@ -5,6 +5,8 @@ import user from "../../assets/user-avatar.png";
 import { useState } from "react";
 import { JoinPopUp } from "./popup/JoinPopUp";
 import { LoginPopUp } from "./popup/LogInPopUp";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const Banner = () => {
   const [join, setJoin] = useState(false);
@@ -20,15 +22,15 @@ const Banner = () => {
 
   return (
     <div className="banner-wrapper">
-      <div className="category-list">
-        <nav>
+      <Swiper className="category-list"  slidesPerView="auto" >
+        <SwiperSlide className="slide">
           {list.map((item, id) => (
             <ul key={id}>
               <li>{item.title}</li>
             </ul>
           ))}
-        </nav>
-      </div>
+        </SwiperSlide>
+      </Swiper>
       <div className="banner-img">
         <div className="banner">
           <img src={banner} alt="banner" />
@@ -39,7 +41,7 @@ const Banner = () => {
           <button className="bannerbtn">Learn more</button>
         </div>
       </div>
-      <div>
+      <div className="for-user">
         <div className="user-log">
           <div>
             <img src={user} alt="user" />

@@ -4,3 +4,9 @@
     padding:20px 0 46px;
   
 }
+
+@media(max-width:768px){
+    .main-wrapper{
+        padding:0;
+    }
+}
