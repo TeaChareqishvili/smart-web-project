@@ -12,7 +12,6 @@ import { useState, useRef, useEffect } from "react";
 const Footer = () => {
   const [arrowUp, setArrowUp] = useState(true);
   const [arrowDown, setArrowDown] = useState(false);
-
   const arrowUpRef = useRef(null);
   const arrowDownRef = useRef(null);
 
