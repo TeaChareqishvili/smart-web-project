@@ -1,6 +1,6 @@
 import "./FooterStyle.scss";
 import brandLogo from "../../assets/logo-colored.svg";
-import { footerInfo, link } from "./FooterData";
+import { footerInfoEnglish, footerInfoGerman, link } from "./FooterData";
 import google from "../../assets/market-button.svg";
 import apple from "../../assets/apple.svg";
 import Usa from "../../assets/USA.png";
@@ -13,6 +13,8 @@ const Footer = () => {
   const [arrowUp, setArrowUp] = useState(true);
   const [arrowDown, setArrowDown] = useState(false);
 
+  const [language, setLanguage] = useState("english");
+
   const arrowUpRef = useRef(null);
   const arrowDownRef = useRef(null);
 
@@ -22,10 +24,12 @@ const Footer = () => {
         if (arrowUpRef.current.contains(e.target)) console.log("cool");
         setArrowUp(false);
         setArrowDown(true);
+        setLanguage("german");
       } else if (arrowDownRef.current.contains(e.target)) {
         console.log("nia");
         setArrowDown(false);
         setArrowUp(true);
+        setLanguage("english");
       }
     };
 
@@ -36,14 +40,33 @@ const Footer = () => {
     };
   }, []);
 
+  const getLocalizedFooterInfo = () => {
+    if (language === "english") {
+      return footerInfoEnglish;
+    } else if (language === "german") {
+      return footerInfoGerman;
+    }
+  };
+
+ 
+  const footerInfo = getLocalizedFooterInfo();
+
   return (
     <>
       <div className="footer-wrapper">
         <div className="media">
           <img src={brandLogo} alt="logo" />
-          <p>
-            Best information about the company gies here but now lorem ipsum is
-          </p>
+          {language==='english' ? (
+            <p>
+              Best information about the company gies here but now lorem ipsum
+              is
+            </p>
+          ) : (
+            <p>
+              Beste Informationen über das Unternehmen stehen hier, aber jetzt
+              Lorem Ipsum
+            </p>
+          )}
           <div className="media-icons">
             {link.map((item, id) => (
               <div key={id} className="icons">
