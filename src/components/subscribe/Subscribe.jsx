@@ -2,6 +2,7 @@ import "./SubscribeStyle.scss";
 import emailicon from "../../assets/email.svg";
 
 
+
 const Subscribe = ()=>{
     return (
         <div className='subscribe-wrapper'>

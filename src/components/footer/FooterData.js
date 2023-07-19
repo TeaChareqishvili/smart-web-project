@@ -30,7 +30,7 @@ const link = [
 
 export {link}
 
-const footerInfo =[
+const footerInfoEnglish =[
     {
         title:'About',
         info: 'About Us',
@@ -61,4 +61,38 @@ const footerInfo =[
     },
 ];
 
-export {footerInfo}
+export {footerInfoEnglish}
+
+
+const footerInfoGerman = [
+    {
+      title: 'Über uns',
+      info: 'Über Uns',
+      info2: 'Filialen',
+      info3: 'Kategorien',
+      info4: 'Blogs'
+    },
+    {
+      title: 'Partnerschaft',
+      info: 'Über Uns',
+      info2: 'Filialen',
+      info3: 'Kategorien',
+      info4: 'Blogs'
+    },
+    {
+      title: 'Informationen',
+      info: 'Hilfe',
+      info2: 'Geld zurück',
+      info3: 'Versand',
+      info4: 'Kontakt'
+    },
+    {
+      title: 'Für Benutzer',
+      info: 'Anmelden',
+      info2: 'Registrieren',
+      info3: 'Einstellungen',
+      info4: 'Meine Bestellungen'
+    }
+  ];
+
+  export {footerInfoGerman}
