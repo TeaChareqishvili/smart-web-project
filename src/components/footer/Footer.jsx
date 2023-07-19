@@ -15,6 +15,7 @@ const Footer = () => {
 
   const [language, setLanguage] = useState("english");
 
+
   const arrowUpRef = useRef(null);
   const arrowDownRef = useRef(null);
 

@@ -16,7 +16,10 @@ const ElectorinicsSource = () => {
           <button>Source now</button>
         </div>
       </div>
+
       {electroinics.map((item, id) => (
+
+  
         <div key={id} className="home-items">
           <div className="about-item">
             <p className="item-title">{item.title}</p>
