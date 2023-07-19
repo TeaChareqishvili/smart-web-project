@@ -1,6 +1,6 @@
 import "./SubscribeStyle.scss";
 import emailicon from "../../assets/email.svg";
-import { NavLink } from "react-router-dom";
+
 
 
 const Subscribe = ()=>{
@@ -16,11 +16,6 @@ const Subscribe = ()=>{
                     <img src={emailicon} alt="icon"/>
                     </form>
                 </div>
-                <nav>
-                <NavLink to="/second">
-                    <button>second page</button>
-                </NavLink>
-                </nav>
             </div>
         </div>
     )
