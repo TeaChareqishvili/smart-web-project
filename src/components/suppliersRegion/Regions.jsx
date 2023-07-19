@@ -14,14 +14,18 @@ const Regions = () => {
               <img src={item.image} alt="flag" />
               <div>
                 <p className="country-name">{item.country}</p>
-                <a href={item.link}><p>{item.link}</p></a>
+                <a href={item.link}>
+                  <p>{item.link}</p>
+                </a>
               </div>
             </div>
             <div className="region">
               <img src={item.image2} alt="flag" />
               <div>
                 <p className="country-name">{item.country2}</p>
-               <a href={item.link2}><p>{item.link2}</p></a> 
+                <a href={item.link2}>
+                  <p>{item.link2}</p>
+                </a>
               </div>
             </div>
           </div>
