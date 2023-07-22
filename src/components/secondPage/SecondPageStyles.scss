@@ -1,0 +1,144 @@
+.main-wrapper{
+    width:100%;
+    background-color: #F7FAFC;
+
+    .content-wrapper{
+        width:82%;
+        margin:20px auto 43px;
+
+        .list{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          
+
+            p{
+                color:#8B96A5;
+                font-size: 16px;
+                font-family: "Inter";
+                letter-spacing: -0.2px;
+                line-height: 24px;
+                cursor: pointer;
+               
+            }
+
+          
+            img{
+                margin-right:6px;
+                cursor: pointer;
+            }
+
+            p:hover{
+                color:#0D6EFD;
+            }
+        }
+    }
+}
+
+.category-list-wrapper {
+    width:20%;
+    
+ 
+    .list-wrapper{
+
+        span{
+            color:#0D6EFD;
+            font-size:16px;
+            font-family:"Inter";
+            cursor: pointer;
+            margin-bottom:20px;
+        }
+
+        .border-list{
+            width:100%;
+            height:1px;
+            background-color: #DEE2E7;
+            margin:21px 0 16px;
+        }
+
+        .category-title{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+
+            h6{
+               color:#1C1C1C;
+               font-size:16px;
+               font-weight:600;
+               font-family: "Inter";
+            }
+            img{
+                cursor: pointer;
+            }
+
+          
+            }
+        }
+        .expanded-list{
+            p{
+                color:#505050;
+                font-family: "Inter";
+                font-size:16px;
+                margin-bottom:17px;
+                cursor: pointer;
+            }
+            p:hover{
+                color:#0D6EFD;
+            }
+
+         
+    }
+    .checkbox{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom:12px;
+      
+        input{
+         
+            cursor: pointer;
+            height: 24px;
+            width: 34px;
+          //TODO gasastilia
+           
+        }
+       
+    
+        label{
+            color:#1C1C1C;
+            font-family: "Inter";
+            font-size:16px;
+            margin-left:10px;
+            cursor: pointer;
+        }
+        label:hover{
+            color:#0D6EFD;
+        }
+    
+    }
+}
+
+.rating-wrapper{
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     margin-bottom:18px;
+
+    input{
+        margin-right:10px;
+    }
+
+    .radio{
+        display: none;
+    }
+    
+    .star{
+        cursor: pointer;
+        color: #BDC4CD;
+        transition: color 400ms;
+    }
+
+}
+
+
