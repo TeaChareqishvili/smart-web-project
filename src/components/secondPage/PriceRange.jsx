@@ -29,7 +29,9 @@ const PriceRange = () => {
           <span className="price">max</span>
           <input type="number" value="999999" />
         </div>
+       
       </div>
+      <button className="apply-btn">Apply</button>
     </div>
   );
 };
