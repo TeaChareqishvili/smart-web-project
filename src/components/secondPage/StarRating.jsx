@@ -21,6 +21,7 @@ const StarRating = () => {
         value="1"
         onClick={handleFirstInputClick}
         checked={firstInputRating >= 1}
+        onChange={(e) => setFirstInputRating(parseInt(e.target.value) + 1)}
       />
       <div className="stars">
       {[...Array(5)].map((_, id) => {

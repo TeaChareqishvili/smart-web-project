@@ -5,6 +5,7 @@ import { listCheckBox } from "./ListData";
 import { featureList } from "./ListData";
 import { conditionLits } from "./ListData";
 import { StarRating } from "./StarRating";
+import { PriceRange } from "./PriceRange";
 
 const CategoryList = () => {
   return (
@@ -47,7 +48,7 @@ const CategoryList = () => {
         <span>see all</span>
         <div className="border-list"></div>
         <div>
-            Price Range     
+           <PriceRange/>
         </div>
         <div className="border-list"></div>
         <div className="category-title">
