@@ -12,11 +12,11 @@ import coffesMaker from "../../assets/coffemaker.png";
 import headphonesSource from "../../assets/headphones2.png";
 import sourceCamera from "../../assets/sourcecamera.png";
 import sourceHeadphones from "../../assets/sourceheadphones.png";
-import sourceLeptop from "../../assets/sourceleptop.png";
+// import sourceLeptop from "../../assets/sourceleptop.png";
 import sourceMobile from "../../assets/sourcemobile.png";
 import sourceMobile2 from "../../assets/sourcemobile2.png";
-import sourceWatch from "../../assets/sourcewatch.png";
-import mobile3 from "../../assets/mobile3.png";
+// import sourceWatch from "../../assets/sourcewatch.png";
+ import mobile3 from "../../assets/mobile3.png";
 import mobile1 from "../../assets/mobile1.png";
 
 import camera from "../../assets/camera.png";
@@ -267,7 +267,7 @@ const WholeData = [
         type:'electro'
      },
      {
-        item:sourceWatch,
+        item:mobile3,
         favorite:favorite,
         title:'GoPro HERO6 4K Action Camera - Black',
         price:'$998.00',

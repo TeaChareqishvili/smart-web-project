@@ -1,6 +1,7 @@
 import "./SecondPageStyles.scss";
 import arrowRight from "../../assets/chevron_right.svg";
 import { CategoryList } from "./CategoryList";
+import { ItemList } from "./ItemList";
 
 const ElectronicSecondPage = () => {
   return (
@@ -15,8 +16,12 @@ const ElectronicSecondPage = () => {
           <img src={arrowRight} alt="arrow"/>
           <p>Summer clothing</p>
         </div>
+        <div className="main-content">
         <CategoryList/>
+        <ItemList/>
+        </div>
       </div>   
+    
     </div>
   );
 };
