@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/smart-web-project/static/css/main.ba6368d0.css",
-    "main.js": "/smart-web-project/static/js/main.2725918a.js",
+    "main.css": "/smart-web-project/static/css/main.016a0028.css",
+    "main.js": "/smart-web-project/static/js/main.75b43b36.js",
     "static/media/supply.png": "/smart-web-project/static/media/supply.fc1550002da88531459d.png",
     "static/media/Inter-Bold.ttf": "/smart-web-project/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
     "static/media/Inter-Light.ttf": "/smart-web-project/static/media/Inter-Light.eec8664621fec98efb37.ttf",
@@ -17,7 +17,6 @@
     "static/media/item11.png": "/smart-web-project/static/media/item11.c7c2102bda1e85a06a27.png",
     "static/media/item4.png": "/smart-web-project/static/media/item4.c7c2102bda1e85a06a27.png",
     "static/media/item2.png": "/smart-web-project/static/media/item2.03cc082f072125ff9373.png",
-    "static/media/armchair.png": "/smart-web-project/static/media/armchair.7e2e1cbce9f0518be6fc.png",
     "static/media/item.png": "/smart-web-project/static/media/item.61da385d27bc81c9f7a7.png",
     "static/media/item8.png": "/smart-web-project/static/media/item8.314976ab30215dae83f2.png",
     "static/media/item10.png": "/smart-web-project/static/media/item10.d9149cdb3fac89aecd16.png",
@@ -44,28 +43,23 @@
     "static/media/search.svg": "/smart-web-project/static/media/search.52d2c757562ca9096aabe1985a8450b4.svg",
     "static/media/list.svg": "/smart-web-project/static/media/list.a331ee6f028765503054e58ac80c2c7c.svg",
     "static/media/facebook3.svg": "/smart-web-project/static/media/facebook3.fb5c2c9070b080acf931b26535394d2a.svg",
-    "static/media/chevron-left.svg": "/smart-web-project/static/media/chevron-left.96211d250ce6803d31675625460cfa68.svg",
     "static/media/email.svg": "/smart-web-project/static/media/email.fe73e10de8296f9c4d854f06a2d23234.svg",
     "static/media/person-mobile.svg": "/smart-web-project/static/media/person-mobile.6a686e32b18464f2e71485cf495b99b0.svg",
     "static/media/inventory_2.svg": "/smart-web-project/static/media/inventory_2.60a2e611ddf1fa30963dcf507ede5a8e.svg",
     "static/media/inventorybar.svg": "/smart-web-project/static/media/inventorybar.804bfb1485880781de07920d662bed26.svg",
     "static/media/headset_mic.svg": "/smart-web-project/static/media/headset_mic.de770e491826c40cd64b92d289f9a558.svg",
     "static/media/business.svg": "/smart-web-project/static/media/business.50039609c4007e8116281da8211f058a.svg",
-    "static/media/gridview.svg": "/smart-web-project/static/media/gridview.0ad52c14c8cd9fe34d23354e859c7af9.svg",
     "static/media/security.svg": "/smart-web-project/static/media/security.7fbb3b4ede8ba4cdf637c685e532f5ce.svg",
     "static/media/send.svg": "/smart-web-project/static/media/send.801886d24c841bc0e07761a1ae95764f.svg",
     "static/media/arrow_forward.svg": "/smart-web-project/static/media/arrow_forward.57b1b7ba792a5b02089afdff7005c176.svg",
     "static/media/home.svg": "/smart-web-project/static/media/home.c257b4fc2d61d679fdb67e607da930bb.svg",
-    "static/media/chevron_right.svg": "/smart-web-project/static/media/chevron_right.286c7c2a8998817a12229ef5f777f087.svg",
-    "static/media/category_expand.svg": "/smart-web-project/static/media/category_expand.bee3d04f02d7869faf326d3e18e7c407.svg",
     "static/media/expand_less.svg": "/smart-web-project/static/media/expand_less.1ae2ed8fff68dc46703ecf0e72d2d3e5.svg",
-    "static/media/listview.svg": "/smart-web-project/static/media/listview.f8c3952853f0e3a8c6418476e093ebf6.svg",
     "static/media/menu.svg": "/smart-web-project/static/media/menu.019cae188ce8acde22dfc85b46979776.svg",
-    "main.ba6368d0.css.map": "/smart-web-project/static/css/main.ba6368d0.css.map",
-    "main.2725918a.js.map": "/smart-web-project/static/js/main.2725918a.js.map"
+    "main.016a0028.css.map": "/smart-web-project/static/css/main.016a0028.css.map",
+    "main.75b43b36.js.map": "/smart-web-project/static/js/main.75b43b36.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba6368d0.css",
-    "static/js/main.2725918a.js"
+    "static/css/main.016a0028.css",
+    "static/js/main.75b43b36.js"
   ]
 }
