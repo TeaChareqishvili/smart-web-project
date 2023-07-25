@@ -4,6 +4,7 @@ import { electroinics } from "./SourceData";
 import arrowRight from "../../assets/arrow_forward.svg";
 import { mobileElectronic } from "./SourceData";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { NavLink } from "react-router-dom";
 import "swiper/css";
 
 const ElectorinicsSource = () => {
@@ -13,13 +14,13 @@ const ElectorinicsSource = () => {
         <img src={electronics} alt="home" />
         <div className="home-text">
           <h4>Home and outdoor</h4>
-          <button>Source now</button>
+          <NavLink to="/second">
+            <button>Source now</button>
+          </NavLink>
         </div>
       </div>
 
       {electroinics.map((item, id) => (
-
-  
         <div key={id} className="home-items">
           <div className="about-item">
             <p className="item-title">{item.title}</p>

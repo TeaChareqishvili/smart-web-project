@@ -7,6 +7,8 @@ import { JoinPopUp } from "./popup/JoinPopUp";
 import { LoginPopUp } from "./popup/LogInPopUp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { NavLink } from "react-router-dom";
+
 
 const Banner = () => {
   const [join, setJoin] = useState(false);
@@ -38,7 +40,10 @@ const Banner = () => {
         <div className="banner-text">
           <h2>Latest trending</h2>
           <h1>Electronic items</h1>
+          <NavLink to="/second">
           <button className="bannerbtn">Learn more</button>
+          </NavLink>
+       
         </div>
       </div>
       <div className="for-user">

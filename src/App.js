@@ -2,7 +2,7 @@ import { FirstPage } from "./components/firstPage/FirstPage";
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
 import { Routes, Route } from "react-router-dom";
-// import { SecondPage } from "./components/secondPage/SecondPage";
+ import { ElectronicSecondPage } from "./components/secondPage/ElectronicSecondPage";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/smart-web-project" element={<FirstPage />} />
-          {/* <Route path="/second" element={<SecondPage />} /> */}
+          <Route path="/second" element={<ElectronicSecondPage />} />
         </Routes>
         <Footer />
       </div>
