@@ -64,7 +64,7 @@ const Header = () => {
               <option value="Machinery tools">Machinery tools</option>
               <option value="Machinery tools">Machinery tools</option>
             </select>
-            <button>Search</button>
+            <button >Search</button>
           </div>
         </form>
         <div className="icons">

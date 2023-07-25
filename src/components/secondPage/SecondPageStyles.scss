@@ -122,15 +122,37 @@
         justify-content: flex-start;
         margin-bottom:12px;
       
-        input{
-         
+        input[type="checkbox"] {
             cursor: pointer;
-            height: 24px;
-            width: 34px;
-          //TODO gasastilia
-           
-        }
-       
+            width: 20px;
+            height: 20px;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            -o-appearance: none;
+            border: 2px solid #BDBDBD;
+            border-radius: 6px;
+            position: relative;
+          }
+          
+          input[type="checkbox"]::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 14px;
+            height: 14px;
+          
+            background-color: transparent;
+          }
+          
+          input[type="checkbox"]:checked::before {
+            background-color: #0D6EFD;
+            border-radius: 6px;
+          }
+          
+          
+     
     
         label{
             color:#1C1C1C;
@@ -151,6 +173,38 @@
      align-items: center;
      justify-content: flex-start;
      margin-bottom:18px;
+     
+      
+     input[type="checkbox"] {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -o-appearance: none;
+        border: 2px solid #BDBDBD;
+        border-radius: 6px;
+        position: relative;
+      }
+      
+      input[type="checkbox"]::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 14px;
+        height: 14px;
+      
+        background-color: transparent;
+      }
+      
+      input[type="checkbox"]:checked::before {
+        background-color: #0D6EFD;
+        border-radius: 6px;
+      }
+      
+      
 
     input{
         margin-right:10px;
