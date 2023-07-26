@@ -27,6 +27,8 @@ const GadgetList = () => {
     );
   };
 
+  console.log("randomElectroData: ", randomElectroData);
+
   return (
     <>
       {randomElectroData.map((item, id) => (

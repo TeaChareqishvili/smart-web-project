@@ -2,8 +2,15 @@ import "./SecondPageStyles.scss";
 import gridview from "../../assets/gridview.svg";
 import listview from "../../assets/listview.svg";
 import { GadgetList } from "./GadgetList";
+import { useState } from "react";
+import { GadgetListGrid } from "./GadgetListGird";
 
 const ItemList = () => {
+
+  const [view, setView] = useState(true)
+
+
+
   return (
     <div className="itemList-wrapper">
       <div className="select-box">
@@ -16,11 +23,16 @@ const ItemList = () => {
           <select>
             <option>Featured</option>
           </select>
-          <img src={gridview} alt="list" />
-          <img src={listview} alt="list" />
+          <img onClick={()=>setView(false)} src={gridview} alt="list" />
+          <img onClick={()=>setView(true)} src={listview} alt="list" />
         </div>
       </div>
-      <GadgetList/>
+      {view ? (
+        <GadgetList />
+      ) : (
+        <GadgetListGrid />
+      )}
+    
     </div>
   );
 };
