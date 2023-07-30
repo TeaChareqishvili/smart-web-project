@@ -9,7 +9,7 @@ const Regions = () => {
       </div>
       <div className="regions">
         {region.map((item, id) => (
-          <div key={id}>
+          <div key={id} className="reg">
             <div className="region">
               <img src={item.image} alt="flag" />
               <div>

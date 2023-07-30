@@ -30,6 +30,7 @@
                 width:100%;
                 transform: scale(1);
                 transition: 0.5s;
+                cursor: pointer;
              
             }
             img:hover{
@@ -46,6 +47,29 @@
         align-items: center;
         justify-content: space-between;
        
+
+        .grid-rate{
+            display: flex;
+            align-items: center;
+            margin-bottom:13px;
+            justify-content:flex-start;
+
+            .item-rating-star{
+                color: #FF9017;
+                cursor: pointer;
+               
+            }
+
+            .item-rating-star:last-of-type {
+                color: #8B96A5;
+                margin-right:6px;
+              }
+              .rate{
+                color:#FF9017;
+                font-size:16px;
+                font-family:"Inter";
+              }
+        }
 
         .grid-price{
             display: flex;

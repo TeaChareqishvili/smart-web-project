@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content:center;
    
 
     .media{
@@ -144,6 +144,7 @@
         width:100%;
         padding:0 12px;
         justify-content: space-around;
+        margin-top:20px;
        
        .footer-info{
          display: none;
@@ -156,5 +157,18 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .get-app{
+        text-align: center;
+       .app-icons{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+
+        div{
+            margin-left:10px;
+        }
+       }
     }
 }

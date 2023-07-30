@@ -31,10 +31,11 @@
 
 .banner-img{
     position: relative;
+  
     height:100%;
 
     img{
-        // max-width:664px;
+      
         width:100%;
         height:100%;
     }
@@ -81,7 +82,7 @@
 
 .for-user{
     margin-left:10px;
-}
+
 
 .user-log{
     background-color:#E3F0FF;
@@ -160,13 +161,14 @@
         }
     }
 }
-
 .orange-card{
     background-color:#F38332;
     border-radius:6px;
     padding:16px 16px 22px 16px;
     margin-bottom:10px;
     cursor: pointer;
+ 
+  
 
     p{
         color:#FFF;
@@ -185,6 +187,9 @@
     border-radius:6px;
     padding:16px 16px 22px 16px;
     cursor: pointer;
+    height:102px;
+  
+  
 
     p{
         color:#FFF;
@@ -196,6 +201,10 @@
 .blue-card:hover{
     background-color:#419b9f;
 }
+}
+
+
+
 
 
 @media(max-width:1024px){

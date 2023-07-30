@@ -1,13 +1,13 @@
-import "./SecondPageStyles.scss";
-import arrowRight from "../../assets/chevron_right.svg";
-import { CategoryList } from "./CategoryList";
-import { ItemList } from "./ItemList";
-import { Subscribe } from "../subscribe/Subscribe";
+import "../SecondPageStyles.scss";
+import arrowRight from "../../../assets/chevron_right.svg";
+import { CategoryList } from "../CategoryList";
+import { Subscribe } from "../../subscribe/Subscribe";
+import { SourceForHome } from "./SourceForHome";
 
-const ElectronicSecondPage = () => {
-  return (
-    <>
-      <div className="main-wrapper">
+const HomeSourceItems = ()=>{
+     return (
+     <div>
+         <div className="main-wrapper">
         <div className="content-wrapper">
           <div className="list">
             <p>Home</p>
@@ -20,13 +20,13 @@ const ElectronicSecondPage = () => {
           </div>
           <div className="main-content">
             <CategoryList />
-            <ItemList />
+           <SourceForHome/>
           </div>
         </div>
       </div>
       <Subscribe />
-    </>
-  );
-};
+     </div>
+     )
+}
 
-export { ElectronicSecondPage };
+export {HomeSourceItems}

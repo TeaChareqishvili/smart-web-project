@@ -19,6 +19,7 @@
             width:100%;
             transform: scale(1);
             transition: 0.5s;
+            cursor: pointer;
         }
         :hover{
             transform: scale(1.06);
@@ -85,6 +86,20 @@
             margin-bottom:12px;
 
            
+            .item-rating-star{
+                color: #FF9017;
+                cursor: pointer;
+               
+            }
+            .item-rating-star:last-of-type {
+                color: #8B96A5;
+                margin-right:6px;
+              }
+              .rate{
+                color:#FF9017;
+                font-size:16px;
+                font-family:"Inter";
+              }
     
             span{
                 width:6px;
@@ -130,6 +145,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-top:20px;
 
 
 

@@ -1,11 +1,14 @@
-import "./GadgetGridStyle.scss";
-import { WholeData } from "../allData/AllData";
+import "../GadgetGridStyle.scss";
+import { WholeData } from "../../allData/AllData";
 import { useState } from "react";
-import right from "../../assets/chevron-right.png";
-import left from "../../assets/chevron-left.svg";
+import right from "../../../assets/chevron-right.png";
+import left from "../../../assets/chevron-left.svg";
+import { FaStar } from "react-icons/fa";
 
-const GadgetListGrid = () => {
- 
+
+
+const HomeGridView = ()=>{
+
     const getRandomItems = (arr, count) => {
         const shuffled = arr.sort(() => Math.random() - 0.5);
         return shuffled.slice(0, count);
@@ -13,7 +16,7 @@ const GadgetListGrid = () => {
     
       const [randomElectroData, setRandomElectroData] = useState(
         getRandomItems(
-          WholeData.filter((item) => item.type === "electro"),
+          WholeData.filter((item) => item.type === "home"),
           9
         )
       );
@@ -22,14 +25,14 @@ const GadgetListGrid = () => {
   const handleRefresh = () => {
     setRandomElectroData(
       getRandomItems(
-        WholeData.filter((item) => item.type === "electro"),
+        WholeData.filter((item) => item.type === "home"),
         9
       )
     );
   };
 
-  return (
-    <div>
+    return(
+        <div>
         <div className="grid">
       {randomElectroData.map((item, id) => (
         <div key={id} className="item-wrapper">
@@ -42,6 +45,13 @@ const GadgetListGrid = () => {
                 <p>{item.price}</p>
                 <span>{item.sale}</span>
               </div>
+              <div className="grid-rate">
+              {[...Array(5)].map((_, id) => (
+                <FaStar key={id} className="item-rating-star" />
+              ))}
+              <p className="rate">7.5</p>
+              </div>
+            
               <div className="grid-title">
                 <p>{item.title}</p>
               </div>
@@ -64,7 +74,7 @@ const GadgetListGrid = () => {
         <img src={right} alt="arrow"/>
      </div>
     </div>
-  );
-};
+    )
+}
 
-export { GadgetListGrid };
+export {HomeGridView}

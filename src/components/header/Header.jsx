@@ -10,6 +10,7 @@ import card from "../../assets/shopping_cart.svg";
 import person from "../../assets/person-mobile.svg";
 import search from "../../assets/mobilesearch.svg";
 import { MenuBar } from "./MenuBar";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -42,17 +43,21 @@ const Header = () => {
       <div className="header-wrapper">
         <div className="logo">
           <img ref={menuRef} className="mobile-menu" src={menu} alt="menu" />
+          <NavLink to="smart-web-project">
           <img src={brandimg} alt="brand" />
+          </NavLink>
+       
         </div>
         {burgerMenu && <MenuBar setBurgerMenu={setBurgerMenu} />}
         <form>
           <div className="input-wrapper">
-            <input
+             <input
               type="text"
               placeholder="Search"
               value={selectedCategory}
               onChange={(event) => setSelectedCategory(event.target.value)}
             />
+    
             <select value={selectedCategory} onChange={handleCategoryChange}>
               <option value="all category">All category</option>
               <option value="Automobiles">Automobiles</option>
@@ -64,7 +69,7 @@ const Header = () => {
               <option value="Machinery tools">Machinery tools</option>
               <option value="Machinery tools">Machinery tools</option>
             </select>
-            <button >Search</button>
+            <button>Search</button> 
           </div>
         </form>
         <div className="icons">

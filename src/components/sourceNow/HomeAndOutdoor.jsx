@@ -3,6 +3,7 @@ import home from "../../assets/home.png";
 import { homeItems } from "./SourceData";
 import arrowRight from "../../assets/arrow_forward.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { NavLink } from "react-router-dom";
 import "swiper/css";
 
 const HomeAndOutdoor = () => {
@@ -13,7 +14,10 @@ const HomeAndOutdoor = () => {
         <img src={home} alt="home" />
         <div className="home-text">
           <h4>Home and outdoor</h4>
+          <NavLink to="/HomeSourceItems">
           <button>Source now</button>
+          </NavLink>
+        
         </div>
       </div>
       {homeItems.map((item,id) => (

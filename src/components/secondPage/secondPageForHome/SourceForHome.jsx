@@ -1,18 +1,17 @@
-import "./SecondPageStyles.scss";
-import gridview from "../../assets/gridview.svg";
-import listview from "../../assets/listview.svg";
-import { GadgetList } from "./GadgetList";
+import "../SecondPageStyles.scss";
+import gridview from "../../../assets/gridview.svg";
+import listview from "../../../assets/listview.svg";
 import { useState } from "react";
-import { GadgetListGrid } from "./GadgetListGrid";
-
-const ItemList = () => {
-
-  const [view, setView] = useState(true)
+import { HomeListView } from "./HomeListView";
+import { HomeGridView } from "./HomeGridView";
 
 
+const SourceForHome = ()=>{
 
-  return (
-    <div className="itemList-wrapper">
+    const [view, setView] = useState(true)
+
+    return(
+        <div className="itemList-wrapper">
       <div className="select-box">
         <div>
           <p>12,911 items in Mobile accessory</p>
@@ -27,14 +26,12 @@ const ItemList = () => {
           <img className="view-grid" onClick={()=>setView(true)} src={listview} alt="list" />
         </div>
       </div>
-      {view ? (
-        <GadgetList />
-      ) : (
-        <GadgetListGrid />
-      )}
+     {view ? (  <HomeListView />) : <HomeGridView/>}
+      
+      
     
     </div>
-  );
-};
+    )
+}
 
-export { ItemList };
+export {SourceForHome}

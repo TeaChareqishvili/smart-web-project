@@ -91,12 +91,15 @@ const Footer = () => {
         </div>
         <div className="get-app">
           <p>Gett app</p>
+          <div className="app-icons">
           <div>
             <img src={apple} alt="apple-icon" />
           </div>
           <div>
             <img src={google} alt="google-icon" />
           </div>
+          </div>
+         
         </div>
       </div>
       <div className="ecommerce-wrapper">

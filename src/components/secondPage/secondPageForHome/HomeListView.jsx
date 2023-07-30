@@ -1,35 +1,37 @@
-import "./GadgetListStyle.scss";
-import { WholeData } from "../allData/AllData";
+import "../GadgetListStyle.scss";
+import { WholeData } from "../../allData/AllData";
 import { useState } from "react";
-import right from "../../assets/chevron-right.png";
-import left from "../../assets/chevron-left.svg";
+import right from "../../../assets/chevron-right.png";
+import left from "../../../assets/chevron-left.svg";
 import { FaStar } from "react-icons/fa";
 
-const GadgetList = () => {
-  const getRandomItems = (arr, count) => {
-    const shuffled = arr.sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, count);
-  };
 
-  const [randomElectroData, setRandomElectroData] = useState(
-    getRandomItems(
-      WholeData.filter((item) => item.type === "electro"),
-      6
-    )
-  );
+const HomeListView = ()=>{
 
-  const handleRefresh = () => {
-    setRandomElectroData(
-      getRandomItems(
-        WholeData.filter((item) => item.type === "electro"),
-        6
-      )
-    );
-  };
+    const getRandomItems = (arr, count) => {
+        const shuffled = arr.sort(() => Math.random() - 0.5);
+        return shuffled.slice(0, count);
+      };
+    
+      const [randomElectroData, setRandomElectroData] = useState(
+        getRandomItems(
+          WholeData.filter((item) => item.type === "home"),
+          6
+        )
+      );
+    
+      const handleRefresh = () => {
+        setRandomElectroData(
+          getRandomItems(
+            WholeData.filter((item) => item.type === "home"),
+            6
+          )
+        );
+      };
 
-
-  return (
-    <>
+      
+    return(
+        <>
       {randomElectroData.map((item, id) => (
         <div className="gadget-wrapper" key={id}>
           <div className="gadget-img">
@@ -70,7 +72,7 @@ const GadgetList = () => {
         <img src={right} alt="arrow" />
       </div>
     </>
-  );
-};
+    )
+}
 
-export { GadgetList };
+export{HomeListView}

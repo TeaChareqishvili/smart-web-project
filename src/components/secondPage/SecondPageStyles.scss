@@ -338,7 +338,6 @@
         align-items: center;
         justify-content: flex-end;
         
-       
     }
 
     .select-box{
@@ -390,8 +389,22 @@
             font-family:"Inter";
         }
     }
-    img{
+    .view-list{
         cursor: pointer;
+        border: 1px solid #DEE2E7;
+        padding:7px;
+        border-radius:4px 0 0 4px;
     }
+    .view-grid{
+        cursor: pointer;
+        border: 1px solid #DEE2E7;
+        padding:7px;
+        border-radius:0 4px 4px 0;
+    }
+ 
+   img:hover{
+    background-color: #DEE2E7;
+   }
+  
 }
 
