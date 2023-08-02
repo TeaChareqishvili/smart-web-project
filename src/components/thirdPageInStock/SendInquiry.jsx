@@ -3,8 +3,10 @@ import germanFlag from "../../assets/flag.png";
 import language from "../../assets/language.png";
 import verified from "../../assets/verified_user.png";
 
+
 const SendInquiry = () => {
   return (
+ 
     <div className="sendInquiry">
       <div className="supplier">
         <div>

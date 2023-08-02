@@ -9,6 +9,7 @@ import shirt6 from "../../assets/image40.jpeg";
 import { useState } from "react";
 import { Content } from "./Content";
 import {SendInquiry} from "./SendInquiry";
+// import heart from "../../assets/favorite_border.png";
 
 const InStock = () => {
   const [selectedShirt, setSelectedShirt] = useState(mainShirt);
