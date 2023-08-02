@@ -229,9 +229,7 @@
 
          .input-range{
           
-
-
-                 .progress-min{
+          .progress-min{
             position:absolute;
             top:0;
             left:25%;  
@@ -292,9 +290,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    
      
-    
         input{
             max-width:111px;
             width:100%;
@@ -312,10 +308,7 @@
         }
     
         div{
-          
-    
-            .price{
-              
+            .price{      
                 color:#1C1C1C;
                 font-family:"Inter";
                 font-size:16px;
@@ -407,4 +400,5 @@
    }
   
 }
+
 

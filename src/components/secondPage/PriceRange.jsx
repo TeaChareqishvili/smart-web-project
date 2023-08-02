@@ -4,6 +4,8 @@ import expandLess from "../../assets/category_expand.svg";
 
 // TODO price  range change
 const PriceRange = () => {
+
+  
   return (
     <div className="price-wrapper">
       <div className="category-title">

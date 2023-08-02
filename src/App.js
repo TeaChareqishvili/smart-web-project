@@ -4,6 +4,7 @@ import { Header } from "./components/header/Header";
 import { Routes, Route } from "react-router-dom";
  import { ElectronicSecondPage } from "./components/secondPage/ElectronicSecondPage";
  import { HomeSourceItems } from "./components/secondPage/secondPageForHome/HomeSourceItems";
+ import { Clothing } from "./components/thirdPageMain/Clothing";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/smart-web-project" element={<FirstPage />} />
           <Route path="/second" element={<ElectronicSecondPage />} />
           <Route path="/HomeSourceItems" element={<HomeSourceItems />} />
+          <Route path="/clothing" element={<Clothing />} />
         </Routes>
         <Footer />
       </div>
