@@ -126,6 +126,7 @@
             cursor: pointer;
             width: 20px;
             height: 20px;
+            appearance: none;
             -moz-appearance: none;
             -webkit-appearance: none;
             -o-appearance: none;
@@ -179,6 +180,7 @@
         cursor: pointer;
         width: 20px;
         height: 20px;
+        appearance: none;
         -moz-appearance: none;
         -webkit-appearance: none;
         -o-appearance: none;
@@ -234,6 +236,8 @@
             top:0;
             left:25%;  
             height:6px;
+        appearance: none;
+
             -webkit-appearance: none;
             background: none;
             pointer-events:none;
@@ -244,6 +248,7 @@
             top:0;
             right:25%;
             height:6px;
+            appearance: none;
             -webkit-appearance: none;
             background: none;
             pointer-events:none;
@@ -404,5 +409,5 @@
 
 .description-section{
     display: flex;
-    align-items: center;
+    align-items:flex-start;
 }

@@ -43,19 +43,34 @@ const JoinPopUp = ({ setJoin }) => {
       <form ref={formRef}>
         <div>
           <label>First name</label>
-          <input type="text" placeholder="Name" required />
+          <input type="text" placeholder="Name" required onChange={() => {}} />
         </div>
         <div>
           <label>Last name</label>
-          <input type="text" placeholder="Last name" required />
+          <input
+            type="text"
+            placeholder="Last name"
+            required
+            onChange={() => {}}
+          />
         </div>
         <div>
           <label>Password</label>
-          <input type="password" placeholder="Password" required />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            onChange={() => {}}
+          />
         </div>
         <div>
           <label>Email</label>
-          <input type="email" placeholder="Your email" required />
+          <input
+            type="email"
+            placeholder="Your email"
+            required
+            onChange={() => {}}
+          />
         </div>
         <div>
           <button onClick={() => handleSubmit()}>Join</button>

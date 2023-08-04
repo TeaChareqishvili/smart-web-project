@@ -2,6 +2,8 @@ import { Navigation } from "../secondPage/Navigation";
 import "../secondPage/SecondPageStyles.scss";
 import { InStock } from "../thirdPageInStock/InStock";
 import { Description } from "../thirdPagedescription/Description";
+import { MayLike } from "../thirdPagedescription/MayLike";
+import { RelatedItems } from "../relatedItmesThirdPade/RelatedItems";
 
 const Clothing = () => {
   return (
@@ -11,8 +13,9 @@ const Clothing = () => {
         <InStock />
         <div className="description-section">
           <Description/>
-          <div>hbcjbckajbckjabcajkscb</div>
+          <MayLike/>
         </div>
+         <RelatedItems/>
       </div>
      
     </div>
