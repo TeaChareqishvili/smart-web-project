@@ -4,6 +4,7 @@ import { InStock } from "../thirdPageInStock/InStock";
 import { Description } from "../thirdPagedescription/Description";
 import { MayLike } from "../thirdPagedescription/MayLike";
 import { RelatedItems } from "../relatedItmesThirdPade/RelatedItems";
+import { Discount } from "../discountThirdPage/Discount";
 
 const Clothing = () => {
   return (
@@ -16,8 +17,8 @@ const Clothing = () => {
           <MayLike/>
         </div>
          <RelatedItems/>
-      </div>
-     
+         <Discount/>
+      </div>  
     </div>
   );
 };
