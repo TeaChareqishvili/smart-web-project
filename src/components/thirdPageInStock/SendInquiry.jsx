@@ -2,11 +2,12 @@ import "./inquiryStyles.scss";
 import germanFlag from "../../assets/flag.png";
 import language from "../../assets/language.png";
 import verified from "../../assets/verified_user.png";
+import heart from "../../assets/favorite_border.png";
 
 
 const SendInquiry = () => {
   return (
- 
+ <div>
     <div className="sendInquiry">
       <div className="supplier">
         <div>
@@ -34,6 +35,11 @@ const SendInquiry = () => {
         <button>Send inquiry</button>
         <button>Seller’s profile</button>
       </div>
+    </div>
+   <div className="save-later">
+    <img src={heart} alt="heart-icon"/>
+    <span>Save for later</span>
+   </div>
     </div>
   );
 };

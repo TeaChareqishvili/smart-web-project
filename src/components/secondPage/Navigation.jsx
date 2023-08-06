@@ -13,9 +13,14 @@ const Navigation = ()=>{
           <p>Clothings</p>
         </NavLink>
         <img src={arrowRight} alt="arrow" />
-        <p>Men's wear</p>
+        <NavLink to="/second">
+        <p>Electorinics</p>
+        </NavLink>
         <img src={arrowRight} alt="arrow" />
-        <p>Summer clothing</p>
+        <NavLink to="/HomeSourceItems">
+        <p>For Home</p>
+        </NavLink>
+      
       </div>
     )
 }

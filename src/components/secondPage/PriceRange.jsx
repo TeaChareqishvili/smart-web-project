@@ -14,9 +14,9 @@ const PriceRange = () => {
         <img src={expandLess} alt="arrow" />
       </div>
       <div className="progress-range">
-        {/* <div className="range">
+        <div className="range">
           <div className="progress"></div>
-        </div> */}
+        </div>
         <div className="input-range">
           <input
             type="range"

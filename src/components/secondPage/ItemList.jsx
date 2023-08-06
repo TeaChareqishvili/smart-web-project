@@ -4,8 +4,10 @@ import listview from "../../assets/listview.svg";
 import { GadgetList } from "./GadgetList";
 import { useState } from "react";
 import { GadgetListGrid } from "./GadgetListGrid";
+import { SelectedItems } from "./SelectedItems";
 
-const ItemList = () => {
+
+const ItemList = ({selectedItems,handleClear,handleRemoveItem}) => {
 
   const [view, setView] = useState(true)
 
@@ -27,6 +29,7 @@ const ItemList = () => {
           <img className="view-grid" onClick={()=>setView(true)} src={listview} alt="list" />
         </div>
       </div>
+      <SelectedItems selectedItems={selectedItems} handleClear={handleClear} handleRemoveItem={handleRemoveItem}/>
       {view ? (
         <GadgetList />
       ) : (

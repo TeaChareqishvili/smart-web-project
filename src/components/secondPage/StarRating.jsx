@@ -12,7 +12,7 @@ const StarRating = () => {
     setFirstInputRating(value+1);
     setRating(value);
   };
-//TODO fix rating
+
   return (
     <div className="rating-wrapper">
          <input

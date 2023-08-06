@@ -9,7 +9,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { NavLink } from "react-router-dom";
 
-
 const Banner = () => {
   const [join, setJoin] = useState(false);
   const [login, setLogin] = useState(false);
@@ -24,11 +23,25 @@ const Banner = () => {
 
   return (
     <div className="banner-wrapper">
-      <Swiper className="category-list"  slidesPerView="auto" >
+      <Swiper className="category-list" slidesPerView="auto">
         <SwiperSlide className="slide">
           {list.map((item, id) => (
             <ul key={id}>
-              <li>{item.title}</li>
+              {item.title === "Home interiors" ? (
+                <li>
+                  <NavLink className="nav-link" to="/HomeSourceItems">{item.title}</NavLink>
+                </li>
+              ) : item.title === "Computer and tech" ? (
+                <li>
+                  <NavLink className="nav-link" to="/second">{item.title}</NavLink>
+                </li>
+              ) : item.title === "Clothes and wear" ? (
+                <li>
+                  <NavLink className="nav-link" to="/clothing">{item.title}</NavLink>
+                </li>
+              ) : (
+                <li>{item.title}</li>
+              )}
             </ul>
           ))}
         </SwiperSlide>
@@ -41,9 +54,8 @@ const Banner = () => {
           <h2>Latest trending</h2>
           <h1>Electronic items</h1>
           <NavLink to="/second">
-          <button className="bannerbtn">Learn more</button>
+            <button className="bannerbtn">Learn more</button>
           </NavLink>
-       
         </div>
       </div>
       <div className="for-user">
