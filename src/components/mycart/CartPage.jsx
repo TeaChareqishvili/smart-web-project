@@ -1,6 +1,7 @@
 import "./CartPageStyle.scss";
 import { MyCart } from "./MyCart";
 import { CheckOut } from "./CheckOut";
+import { Conditions } from "./Condition";
 
 const CartPage = () => {
   return (
@@ -10,6 +11,7 @@ const CartPage = () => {
           <MyCart />
           <CheckOut />
         </div>
+       <Conditions/>
       </div>
     </div>
   );

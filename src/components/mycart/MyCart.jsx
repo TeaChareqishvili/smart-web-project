@@ -52,5 +52,5 @@ const MyCart = () => {
     </div>
   );
 };
-
+///TODO add remove all button
 export { MyCart };
