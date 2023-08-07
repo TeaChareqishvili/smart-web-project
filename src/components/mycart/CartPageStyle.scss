@@ -1,16 +1,17 @@
 .my-cart-wrapper{
-    width:100%;
-    background-color: #F7FAFC;
-
+   width:82%;
+   margin:auto;
    .cart-content{
     display: flex;
    }
        
 }
+.cartPage{
+    width:100%;
+    background-color: #F7FAFC;
 
+}
 .chosenItemsNumber{
-   width:82%;
-   margin:auto;
    padding:27px 0 23px;
 
    h3{
@@ -26,8 +27,8 @@
     border-radius:6px;
     padding:23px 20px 21px 19px;
      max-width:880px;
-     width:82%;
-     margin: auto;
+     width:100%;
+     margin-right:20px;
 
      .cart-grid-wrapper{
         width:100%;
