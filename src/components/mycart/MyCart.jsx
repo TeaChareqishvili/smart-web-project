@@ -4,12 +4,15 @@ import back from "../../assets/arrow_back.svg";
 import { NavLink } from "react-router-dom";
 
 const MyCart = () => {
-  const { chosenItems, handleRemoveItem } = useHeartIconClick();
+  const { chosenItems, handleRemoveItem, handleClearAll } = useHeartIconClick();
  
   const handleRemoveButtonClick = (itemId) => {
     handleRemoveItem(itemId); 
   };
   
+  const handleRemoveAllButtonClick = () => {
+    handleClearAll();
+  };
 
   return (
     <div>
@@ -43,14 +46,17 @@ const MyCart = () => {
               <div className="cart-border"></div>
             </>
           ))}
+          <div className="cart-btn">
         <NavLink to="/second">
           <button className="back">
             <img src={back} alt="back" /> Back to Shop
           </button>
         </NavLink>
+        <button onClick={()=>handleRemoveAllButtonClick()} className="remove">Remove all</button>
+        </div>
       </div>
     </div>
   );
 };
-///TODO add remove all button
+
 export { MyCart };

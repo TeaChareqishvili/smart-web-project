@@ -31,6 +31,30 @@
      width:100%;
      margin-right:20px;
 
+
+     .cart-btn{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .remove{
+            background-color: #FFFFFF;
+            border:none;
+            border:1px solid #DEE2E7;
+            border-radius:6px;
+            padding:0 16px 0 16px;
+            color:#0D6EFD;
+            font-family:"Inter-bold";
+            font-size:16px;
+            height:40px;
+            box-shadow: 0px 1px 2px 0px rgba(56, 56, 56, 0.08);
+            cursor: pointer;
+        }
+        .remove:hover{
+            font-family: "bold";
+        }
+     }
+
      .cart-grid-wrapper{
         width:100%;
         display:grid;

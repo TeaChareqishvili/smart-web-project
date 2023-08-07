@@ -4,9 +4,10 @@ import listview from "../../../assets/listview.svg";
 import { useState } from "react";
 import { HomeListView } from "./HomeListView";
 import { HomeGridView } from "./HomeGridView";
+import { SelectedItems } from "../SelectedItems";
 
 
-const SourceForHome = ()=>{
+const SourceForHome = ({selectedItems,handleClear,handleRemoveItem})=>{
 
     const [view, setView] = useState(true)
 
@@ -26,6 +27,7 @@ const SourceForHome = ()=>{
           <img className="view-grid" onClick={()=>setView(true)} src={listview} alt="list" />
         </div>
       </div>
+      <SelectedItems selectedItems={selectedItems} handleClear={handleClear} handleRemoveItem={handleRemoveItem}/>
      {view ? (  <HomeListView />) : <HomeGridView/>}
       
       

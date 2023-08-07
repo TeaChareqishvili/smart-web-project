@@ -20,9 +20,18 @@ const useHeartIconClick = () => {
     setChosenItems((prevSelectedItems) =>
       prevSelectedItems.filter((item) => item.id !== itemId)
     );
+    const updatedItems = chosenItems.filter((item) => item.id !== itemId);
+    localStorage.setItem('chosenItems', JSON.stringify(updatedItems));
+
+   
+  };
+  const handleClearAll = () => {
+    setChosenItems([]);
+    localStorage.removeItem('chosenItems'); // Remove the 'chosenItems' key from local storage
   };
 
-  return { chosenItems, handleHeartIconClick, handleRemoveItem  };
+
+  return { chosenItems, handleHeartIconClick, handleRemoveItem, handleClearAll };
 };
 
 export default useHeartIconClick;

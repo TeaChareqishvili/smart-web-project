@@ -9,6 +9,7 @@ import useHeartIconClick from "../hook/saveFavorite";
 
 const GadgetList = () => {
   const {  handleHeartIconClick } = useHeartIconClick();
+ 
 
   const getRandomItems = (arr, count) => {
     const shuffled = arr.sort(() => Math.random() - 0.5);
@@ -43,7 +44,7 @@ const GadgetList = () => {
           <div className="gadget-info">
             <div className="gadget-title">
               <p>{item.title}</p>
-              <img onClick={() => handleHeartIconClick(item)} src={item.favorite} alt="heart-icon" />
+             <img onClick={() => handleHeartIconClick(item)} src={item.favorite} alt="heart-icon" />    
             </div>
             <div className="gadget-price">
               <span className="price">{item.price}</span>

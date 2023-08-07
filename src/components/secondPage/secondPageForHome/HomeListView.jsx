@@ -4,34 +4,35 @@ import { useState } from "react";
 import right from "../../../assets/chevron-right.png";
 import left from "../../../assets/chevron-left.svg";
 import { FaStar } from "react-icons/fa";
+import useHeartIconClick from "../../hook/saveFavorite";
 
 
-const HomeListView = ()=>{
+const HomeListView = () => {
+  const { handleHeartIconClick } = useHeartIconClick();
 
-    const getRandomItems = (arr, count) => {
-        const shuffled = arr.sort(() => Math.random() - 0.5);
-        return shuffled.slice(0, count);
-      };
-    
-      const [randomElectroData, setRandomElectroData] = useState(
-        getRandomItems(
-          WholeData.filter((item) => item.type === "home"),
-          6
-        )
-      );
-    
-      const handleRefresh = () => {
-        setRandomElectroData(
-          getRandomItems(
-            WholeData.filter((item) => item.type === "home"),
-            6
-          )
-        );
-      };
+  const getRandomItems = (arr, count) => {
+    const shuffled = arr.sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  };
 
-      
-    return(
-        <>
+  const [randomElectroData, setRandomElectroData] = useState(
+    getRandomItems(
+      WholeData.filter((item) => item.type === "home"),
+      6
+    )
+  );
+
+  const handleRefresh = () => {
+    setRandomElectroData(
+      getRandomItems(
+        WholeData.filter((item) => item.type === "home"),
+        6
+      )
+    );
+  };
+
+  return (
+    <>
       {randomElectroData.map((item, id) => (
         <div className="gadget-wrapper" key={id}>
           <div className="gadget-img">
@@ -40,7 +41,11 @@ const HomeListView = ()=>{
           <div className="gadget-info">
             <div className="gadget-title">
               <p>{item.title}</p>
-              <img src={item.favorite} alt="heart-icon" />
+              <img
+                onClick={() => handleHeartIconClick(item)}
+                src={item.favorite}
+                alt="heart-icon"
+              />
             </div>
             <div className="gadget-price">
               <span className="price">{item.price}</span>
@@ -72,7 +77,7 @@ const HomeListView = ()=>{
         <img src={right} alt="arrow" />
       </div>
     </>
-    )
-}
+  );
+};
 
-export{HomeListView}
+export { HomeListView };
