@@ -11,10 +11,14 @@ import person from "../../assets/person-mobile.svg";
 import search from "../../assets/mobilesearch.svg";
 import { MenuBar } from "./MenuBar";
 import { NavLink } from "react-router-dom";
+import useHeartIconClick from "../hook/saveFavorite";
 
 const Header = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [burgerMenu, setBurgerMenu] = useState(false);
+  const [header, setHeader] = useState(true)
+
+  const { chosenItems} = useHeartIconClick();
 
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
@@ -38,26 +42,26 @@ const Header = () => {
     };
   }, []);
 
+
   return (
     <>
       <div className="header-wrapper">
         <div className="logo">
           <img ref={menuRef} className="mobile-menu" src={menu} alt="menu" />
           <NavLink to="smart-web-project">
-          <img src={brandimg} alt="brand" />
+            <img src={brandimg} alt="brand" onClick={()=>setHeader(true)} />
           </NavLink>
-       
         </div>
         {burgerMenu && <MenuBar setBurgerMenu={setBurgerMenu} />}
         <form>
           <div className="input-wrapper">
-             <input
+            <input
               type="text"
               placeholder="Search"
               value={selectedCategory}
               onChange={(event) => setSelectedCategory(event.target.value)}
             />
-    
+
             <select value={selectedCategory} onChange={handleCategoryChange}>
               <option value="all category">All category</option>
               <option value="Automobiles">Automobiles</option>
@@ -69,17 +73,27 @@ const Header = () => {
               <option value="Machinery tools">Machinery tools</option>
               <option value="Machinery tools">Machinery tools</option>
             </select>
-            <button>Search</button> 
+            <button>Search</button>
           </div>
         </form>
         <div className="icons">
           {icons.map((item, id) => (
             <div key={id} className="desktop-icons">
-              <img src={item.icon} alt="icon" />
-              <p>{item.title}</p>
+              {item.title === "My cart" ? (
+                <NavLink to="/cart">      
+                  <img src={item.icon} alt="icon" onClick={()=>setHeader(false)} />
+                  <p onClick={()=>setHeader(false)}>{item.title}<span className="number">({chosenItems.length})</span></p>
+                </NavLink>
+              ) : (
+                <>
+                  <img src={item.icon} alt="icon" />
+                  <p>{item.title}</p>
+                </>
+              )}
             </div>
           ))}
         </div>
+
         <div className="mobile-icons">
           <img src={card} alt="card" />
           <img src={person} alt="person" />
@@ -92,7 +106,7 @@ const Header = () => {
         </form>
       </div>
       <div className="border"></div>
-      <div className="category-wrapper">
+      {header && <div className="category-wrapper">
         <div className="categories">
           <img src={menu} alt="menu" />
           {categories.map((item, id) => (
@@ -115,7 +129,8 @@ const Header = () => {
             <img src={expand} alt="expand-more" />
           </div>
         </div>
-      </div>
+      </div>}
+      
       <div className="border"></div>
     </>
   );

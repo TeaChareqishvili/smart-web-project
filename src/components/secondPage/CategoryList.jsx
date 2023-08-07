@@ -81,4 +81,3 @@ const CategoryList = ({ selectedItems, handleItemClick }) => {
 
 export { CategoryList };
 
-// TODO price range style function 

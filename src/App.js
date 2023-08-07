@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
  import { ElectronicSecondPage } from "./components/secondPage/ElectronicSecondPage";
  import { HomeSourceItems } from "./components/secondPage/secondPageForHome/HomeSourceItems";
  import { Clothing } from "./components/thirdPageMain/Clothing";
+ import { CartPage } from "./components/mycart/CartPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/second" element={<ElectronicSecondPage />} />
           <Route path="/HomeSourceItems" element={<HomeSourceItems />} />
           <Route path="/clothing" element={<Clothing />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
         <Footer />
       </div>

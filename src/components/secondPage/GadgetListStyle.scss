@@ -7,6 +7,7 @@
     padding:9px 20px 31px 9px;
     margin-bottom:10px;
     display: flex;
+    min-width:340px;
 
 
     .gadget-img{
@@ -122,6 +123,10 @@
 
             }
 
+            .shipping-mobile{
+                display: none;
+            }
+
         }
     }
     .description{
@@ -200,4 +205,45 @@
         border-radius:4px;       
         padding:9px;  
     }
+}
+
+
+@media(max-width:768px){
+   
+    .gadget-info{
+
+        .gadget-title{
+
+            img{
+                display: none;
+            }
+        }
+
+        .gadget-price{
+
+            .sale{
+                display: none;
+            }
+        }
+    }
+
+    .description{
+        display:none;
+    }
+    .details{
+        display: none;
+    }
+    .shipping{
+        display: none;
+    }
+
+   
+    
+
+    .shipping-mobile{
+        display: block;
+        color:#00B517;
+        font-size:16px;
+        font-family:"Inter";
+       }
 }

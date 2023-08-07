@@ -31,7 +31,7 @@ import favorite from "../../assets/favorite_border.png";
 
 
 const WholeData = [
-    {
+    {  id:1,
        item:blender,
        favorite:favorite,
        title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -44,6 +44,7 @@ const WholeData = [
        type:'home'
     },
     {
+        id:2,
         item:chair,
         favorite:favorite,
         title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -56,6 +57,7 @@ const WholeData = [
         type:'home'
      },
      {
+      id:3,
         item:dishes,
         favorite:favorite,
         title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -68,6 +70,7 @@ const WholeData = [
         type:'home'
      },
      {
+      id:4,
         item:homeAppliance,
         favorite:favorite,
         title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -80,6 +83,7 @@ const WholeData = [
         type:'home'
      },
      {
+      id:5,
         item:lamp,
         favorite:favorite,
         title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -92,6 +96,7 @@ const WholeData = [
         type:'home'
      },
      {
+      id:6,
         item:mixer,
         favorite:favorite,
         title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -104,6 +109,7 @@ const WholeData = [
         type:'home'
      },
      {
+      id:7,
         item:plant,
         favorite:favorite,
         title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -116,6 +122,7 @@ const WholeData = [
         type:'home'
      },
      {
+      id:8,
         item:dish,
         favorite:favorite,
         title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -128,6 +135,7 @@ const WholeData = [
         type:'home'
      },
      {
+      id:9,
         item:chair2,
         favorite:favorite,
         title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -140,6 +148,7 @@ const WholeData = [
         type:'home'
      },
      {
+      id:10,
         item:coffesMaker,
         favorite:favorite,
         title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -152,6 +161,7 @@ const WholeData = [
         type:'home'
      },
      {
+      id:11,
         item:sourceMobile2,
         favorite:favorite,
         title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -164,6 +174,7 @@ const WholeData = [
         type:'electro'
      },
      {
+      id:12,
         item:sourceMobile,
         favorite:favorite,
         title:'GoPro HERO6 4K Action Camera - Black',
@@ -175,6 +186,7 @@ const WholeData = [
         type:'electro'
      },
      {
+      id:13,
         item:mobile1,
         favorite:favorite,
         title:'GoPro HERO6 4K Action Camera - Black',
@@ -186,6 +198,7 @@ const WholeData = [
         type:'electro'
      },
      {
+      id:14,
         item:leptop,
         favorite:favorite,
         title:'GoPro HERO6 4K Action Camera - Black',
@@ -197,6 +210,7 @@ const WholeData = [
         type:'electro'
      },
      {
+      id:15,
         item:watch,
         favorite:favorite,
         title:'GoPro HERO6 4K Action Camera - Black',
@@ -209,6 +223,7 @@ const WholeData = [
         type:'electro'
      },
      {
+      id:16,
         item:headPhones,
         favorite:favorite,
         title:'GoPro HERO6 4K Action Camera - Black',
@@ -221,6 +236,7 @@ const WholeData = [
      },
 
      {
+      id:17,
         item:mobile,
         favorite:favorite,
         title:'GoPro HERO6 4K Action Camera - Black',
@@ -233,6 +249,7 @@ const WholeData = [
         type:'electro'
      },
      {
+      id:18,
         item:camera,
         favorite:favorite,
         title:'GoPro HERO6 4K Action Camera - Black',
@@ -246,6 +263,7 @@ const WholeData = [
      },
   
      {
+      id:19,
         item:mobile3,
         favorite:favorite,
         title:'GoPro HERO6 4K Action Camera - Black',
@@ -258,6 +276,7 @@ const WholeData = [
         type:'electro'
      },
      {
+      id:20,
         item:sourceHeadphones,
         favorite:favorite,
         title:'GoPro HERO6 4K Action Camera - Black',
@@ -270,6 +289,7 @@ const WholeData = [
         type:'electro'
      },
      {
+      id:21,
       item:camera,
       favorite:favorite,
       title:'GoPro HERO6 4K Action Camera - Black',
@@ -282,6 +302,7 @@ const WholeData = [
       type:'electro'
    },
    {
+      id:22,
       item:sourceMobile2,
       favorite:favorite,
       title:'Canon Cmera EOS 2000, Black 10x zoom',
@@ -294,6 +315,7 @@ const WholeData = [
       type:'electro'
    },
    {
+      id:23,
       item:leptop,
       favorite:favorite,
       title:'GoPro HERO6 4K Action Camera - Black',

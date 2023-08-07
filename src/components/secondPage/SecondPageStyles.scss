@@ -451,3 +451,11 @@
         font-family: "bold";
     }
 }
+
+
+@media(max-width:1024px){
+    .category-list-wrapper{
+        display: none;
+    }
+}
+
