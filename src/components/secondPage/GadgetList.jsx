@@ -6,10 +6,8 @@ import left from "../../assets/chevron-left.svg";
 import { FaStar } from "react-icons/fa";
 import useHeartIconClick from "../hook/saveFavorite";
 
-
 const GadgetList = () => {
-  const {  handleHeartIconClick } = useHeartIconClick();
- 
+  const { handleHeartIconClick } = useHeartIconClick();
 
   const getRandomItems = (arr, count) => {
     const shuffled = arr.sort(() => Math.random() - 0.5);
@@ -32,8 +30,6 @@ const GadgetList = () => {
     );
   };
 
- 
-
   return (
     <>
       {randomElectroData.map((item, id) => (
@@ -44,17 +40,24 @@ const GadgetList = () => {
           <div className="gadget-info">
             <div className="gadget-title">
               <p>{item.title}</p>
-             <img onClick={() => handleHeartIconClick(item)} src={item.favorite} alt="heart-icon" />    
+              <img
+                onClick={() => handleHeartIconClick(item)}
+                src={item.favorite}
+                alt="heart-icon"
+              />
             </div>
             <div className="gadget-price">
               <span className="price">{item.price}</span>
               <span className="sale">{item.sale}</span>
             </div>
             <div className="gadget-shipping">
-              <div>  {[...Array(5)].map((_, id) => (
-                <FaStar key={id} className="item-rating-star" />
-              ))}</div>
-            
+              <div>
+                {" "}
+                {[...Array(5)].map((_, id) => (
+                  <FaStar key={id} className="item-rating-star" />
+                ))}
+              </div>
+
               <p className="rate">7.5</p>
               <span></span>
               <p className="orders">{item.orders}</p>

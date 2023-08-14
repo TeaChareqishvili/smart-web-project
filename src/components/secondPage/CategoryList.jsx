@@ -33,7 +33,7 @@ const CategoryList = ({ selectedItems, handleItemClick }) => {
         </div>
         {listCheckBox.map((item, id) => (
           <div key={id} className="checkbox">
-            <input type="checkbox" />
+            <input type="checkbox"  onClick={() => handleItemClick(item)} />
             <label  onClick={() => handleItemClick(item)}>{item.title}</label>
           </div>
         ))}
@@ -45,7 +45,7 @@ const CategoryList = ({ selectedItems, handleItemClick }) => {
         </div>
         {featureList.map((item, id) => (
           <div key={id} className="checkbox">
-            <input type="checkbox" />
+            <input type="checkbox"  onClick={() => handleItemClick(item)} />
             <label  onClick={() => handleItemClick(item)}>{item.title}</label>
           </div>
         ))}
@@ -61,7 +61,7 @@ const CategoryList = ({ selectedItems, handleItemClick }) => {
         </div>
         {conditionLits.map((item,id)=>(
              <div key={id} className="checkbox">
-             <input type="radio" name="condition"/>
+             <input type="radio" name="condition"  onClick={() => handleItemClick(item)}/>
              <label  onClick={() => handleItemClick(item)}>{item.title}</label>
            </div>
         ))}

@@ -1,13 +1,19 @@
 import "./ConditionStyle.scss";
 import { related } from "../thirdPagedescription/sliderdata";
 import cart from "../../assets/cart.svg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 
 const SavedLater = ()=>{
+
+
+
     return(
         <div className="related-items-wrapper">
         <h5>Saved for later</h5>
-        <div className="related-items">
+        <Swiper  slidesPerView="auto">
+        <SwiperSlide className="related-items">
           {related.map((item, id) => (
             
             <div key={id} className="related">
@@ -22,9 +28,11 @@ const SavedLater = ()=>{
                 Move to cart
               </button>
             </div>
-          
+       
           ))}
-        </div>
+            
+        </SwiperSlide>
+        </Swiper>
       </div>
     )
 }

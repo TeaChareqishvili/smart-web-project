@@ -13,6 +13,7 @@ import { MenuBar } from "./MenuBar";
 import { NavLink } from "react-router-dom";
 import useHeartIconClick from "../hook/saveFavorite";
 
+
 const Header = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [burgerMenu, setBurgerMenu] = useState(false);
@@ -104,6 +105,8 @@ const Header = () => {
           <input type="text" placeholder="Search" />
           <img src={search} alt="search" />
         </form>
+        <div>
+        </div>
       </div>
       <div className="border"></div>
       {header && <div className="category-wrapper">

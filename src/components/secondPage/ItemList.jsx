@@ -5,6 +5,9 @@ import { GadgetList } from "./GadgetList";
 import { useState } from "react";
 import { GadgetListGrid } from "./GadgetListGrid";
 import { SelectedItems } from "./SelectedItems";
+import sort from "../../assets/sort.svg";
+import filter from "../../assets/filter_alt.svg";
+import { AlsoMayLike } from "./secondPageForHome/AlsoMayLike";
 
 
 const ItemList = ({selectedItems,handleClear,handleRemoveItem}) => {
@@ -14,8 +17,19 @@ const ItemList = ({selectedItems,handleClear,handleRemoveItem}) => {
 
 
   return (
-    <div className="itemList-wrapper">
+    <div className="itemList-wrapper">    
       <div className="select-box">
+        <div className="mobile">
+          <div className="sort">
+             <p>Sort:Newest</p>
+             <img src={sort} alt="sort"/>
+          </div>
+          <div className="filter">
+            <p>Filter (3)</p>
+            <img src={filter} alt="filter"/>
+          </div>
+        </div>
+        <div className="desktop">
         <div>
           <p>12,911 items in Mobile accessory</p>
         </div>
@@ -25,6 +39,9 @@ const ItemList = ({selectedItems,handleClear,handleRemoveItem}) => {
           <select>
             <option>Featured</option>
           </select>
+          </div>
+          </div>
+          <div className="view-icons">
           <img className="view-list" onClick={()=>setView(false)} src={gridview} alt="list" />
           <img className="view-grid" onClick={()=>setView(true)} src={listview} alt="list" />
         </div>
@@ -35,7 +52,7 @@ const ItemList = ({selectedItems,handleClear,handleRemoveItem}) => {
       ) : (
         <GadgetListGrid />
       )}
-    
+       <AlsoMayLike/>
     </div>
   );
 };

@@ -10,6 +10,8 @@
     min-width:340px;
 
 
+    
+
     .gadget-img{
         max-width:184px;
         height:184px;
@@ -30,6 +32,13 @@
 
     .gadget-info{
            margin-left:10px;
+
+           .shipping-mobile{
+               opacity:0;
+                color:#00B517;
+                font-size:16px;
+                font-family:"Inter";
+        }
 
         .gadget-title{
             display:flex;
@@ -205,6 +214,7 @@
         border-radius:4px;       
         padding:9px;  
     }
+   
 }
 
 
@@ -212,7 +222,14 @@
    
     .gadget-info{
 
+         .shipping-mobile{
+            opacity: 1;
+         }
+      
+
         .gadget-title{
+
+          
 
             img{
                 display: none;
@@ -235,15 +252,10 @@
     }
     .shipping{
         display: none;
-    }
-
-   
+    }  
     
-
+         
     .shipping-mobile{
-        display: block;
-        color:#00B517;
-        font-size:16px;
-        font-family:"Inter";
-       }
+        opacity: 1;
+    }
 }

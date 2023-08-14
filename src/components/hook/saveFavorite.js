@@ -27,7 +27,7 @@ const useHeartIconClick = () => {
   };
   const handleClearAll = () => {
     setChosenItems([]);
-    localStorage.removeItem('chosenItems'); // Remove the 'chosenItems' key from local storage
+    localStorage.removeItem('chosenItems'); 
   };
 
 
