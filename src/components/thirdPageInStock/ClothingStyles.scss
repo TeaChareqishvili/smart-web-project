@@ -1,5 +1,5 @@
 .inStock-wrapper{
-  
+    width:100%;
     margin:20px auto 20px;
     background-color: #ffffff;
     border:solid 1px #DEE2E7;
@@ -9,6 +9,7 @@
     .content{
         display: grid;
         grid-template-columns: 2fr 3fr 1.5fr;
+        gap:10px;
 
         .clothing-img{
           
@@ -64,7 +65,7 @@
 
 
 .shirt-content-wrapper{
-    max-width: 430px;
+    padding-right:40px;
     width:100%;
     margin-left:22px;
     margin-bottom:44px;
@@ -236,4 +237,49 @@
             }
         }
       }
+}
+
+@media(max-width:1072px){
+
+  .inStock-wrapper{
+
+    .content{
+      grid-template-columns: 100%;
+
+
+      .clothing-img{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;   
+      }
+     
+    }
+  }
+
+  .shirt-content-wrapper{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media(max-width:768px){
+  .inStock-wrapper{
+
+    .content{
+      .clothing-img{
+        display: none;
+       }
+
+       .in-stock{
+        display: none;
+       }
+    }
+
+  
+  }
 }

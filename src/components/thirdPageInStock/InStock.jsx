@@ -9,6 +9,7 @@ import shirt6 from "../../assets/image40.jpeg";
 import { useState } from "react";
 import { Content } from "./Content";
 import {SendInquiry} from "./SendInquiry";
+import { ForMobileInstock } from "./ForMobileInstock";
 
 
 const InStock = () => {
@@ -20,6 +21,7 @@ const InStock = () => {
 
   return (
     <div className="inStock-wrapper">
+      <ForMobileInstock/>
       <div className="content">
         <div className="clothing-img">
           <div className="main-shirt">
