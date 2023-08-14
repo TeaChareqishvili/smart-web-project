@@ -34,7 +34,7 @@
            margin-left:10px;
 
            .shipping-mobile{
-               opacity:0;
+                display: none;
                 color:#00B517;
                 font-size:16px;
                 font-family:"Inter";
@@ -132,9 +132,7 @@
 
             }
 
-            .shipping-mobile{
-                display: none;
-            }
+         
 
         }
     }
@@ -219,43 +217,68 @@
 
 
 @media(max-width:768px){
-   
-    .gadget-info{
 
-         .shipping-mobile{
-            opacity: 1;
-         }
+    .gadget-wrapper{
       
+        .gadget-info{
 
-        .gadget-title{
-
-          
-
-            img{
-                display: none;
+            .shipping-mobile{
+             display: block;
             }
-        }
-
-        .gadget-price{
-
-            .sale{
-                display: none;
-            }
-        }
-    }
-
-    .description{
-        display:none;
-    }
-    .details{
-        display: none;
-    }
-    .shipping{
-        display: none;
-    }  
-    
+     
+             .gadget-title{
+     
+               
+     
+                 img{
+                     display: none;
+                 }
+             }
+     
+             .gadget-price{
+     
+                 .sale{
+                     display: none;
+                 }
+             }
+         }
+     
+         .description{
+             display:none;
+         }
+         .details{
+             display: none;
+         }
+         .shipping{
+             display: none;
+         }  
          
-    .shipping-mobile{
-        opacity: 1;
+    }  
+}
+
+@media(max-width:450px){
+    .gadget-wrapper{
+      
+        .gadget-info{
+            margin-left:0;
+          
+            .gadget-title{
+                p{
+                    font-size:13px;
+                }    
+            }
+            .gadget-price{
+                .price{
+                  font-size:16px;
+                }
+
+            }
+            .gadget-shipping{
+                .orders{
+                    font-size: 13px;
+                }
+            }
+        }
+      
     }
 }
