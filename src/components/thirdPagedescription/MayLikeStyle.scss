@@ -5,9 +5,7 @@
     padding:20px 22px 41px 16px;
     border:1px solid #DEE2E7;
     border-radius:6px;
-    // max-height:553px;
-    // height:100%;
-    // overflow: hidden;
+  
     
 
 h6{
@@ -68,4 +66,10 @@ h6{
 
     }
 
+}
+
+@media(max-width:768px){
+    .may-like-slider{
+        display: none;
+    }
 }

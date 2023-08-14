@@ -1,11 +1,14 @@
 import "./RelatedItemsStyle.scss";
 import { related } from "../thirdPagedescription/sliderdata";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const RelatedItems = () => {
   return (
-    <div className="related-items-wrapper">
+    <div className="related-items-wrapper" >
       <h5>Related products</h5>
-      <div className="related-items">
+      <Swiper slidesPerView="auto" >
+      <SwiperSlide className="related-items">
         {related.map((item, id) => (
           <div key={id} className="related">
             <div>
@@ -16,7 +19,8 @@ const RelatedItems = () => {
             <span>{item.price}</span>
           </div>
         ))}
-      </div>
+      </SwiperSlide>
+      </Swiper>
     </div>
   );
 };

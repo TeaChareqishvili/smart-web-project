@@ -2,6 +2,7 @@
     margin-top:20px;
     position: relative;
     max-height:120px;
+    width:100%;
 
     .right-side{
         max-width:1180px;
@@ -61,4 +62,18 @@
     }
 
  
+}
+
+@media(max-width:768px){
+    .discount-wrapper{
+        .left-side{
+            p{
+                font-size:13px;
+            }
+
+            h3{
+                font-size:18px;
+            }
+        }
+    }
 }
