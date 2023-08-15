@@ -5,17 +5,17 @@ import { NavLink } from "react-router-dom";
 
 const MyCart = () => {
   const { chosenItems, handleRemoveItem, handleClearAll } = useHeartIconClick();
- 
+
   const handleRemoveButtonClick = (itemId) => {
-    handleRemoveItem(itemId); 
+    handleRemoveItem(itemId);
   };
-  
+
   const handleRemoveAllButtonClick = () => {
     handleClearAll();
   };
 
   return (
-    <div>
+    <div className="my-cart">
       <div className="chosenItemsNumber">
         <h3>My cart ({chosenItems.length})</h3>
       </div>
@@ -34,25 +34,36 @@ const MyCart = () => {
                   </p>
                   <span>Seller: Artel Market</span>
                   <div>
-                    <button onClick={() => handleRemoveButtonClick(item.id)}>Remove</button>
+                    <button onClick={() => handleRemoveButtonClick(item.id)}>
+                      Remove
+                    </button>
                     <button>Save for later</button>
                   </div>
                 </div>
                 <div className="cart-price">
-                  <p>{item.price}</p>
-                  <input type="number" className="cart" placeholder="Pcs 1" />
+                  <div>
+                    <p>{item.price}</p>
+                  </div>
+                  <div>
+                    <input type="number" className="cart" placeholder="Pcs 1" />
+                  </div>
                 </div>
               </div>
               <div className="cart-border"></div>
             </>
           ))}
-          <div className="cart-btn">
-        <NavLink to="/second">
-          <button className="back">
-            <img src={back} alt="back" /> Back to Shop
+        <div className="cart-btn">
+          <NavLink to="/second">
+            <button className="back">
+              <img src={back} alt="back" /> Back to Shop
+            </button>
+          </NavLink>
+          <button
+            onClick={() => handleRemoveAllButtonClick()}
+            className="remove"
+          >
+            Remove all
           </button>
-        </NavLink>
-        <button onClick={()=>handleRemoveAllButtonClick()} className="remove">Remove all</button>
         </div>
       </div>
     </div>

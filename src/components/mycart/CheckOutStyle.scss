@@ -171,3 +171,24 @@
 
 }
 
+@media(max-width:1024px){
+    .main-checkout-wrapper{  
+       max-width:none;
+       width:98.5%;
+       margin-right:6px;
+     
+         .checkout-wrapper{
+
+            button{
+                max-width:none
+            }
+
+            .pay-icons{
+                display: none;
+            }
+         }
+        .coupon{
+            display: none;
+}
+    }
+}

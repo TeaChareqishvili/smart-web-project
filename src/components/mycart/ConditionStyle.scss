@@ -140,3 +140,12 @@
 .move:Hover{
     font-family: "bold";
 }
+
+
+@media(max-width:1024px){
+    .condition-wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
