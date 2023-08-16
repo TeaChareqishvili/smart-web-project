@@ -7,18 +7,12 @@ import mixer from "../../assets/mixer.png";
 import plant from "../../assets/plants.png";
 import dish from "../../assets/3.png";
 import chair2 from "../../assets/armchair.png";
-
 import coffesMaker from "../../assets/coffemaker.png";
-
-
 import sourceHeadphones from "../../assets/wholedataheadphones.png";
-
  import sourceMobile from "../../assets/wholedatamobileblack.png";
  import sourceMobile2 from "../../assets/wholedataredmobile.png";
-
  import mobile3 from "../../assets/mobile3.png";
  import mobile1 from "../../assets/wholedatamobile.png";
-
 import camera from "../../assets/camera.png";
  import headPhones from "../../assets/headphones.png";
  import leptop from "../../assets/leptop.png";
