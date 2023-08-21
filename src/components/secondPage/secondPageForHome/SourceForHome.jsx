@@ -10,7 +10,7 @@ import sort from "../../../assets/sort.svg";
 import filter from "../../../assets/filter_alt.svg";
 
 
-const SourceForHome = ({selectedItems,handleClear,handleRemoveItem})=>{
+const SourceForHome = ({selectedItems,handleClear,handleRemoveItem, handleHeartIconClick})=>{
 
     const [view, setView] = useState(true)
 
@@ -45,7 +45,7 @@ const SourceForHome = ({selectedItems,handleClear,handleRemoveItem})=>{
         </div>
       </div>
       <SelectedItems selectedItems={selectedItems} handleClear={handleClear} handleRemoveItem={handleRemoveItem}/>
-     {view ? (  <HomeListView />) : <HomeGridView/>}
+     {view ? (  <HomeListView  handleHeartIconClick={handleHeartIconClick} />) : <HomeGridView  handleHeartIconClick={handleHeartIconClick}/>}
       
      <AlsoMayLike/>
     

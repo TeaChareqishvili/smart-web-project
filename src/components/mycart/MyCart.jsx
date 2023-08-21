@@ -1,10 +1,10 @@
-import useHeartIconClick from "../hook/saveFavorite";
+// import useHeartIconClick from "../hook/saveFavorite";
 import "./CartPageStyle.scss";
 import back from "../../assets/arrow_back.svg";
 import { NavLink } from "react-router-dom";
 
-const MyCart = () => {
-  const { chosenItems, handleRemoveItem, handleClearAll } = useHeartIconClick();
+const MyCart = ({chosenItems, handleClearAll, handleRemoveItem}) => {
+  // const { chosenItems, handleRemoveItem, handleClearAll } = useHeartIconClick();
 
   const handleRemoveButtonClick = (itemId) => {
     handleRemoveItem(itemId);

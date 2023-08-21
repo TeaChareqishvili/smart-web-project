@@ -122,3 +122,27 @@
         }
     }
 }
+
+
+@media(max-width:768px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-gap:10px;
+        margin-right:5px;
+
+    }
+
+}
+
+@media(max-width:515px){
+    .grid{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-wrap: wrap;
+
+       .item-wrapper{
+        max-width:none;
+       }
+    }
+}

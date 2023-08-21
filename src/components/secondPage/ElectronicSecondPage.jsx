@@ -6,7 +6,7 @@ import { Navigation } from "./Navigation";
 import { useState } from "react";
 
 
-const ElectronicSecondPage = () => {
+const ElectronicSecondPage = ({handleHeartIconClick}) => {
 
   const [selectedItems, setSelectedItems] = useState([]);
 
@@ -36,7 +36,7 @@ const handleRemoveItem =(itemId)=>{
             <Navigation/>
           <div className="main-content">
           <CategoryList selectedItems={selectedItems} handleItemClick={handleItemClick} />
-            <ItemList  selectedItems={selectedItems} handleClear={handleClear} handleRemoveItem={handleRemoveItem}/>
+            <ItemList  selectedItems={selectedItems} handleClear={handleClear} handleRemoveItem={handleRemoveItem} handleHeartIconClick={handleHeartIconClick}/>
           </div>
         </div>
       </div>

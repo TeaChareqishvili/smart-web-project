@@ -5,7 +5,7 @@ import { Subscribe } from "../../subscribe/Subscribe";
 import { SourceForHome } from "./SourceForHome";
 import { Navigation } from "../Navigation";
 
-const HomeSourceItems = ()=>{
+const HomeSourceItems = ( {handleHeartIconClick})=>{
 
 
   const [selectedItems, setSelectedItems] = useState([]);
@@ -36,7 +36,7 @@ const handleRemoveItem =(itemId)=>{
         <Navigation/>
           <div className="main-content">
             <CategoryList selectedItems={selectedItems} handleItemClick={handleItemClick} />
-           <SourceForHome  selectedItems={selectedItems} handleClear={handleClear} handleRemoveItem={handleRemoveItem}/>
+           <SourceForHome  selectedItems={selectedItems} handleClear={handleClear} handleRemoveItem={handleRemoveItem}  handleHeartIconClick={handleHeartIconClick}/>
           </div>
         </div>
       </div>

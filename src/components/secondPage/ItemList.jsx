@@ -10,7 +10,7 @@ import filter from "../../assets/filter_alt.svg";
 import { AlsoMayLike } from "./secondPageForHome/AlsoMayLike";
 
 
-const ItemList = ({selectedItems,handleClear,handleRemoveItem}) => {
+const ItemList = ({selectedItems,handleClear,handleRemoveItem,handleHeartIconClick}) => {
 
   const [view, setView] = useState(true)
 
@@ -48,9 +48,9 @@ const ItemList = ({selectedItems,handleClear,handleRemoveItem}) => {
       </div>
       <SelectedItems selectedItems={selectedItems} handleClear={handleClear} handleRemoveItem={handleRemoveItem}/>
       {view ? (
-        <GadgetList />
+        <GadgetList handleHeartIconClick={handleHeartIconClick} />
       ) : (
-        <GadgetListGrid />
+        <GadgetListGrid  handleHeartIconClick={handleHeartIconClick} />
       )}
        <AlsoMayLike/>
     </div>

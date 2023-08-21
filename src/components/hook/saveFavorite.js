@@ -6,10 +6,6 @@ const useHeartIconClick = () => {
     return storedChosenItems ? JSON.parse(storedChosenItems) : [];
   });
 
-  useEffect(() => {
-    localStorage.setItem('chosenItems', JSON.stringify(chosenItems));
-  }, [chosenItems]);
-
   const handleHeartIconClick = (item) => {
     if (!chosenItems.some((selectedItem) => selectedItem.id === item.id)) {
       setChosenItems((prevSelectedItems) => [...prevSelectedItems, item]);
@@ -22,21 +18,18 @@ const useHeartIconClick = () => {
     );
     const updatedItems = chosenItems.filter((item) => item.id !== itemId);
     localStorage.setItem('chosenItems', JSON.stringify(updatedItems));
-
-   
   };
+
   const handleClearAll = () => {
     setChosenItems([]);
-    localStorage.removeItem('chosenItems'); 
+    localStorage.removeItem('chosenItems');
   };
 
+  useEffect(() => {
+    localStorage.setItem('chosenItems', JSON.stringify(chosenItems));
+  }, [chosenItems]);
 
   return { chosenItems, handleHeartIconClick, handleRemoveItem, handleClearAll };
 };
 
 export default useHeartIconClick;
-
-
-
-
-

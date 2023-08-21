@@ -4,10 +4,10 @@ import { useState } from "react";
 import right from "../../assets/chevron-right.png";
 import left from "../../assets/chevron-left.svg";
 import { FaStar } from "react-icons/fa";
-import useHeartIconClick from "../hook/saveFavorite";
 
-const GadgetListGrid = () => {
-  const { handleHeartIconClick } = useHeartIconClick();
+
+const GadgetListGrid = ( {handleHeartIconClick}) => {
+
 
   const getRandomItems = (arr, count) => {
     const shuffled = arr.sort(() => Math.random() - 0.5);
