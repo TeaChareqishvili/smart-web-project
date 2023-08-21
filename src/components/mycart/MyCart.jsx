@@ -1,11 +1,8 @@
-// import useHeartIconClick from "../hook/saveFavorite";
 import "./CartPageStyle.scss";
 import back from "../../assets/arrow_back.svg";
 import { NavLink } from "react-router-dom";
 
-const MyCart = ({chosenItems, handleClearAll, handleRemoveItem}) => {
-  // const { chosenItems, handleRemoveItem, handleClearAll } = useHeartIconClick();
-
+const MyCart = ({ chosenItems, handleClearAll, handleRemoveItem }) => {
   const handleRemoveButtonClick = (itemId) => {
     handleRemoveItem(itemId);
   };
@@ -13,7 +10,7 @@ const MyCart = ({chosenItems, handleClearAll, handleRemoveItem}) => {
   const handleRemoveAllButtonClick = () => {
     handleClearAll();
   };
-
+console.log(chosenItems, "items")
   return (
     <div className="my-cart">
       <div className="chosenItemsNumber">
@@ -42,7 +39,7 @@ const MyCart = ({chosenItems, handleClearAll, handleRemoveItem}) => {
                 </div>
                 <div className="cart-price">
                   <div>
-                    <p>{item.price}</p>
+                    <p>${item.price}.00</p>
                   </div>
                   <div>
                     <input type="number" className="cart" placeholder="Pcs 1" />

@@ -4,14 +4,24 @@ import bank from "../../assets/Logo.svg";
 import P from "../../assets/Logo1.svg";
 import visa from "../../assets/Logo2.svg";
 import pay from "../../assets/image 21.png";
-import useHeartIconClick from "../hook/saveFavorite";
 
-const CheckOut = () => {
 
-  const { chosenItems } = useHeartIconClick();
+const CheckOut = ({chosenItems}) => {
+
+  
   if (chosenItems.length === 0) {
     return null;
+
   }
+  const totalPrice = chosenItems.reduce((total, item) => total + item.price, 0);
+
+  console.log(totalPrice,'total')
+  const discount = totalPrice -  60.00;
+  const total = discount + 14.00;
+
+
+
+
 
   return (
     <div className="main-checkout-wrapper">
@@ -26,20 +36,20 @@ const CheckOut = () => {
       <div className="coupon-checkout">
         <div>
           <p>Subtotal:</p>
-          <p>Discoun:t</p>
+          <p>Discount:</p>
           <p>Tax:</p>
         </div>
         <div>
-          <span className="grey">$1403.97</span>
-          <span className="red">-$60.00</span>
-          <span className="green">+$14.00</span>
+          <span className="grey">${totalPrice.toFixed(2)}</span>
+          <span className="red">- $60.00</span>
+          <span className="green">+ $14.00</span>
         </div>
       </div>
       <div className="border"></div>
       <div className="checkout">
         <div>
           <h6>Total:</h6>
-          <h4>$1357.97</h4>
+          <h4>${total}</h4>
         </div>
         <button>Checkout</button>
       </div>

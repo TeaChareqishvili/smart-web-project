@@ -47,7 +47,7 @@ const GadgetList = ({handleHeartIconClick}) => {
               />
             </div>
             <div className="gadget-price">
-              <span className="price">{item.price}</span>
+              <span className="price">${item.price}.00</span>
               <span className="sale">{item.sale}</span>
             </div>
             <div className="gadget-shipping">

@@ -11,7 +11,7 @@ const CartPage = ({chosenItems, handleClearAll, handleRemoveItem}) => {
       <div className="my-cart-wrapper">
         <div className="cart-content">
           <MyCart chosenItems={chosenItems} handleClearAll={handleClearAll} handleRemoveItem={handleRemoveItem} />
-          <CheckOut />
+          <CheckOut  chosenItems={chosenItems} />
         </div>
        <Conditions/>
        <SavedLater/>

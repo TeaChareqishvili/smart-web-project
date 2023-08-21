@@ -41,7 +41,7 @@ const HomeGridView = ({handleHeartIconClick}) => {
             <div className="about-item-main">
               <div className="about-item">
                 <div className="grid-price">
-                  <p>{item.price}</p>
+                  <p>${item.price}.00</p>
                   <span>{item.sale}</span>
                 </div>
                 <div className="grid-rate">
