@@ -4,10 +4,12 @@ import { electroinics } from "./SourceData";
 import arrowRight from "../../assets/arrow_forward.svg";
 import { mobileElectronic } from "./SourceData";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "swiper/css";
 
 const ElectorinicsSource = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="home-offer-wrapper">
       <div className="main-img">
@@ -21,7 +23,8 @@ const ElectorinicsSource = () => {
       </div>
 
       {electroinics.map((item, id) => (
-        <div key={id} className="home-items">
+        
+        <div key={id} className="home-items"  onClick={() => navigate('/second')}>
           <div className="about-item">
             <p className="item-title">{item.title}</p>
             <p className="item-price">
@@ -38,7 +41,7 @@ const ElectorinicsSource = () => {
         <h5>Consumer electronics</h5>
         <Swiper slidesPerView="auto" className="mobile-slide">
           {mobileElectronic.map((item, id) => (
-            <SwiperSlide key={id} className="mobile-item">
+            <SwiperSlide key={id} className="mobile-item"  onClick={() => navigate('/second')}>
               <img src={item.image} alt="furniture" />
               <p className="title">{item.title}</p>
               <p className="price">from {item.price}</p>

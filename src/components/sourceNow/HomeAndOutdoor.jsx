@@ -3,12 +3,14 @@ import home from "../../assets/home.png";
 import { homeItems } from "./SourceData";
 import arrowRight from "../../assets/arrow_forward.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "swiper/css";
 
 const HomeAndOutdoor = () => {
-  return (
-   
+
+  const navigate = useNavigate();
+
+  return ( 
     <div className="home-offer-wrapper">
       <div className="main-img">
         <img src={home} alt="home" />
@@ -16,12 +18,11 @@ const HomeAndOutdoor = () => {
           <h4>Home and outdoor</h4>
           <NavLink to="/HomeSourceItems">
           <button>Source now</button>
-          </NavLink>
-        
+          </NavLink>     
         </div>
       </div>
       {homeItems.map((item,id) => (
-        <div key={id} className="home-items">
+        <div key={id} className="home-items"  onClick={() => navigate('/HomeSourceItems')}>      
           <div className="about-item">
             <p className="item-title">{item.title}</p>
             <p className="item-price">from <br/>{item.price}</p>
@@ -35,7 +36,7 @@ const HomeAndOutdoor = () => {
        <h5>Home and outdoor</h5>
        <Swiper  slidesPerView="auto" className="mobile-slide">
         {homeItems.map((item,id)=>(
-          <SwiperSlide key={id} className='mobile-item'>
+          <SwiperSlide key={id} className='mobile-item' onClick={() => navigate('/HomeSourceItems')}>
           <img src={item.image} alt="furniture"/>
           <p className="title">{item.title}</p>
           <p className="price">from {item.price}</p>

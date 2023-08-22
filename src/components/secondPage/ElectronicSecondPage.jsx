@@ -35,7 +35,7 @@ const handleRemoveItem =(itemId)=>{
         <div className="content-wrapper">
             <Navigation/>
           <div className="main-content">
-          <CategoryList selectedItems={selectedItems} handleItemClick={handleItemClick} />
+          <CategoryList selectedItems={selectedItems} handleItemClick={handleItemClick}  />
             <ItemList  selectedItems={selectedItems} handleClear={handleClear} handleRemoveItem={handleRemoveItem} handleHeartIconClick={handleHeartIconClick}/>
           </div>
         </div>
