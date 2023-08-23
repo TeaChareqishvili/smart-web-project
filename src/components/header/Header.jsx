@@ -13,16 +13,10 @@ import { MenuBar } from "./MenuBar";
 import { NavLink } from "react-router-dom";
 // import { DropDown } from "./DropDown";
 
-
-const Header = ({chosenItems}) => {
-
-
-
+const Header = ({ chosenItems }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [burgerMenu, setBurgerMenu] = useState(false);
-  const [header, setHeader] = useState(true)
-
-  
+  const [header, setHeader] = useState(true);
 
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
@@ -46,15 +40,13 @@ const Header = ({chosenItems}) => {
     };
   }, []);
 
-
-
   return (
     <>
       <div className="header-wrapper">
         <div className="logo">
           <img ref={menuRef} className="mobile-menu" src={menu} alt="menu" />
           <NavLink to="smart-web-project">
-            <img src={brandimg} alt="brand" onClick={()=>setHeader(true)} />
+            <img src={brandimg} alt="brand" onClick={() => setHeader(true)} />
           </NavLink>
         </div>
         {burgerMenu && <MenuBar setBurgerMenu={setBurgerMenu} />}
@@ -85,9 +77,16 @@ const Header = ({chosenItems}) => {
           {icons.map((item, id) => (
             <div key={id} className="desktop-icons">
               {item.title === "My cart" ? (
-                <NavLink to="/cart">      
-                  <img src={item.icon} alt="icon" onClick={()=>setHeader(false)} />
-                  <p onClick={()=>setHeader(false)}>{item.title}<span className="number">({chosenItems.length})</span></p>
+                <NavLink to="/cart">
+                  <img
+                    src={item.icon}
+                    alt="icon"
+                    onClick={() => setHeader(false)}
+                  />
+                  <p onClick={() => setHeader(false)}>
+                    {item.title}
+                    <span className="number">({chosenItems.length})</span>
+                  </p>
                 </NavLink>
               ) : (
                 <>
@@ -100,8 +99,13 @@ const Header = ({chosenItems}) => {
         </div>
 
         <div className="mobile-icons">
-          <img src={card} alt="card" />
+          <NavLink to="/cart">
+            {" "}
+            <img src={card} alt="card" />{" "}
+          </NavLink>
+
           <img src={person} alt="person" />
+          <span className="mobile-number">({chosenItems.length})</span>
         </div>
       </div>
       <div className="mobile-form">
@@ -109,35 +113,36 @@ const Header = ({chosenItems}) => {
           <input type="text" placeholder="Search" />
           <img src={search} alt="search" />
         </form>
-        <div>
-        </div>
+        <div></div>
       </div>
       <div className="border"></div>
-      {header && <div className="category-wrapper">
-        <div className="categories">
-          <img src={menu} alt="menu" />
-          {categories.map((item, id) => (
-            <div className="category" key={id}>
-              <ul>
-                <li>{item.title}</li>
-              </ul>
+      {header && (
+        <div className="category-wrapper">
+          <div className="categories">
+            <img src={menu} alt="menu" />
+            {categories.map((item, id) => (
+              <div className="category" key={id}>
+                <ul>
+                  <li>{item.title}</li>
+                </ul>
+              </div>
+            ))}
+            <img src={expand} alt="expand-more" />
+          </div>
+          <div className="countries">
+            <div>
+              <p>English, USD</p>
+              <img src={expand} alt="expand-more" />
             </div>
-          ))}
-          <img src={expand} alt="expand-more" />
-        </div>
-        <div className="countries">
-          <div>
-            <p>English, USD</p>
-            <img src={expand} alt="expand-more" />
-          </div>
-          <div>
-            <p>Ship to</p>
-            <img className="flag" src={flag} alt="flag" />
-            {/* <DropDown/> */}
-            <img src={expand} alt="expand-more" />
+            <div>
+              <p>Ship to</p>
+              <img className="flag" src={flag} alt="flag" />
+              {/* <DropDown/> */}
+              <img src={expand} alt="expand-more" />
+            </div>
           </div>
         </div>
-      </div>}
+      )}
       <div className="border"></div>
     </>
   );
