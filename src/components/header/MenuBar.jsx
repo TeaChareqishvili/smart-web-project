@@ -3,35 +3,42 @@ import avatar from "../../assets/Avatar.png";
 import clear from "../../assets/clear.png";
 import { userMenu, userMenuAdd } from "./HeaderData";
 import { useRef, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const MenuBar = ({ setBurgerMenu }) => {
   const divRef = useRef(null);
   const imgRef = useRef(null);
+  const menuRef = useRef(null);
   const wrapperRef = useRef(null);
 
   useEffect(() => {
     const close = (e) => {
-      if (divRef.current && imgRef.current && wrapperRef.current) {
+      if (
+        divRef.current &&
+        imgRef.current &&
+        wrapperRef.current &&
+        menuRef.current
+      ) {
         if (
           divRef.current.contains(e.target) &&
           !wrapperRef.current.contains(e.target)
         ) {
           setBurgerMenu(false);
-          console.log("nia");
         }
-        if (imgRef.current.contains(e.target)) {
+        if (imgRef.current.contains(e.target) || menuRef.current.contains(e.target)) {
           setBurgerMenu(false);
-          console.log("nia2");
         }
       }
     };
-
+  
     document.addEventListener("click", close);
-
+  
     return () => {
       document.removeEventListener("click", close);
     };
   }, [setBurgerMenu]);
+
+  
   return (
     <div className="burger-bar-wrapper" ref={divRef}>
       <div className="menu-wrapper" ref={wrapperRef}>
@@ -44,15 +51,33 @@ const MenuBar = ({ setBurgerMenu }) => {
             <img ref={imgRef} src={clear} alt="clear" />
           </div>
         </div>
-        <div className="menu-list">
+        <div className="menu-list" ref={menuRef}>
           {userMenu.map((item, id) => (
             <div key={id} className="list">
               <img src={item.icon} alt="icon" />
-              <p>{item.title}</p>
+              {item.id === 1 ? (
+                <NavLink to="/smart-web-project">
+                  <p>{item.title}</p>
+                </NavLink>
+              ) : item.id === 2 ? (
+                <NavLink to="/second">
+                  <p>{item.title}</p>
+                </NavLink>
+              ) : item.id === 3 ? (
+                <NavLink to="/cart">
+                  {" "}
+                  <p>{item.title}</p>
+                </NavLink>
+              ) : (
+                <NavLink to="/clothing">
+                  {" "}
+                  <p>{item.title}</p>
+                </NavLink>
+              )}
             </div>
           ))}
-          <div className="border-menu"></div>
         </div>
+
         <div className="menu-list">
           {userMenuAdd.map((item, id) => (
             <div key={id} className="list">

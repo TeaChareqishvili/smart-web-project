@@ -59,19 +59,23 @@ export {categories}
 
 
 const userMenu = [
-    {
+    {   
+        id:1,
         icon:home,
         title:'Home'
     },
     {
+        id:2,
         icon:list,
         title:"Categories"
     },
-    {
+    {  
+        id:3,
         icon:heart,
         title:'Favorites'
     },
     {
+        id:4,
         icon:order,
         title:"My orders"
     }

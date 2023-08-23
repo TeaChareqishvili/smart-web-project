@@ -11,7 +11,6 @@ import person from "../../assets/person-mobile.svg";
 import search from "../../assets/mobilesearch.svg";
 import { MenuBar } from "./MenuBar";
 import { NavLink } from "react-router-dom";
-// import useHeartIconClick from "../hook/saveFavorite";
 // import { DropDown } from "./DropDown";
 
 
@@ -23,7 +22,7 @@ const Header = ({chosenItems}) => {
   const [burgerMenu, setBurgerMenu] = useState(false);
   const [header, setHeader] = useState(true)
 
-  // const { chosenItems} = useHeartIconClick();
+  
 
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
@@ -47,10 +46,7 @@ const Header = ({chosenItems}) => {
     };
   }, []);
 
-  useEffect(()=>{
-    console.log(chosenItems, "items")
 
-  },[chosenItems]);
 
   return (
     <>
