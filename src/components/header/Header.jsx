@@ -11,25 +11,21 @@ import person from "../../assets/person-mobile.svg";
 import search from "../../assets/mobilesearch.svg";
 import { MenuBar } from "./MenuBar";
 import { NavLink } from "react-router-dom";
-// import { DropDown } from "./DropDown";
+import { select } from "./HeaderData";
 
-const Header = ({ chosenItems }) => {
-  const [selectedCategory, setSelectedCategory] = useState("");
+const Header = ({ chosenItems, setOpen, open }) => {
   const [burgerMenu, setBurgerMenu] = useState(false);
   const [header, setHeader] = useState(true);
 
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
-  };
-
   const menuRef = useRef(null);
+  const searchRef = useRef(null);
+  const navigationRef = useRef(null);
 
   useEffect(() => {
     const handleMenu = (e) => {
       if (menuRef.current) {
         if (menuRef.current.contains(e.target)) {
           setBurgerMenu(true);
-          console.log("nia");
         }
       }
     };
@@ -39,6 +35,27 @@ const Header = ({ chosenItems }) => {
       document.removeEventListener("click", handleMenu);
     };
   }, []);
+
+  useEffect(() => {
+    const handleSearch = (e) => {
+      if (searchRef.current) {
+        if (searchRef.current.contains(e.target)) {
+          setOpen(true);
+          console.log('truee')
+        }
+      }
+      if (navigationRef.current) {
+        if (navigationRef.current.contains(e.target)) {
+          setOpen(false);
+        }
+      }
+    };
+    document.addEventListener("click", handleSearch);
+
+    return () => {
+      document.removeEventListener("click", handleSearch);
+    };
+  }, [setOpen]);
 
   return (
     <>
@@ -51,28 +68,25 @@ const Header = ({ chosenItems }) => {
         </div>
         {burgerMenu && <MenuBar setBurgerMenu={setBurgerMenu} />}
         <form>
-          <div className="input-wrapper">
-            <input
-              type="text"
-              placeholder="Search"
-              value={selectedCategory}
-              onChange={(event) => setSelectedCategory(event.target.value)}
-            />
-
-            <select value={selectedCategory} onChange={handleCategoryChange}>
-              <option value="all category">All category</option>
-              <option value="Automobiles">Automobiles</option>
-              <option value="Clothes and wear">Clothes and wear</option>
-              <option value="Computer and tech">Computer and tech</option>
-              <option value="Tools, equipments">Tools, equipments</option>
-              <option value="Sports and outdoor">Sports and outdoor</option>
-              <option value="Animal and pets">Animal and pets</option>
-              <option value="Machinery tools">Machinery tools</option>
-              <option value="Machinery tools">Machinery tools</option>
-            </select>
-            <button>Search</button>
+          <input className="input" type="text" placeholder="Search" />
+          <div className="search-category" ref={searchRef}>
+            <p> All category</p>
+            <img src={expand} alt="expand" />
           </div>
+          <button className="search-button">Search</button>
+          {open && (
+            <div className="select-search" ref={navigationRef}>
+              {select.map((item, id) => (
+                <div key={id}>
+                  <ul>
+                    <li>{item.title}</li>
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
         </form>
+
         <div className="icons">
           {icons.map((item, id) => (
             <div key={id} className="desktop-icons">
@@ -100,8 +114,7 @@ const Header = ({ chosenItems }) => {
 
         <div className="mobile-icons">
           <NavLink to="/cart">
-            {" "}
-            <img src={card} alt="card" />{" "}
+            <img src={card} alt="card" />
           </NavLink>
 
           <img src={person} alt="person" />

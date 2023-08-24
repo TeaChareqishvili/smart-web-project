@@ -4,9 +4,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index:2;
     position:absolute;
-    top:20%;
-    right:10%;
+     top:30%;
+     right:40%;
     background-color: #8B96A5;
     padding:20px;
     border:1px solid #007bff;
@@ -15,6 +16,7 @@
     .country-menu{
       display: flex;
       align-items: flex-start;
+      z-index: 2;
     }
   }
   
@@ -23,6 +25,7 @@
     width: 20px;
     height: 20px;
     margin-right: 10px;
+    z-index: 2;
   }
   
 

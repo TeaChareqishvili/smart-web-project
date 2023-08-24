@@ -102,3 +102,36 @@ export {userMenuAdd}
 
 
 
+const select = [
+    {
+        title:"Automobiles",
+    },
+
+    {
+        title:"Clothes and wear",
+    },
+    {
+        title:"Home interiros",
+
+    },
+    {
+        title:"Computer and tech",
+    },
+    {
+        title:"Tools, equipments",
+    },
+    {
+        title:"Sports and outdoors",
+    },
+    {
+        title:"Animal and pets",
+    },
+    {
+        title:"Macinery tools",
+    },
+    {
+        title:"More category"
+    }
+]
+
+export{select}

@@ -7,14 +7,35 @@ import { HomeSourceItems } from "./components/secondPage/secondPageForHome/HomeS
 import { Clothing } from "./components/thirdPageMain/Clothing";
 import { CartPage } from "./components/mycart/CartPage";
 import useHeartIconClick from "./components/hook/saveFavorite";
+import { useEffect, useRef,useState} from "react";
 
 function App() {
+
+  const [open, setOpen] = useState(false);
+
+  const appRef = useRef(null)
+  
+  useEffect(() => {
+    const handleMenu = (e) => {
+      if (appRef.current) {
+        if (appRef.current.contains(e.target)) {
+          setOpen(false);
+        
+        }
+      }
+    };
+    document.addEventListener("click", handleMenu);
+
+    return () => {
+      document.removeEventListener("click", handleMenu);
+    };
+  }, [setOpen]);
 
   const { chosenItems, handleHeartIconClick, handleRemoveItem, handleClearAll } = useHeartIconClick();
 
   return (
-    <div className="App">
-      <Header  chosenItems={chosenItems}/>
+    <div className="App" ref={appRef}>
+      <Header  chosenItems={chosenItems} setOpen={setOpen} open={open}/>
       <Routes>
         <Route exact path="/smart-web-project" element={<FirstPage />} />
         <Route path="/second" element={<ElectronicSecondPage handleHeartIconClick={handleHeartIconClick}/>} />
