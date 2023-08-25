@@ -104,32 +104,41 @@ export {userMenuAdd}
 
 const select = [
     {
-        title:"Automobiles",
+        id:1,
+        title:"main",
     },
 
     {
+        id:2,
         title:"Clothes and wear",
     },
     {
+        id:3,
         title:"Home interiros",
 
     },
     {
+        id:4,
         title:"Computer and tech",
     },
     {
+        id:5,
         title:"Tools, equipments",
     },
     {
+        id:6,
         title:"Sports and outdoors",
     },
     {
+        id:7,
         title:"Animal and pets",
     },
     {
+        id:8,
         title:"Macinery tools",
     },
     {
+        id:9,
         title:"More category"
     }
 ]

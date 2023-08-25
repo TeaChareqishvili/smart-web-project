@@ -41,7 +41,7 @@ const Header = ({ chosenItems, setOpen, open }) => {
       if (searchRef.current) {
         if (searchRef.current.contains(e.target)) {
           setOpen(true);
-          console.log('truee')
+          console.log("truee");
         }
       }
       if (navigationRef.current) {
@@ -79,7 +79,28 @@ const Header = ({ chosenItems, setOpen, open }) => {
               {select.map((item, id) => (
                 <div key={id}>
                   <ul>
-                    <li>{item.title}</li>
+                    {item.title === "Clothes and wear" ? (
+                      <NavLink to="/clothing">
+                        {" "}
+                        <li>{item.title}</li>
+                      </NavLink>
+                    ) : item.title === "Home interiros" ? (
+                      <NavLink to="/HomeSourceItems">
+                        <li>{item.title}</li>
+                      </NavLink>
+                    ) : item.title === "Computer and tech" ? (
+                      <NavLink to="/second">
+                        <li>{item.title}</li>
+                      </NavLink>
+                    ) : (
+                      (item.title = "main" ? (
+                        <NavLink to="/smart-web-project">
+                          <li>{item.title}</li>
+                        </NavLink>
+                      ) : (
+                        <li>{item.title}</li>
+                      ))
+                    )}
                   </ul>
                 </div>
               ))}
