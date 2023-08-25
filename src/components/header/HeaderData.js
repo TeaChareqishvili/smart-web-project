@@ -12,6 +12,49 @@ import language from "../../assets/language.svg";
 import headset from "../../assets/headset_mic.svg";
 import about from "../../assets/business.svg";
 
+
+import china from "../../assets/china.png";
+import denmark from "../../assets/Denmark.png";
+import australia from "../../assets/australia.png";
+import france from "../../assets/france.png";
+import Usa from "../../assets/USA.png";
+import italy from "../../assets/italy.png";
+import britain from "../../assets/britain.png";
+
+
+const listFlag =[
+    {
+        id:1,
+        image:china,
+    },
+    {
+        id:2,
+        image:denmark,
+    },
+    {
+        id:3,
+        image:australia,
+    },
+    {
+        id:4,
+        image:france,
+    },
+    {
+        id:5,
+        image:Usa,
+    },
+    {
+        id:6,
+        image:britain,
+    },
+    {
+        id:7,
+        image:italy,
+    },
+]
+
+export {listFlag};
+
 const icons = [
     {
         icon:personIcon,

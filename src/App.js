@@ -12,7 +12,7 @@ import { useEffect, useRef,useState} from "react";
 function App() {
 
   const [open, setOpen] = useState(false);
-
+  const [flags, setFlags] = useState(false)
   const appRef = useRef(null)
   
   useEffect(() => {
@@ -20,7 +20,7 @@ function App() {
       if (appRef.current) {
         if (appRef.current.contains(e.target)) {
           setOpen(false);
-        
+          setFlags(false)
         }
       }
     };
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App" ref={appRef}>
-      <Header  chosenItems={chosenItems} setOpen={setOpen} open={open}/>
+      <Header  chosenItems={chosenItems} setOpen={setOpen} open={open} flags={flags} setFlags={setFlags}/>
       <Routes>
         <Route exact path="/smart-web-project" element={<FirstPage />} />
         <Route path="/second" element={<ElectronicSecondPage handleHeartIconClick={handleHeartIconClick}/>} />

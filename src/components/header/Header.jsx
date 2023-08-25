@@ -1,25 +1,29 @@
 import "./HeaderStyles.scss";
 import brandimg from "../../assets/logo-colored.svg";
-import { icons } from "./HeaderData";
+import {  icons} from "./HeaderData";
 import { useState, useRef, useEffect } from "react";
 import { categories } from "./HeaderData";
 import menu from "../../assets/menu.svg";
 import expand from "../../assets/expand_more.png";
-import flag from "../../assets/flag.png";
+// import flag from "../../assets/flag.png";
 import card from "../../assets/shopping_cart.svg";
 import person from "../../assets/person-mobile.svg";
 import search from "../../assets/mobilesearch.svg";
 import { MenuBar } from "./MenuBar";
 import { NavLink } from "react-router-dom";
 import { select } from "./HeaderData";
+import { DropDownList } from "./DropDownList";
 
-const Header = ({ chosenItems, setOpen, open }) => {
+
+const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
   const [burgerMenu, setBurgerMenu] = useState(false);
   const [header, setHeader] = useState(true);
+ 
 
   const menuRef = useRef(null);
   const searchRef = useRef(null);
   const navigationRef = useRef(null);
+
 
   useEffect(() => {
     const handleMenu = (e) => {
@@ -41,7 +45,8 @@ const Header = ({ chosenItems, setOpen, open }) => {
       if (searchRef.current) {
         if (searchRef.current.contains(e.target)) {
           setOpen(true);
-          console.log("truee");
+          console.log('headerr')
+         
         }
       }
       if (navigationRef.current) {
@@ -107,7 +112,6 @@ const Header = ({ chosenItems, setOpen, open }) => {
             </div>
           )}
         </form>
-
         <div className="icons">
           {icons.map((item, id) => (
             <div key={id} className="desktop-icons">
@@ -137,7 +141,6 @@ const Header = ({ chosenItems, setOpen, open }) => {
           <NavLink to="/cart">
             <img src={card} alt="card" />
           </NavLink>
-
           <img src={person} alt="person" />
           <span className="mobile-number">({chosenItems.length})</span>
         </div>
@@ -168,12 +171,7 @@ const Header = ({ chosenItems, setOpen, open }) => {
               <p>English, USD</p>
               <img src={expand} alt="expand-more" />
             </div>
-            <div>
-              <p>Ship to</p>
-              <img className="flag" src={flag} alt="flag" />
-              {/* <DropDown/> */}
-              <img src={expand} alt="expand-more" />
-            </div>
+            <DropDownList flags={flags} setFlags={setFlags}/>
           </div>
         </div>
       )}
