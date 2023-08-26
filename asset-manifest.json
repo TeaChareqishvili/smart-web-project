@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/smart-web-project/static/css/main.a048cf62.css",
-    "main.js": "/smart-web-project/static/js/main.93394865.js",
+    "main.css": "/smart-web-project/static/css/main.703fd96a.css",
+    "main.js": "/smart-web-project/static/js/main.d486a7e0.js",
     "static/media/supply.png": "/smart-web-project/static/media/supply.fc1550002da88531459d.png",
     "static/media/Inter-Bold.ttf": "/smart-web-project/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
     "static/media/Inter-Light.ttf": "/smart-web-project/static/media/Inter-Light.eec8664621fec98efb37.ttf",
@@ -88,11 +88,11 @@
     "static/media/sort.svg": "/smart-web-project/static/media/sort.f8fc1e08ac6b79fa5909a2fd6c2e249b.svg",
     "static/media/listview.svg": "/smart-web-project/static/media/listview.f8c3952853f0e3a8c6418476e093ebf6.svg",
     "static/media/menu.svg": "/smart-web-project/static/media/menu.019cae188ce8acde22dfc85b46979776.svg",
-    "main.a048cf62.css.map": "/smart-web-project/static/css/main.a048cf62.css.map",
-    "main.93394865.js.map": "/smart-web-project/static/js/main.93394865.js.map"
+    "main.703fd96a.css.map": "/smart-web-project/static/css/main.703fd96a.css.map",
+    "main.d486a7e0.js.map": "/smart-web-project/static/js/main.d486a7e0.js.map"
   },
   "entrypoints": [
-    "static/css/main.a048cf62.css",
-    "static/js/main.93394865.js"
+    "static/css/main.703fd96a.css",
+    "static/js/main.d486a7e0.js"
   ]
 }
