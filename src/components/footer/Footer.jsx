@@ -6,31 +6,39 @@ import apple from "../../assets/apple.svg";
 import Usa from "../../assets/USA.png";
 import German from "../../assets/flag.png";
 import expandUp from "../../assets/expand_less.svg";
-import expandDown from "../../assets/expand_more.png";
 import { useState, useRef, useEffect } from "react";
 
 const Footer = () => {
   const [arrowUp, setArrowUp] = useState(true);
-  const [arrowDown, setArrowDown] = useState(false);
-
   const [language, setLanguage] = useState("english");
-
+  const [chooseLanguage, setChooseLanguage] = useState(false);
 
   const arrowUpRef = useRef(null);
-  const arrowDownRef = useRef(null);
+  const englishRef = useRef(null);
+  const germanRef = useRef(null);
 
   useEffect(() => {
     const click = (e) => {
-      if (arrowUpRef.current && arrowDownRef) {
-        if (arrowUpRef.current.contains(e.target)) console.log("cool");
-        setArrowUp(false);
-        setArrowDown(true);
-        setLanguage("german");
-      } else if (arrowDownRef.current.contains(e.target)) {
-        console.log("nia");
-        setArrowDown(false);
-        setArrowUp(true);
-        setLanguage("english");
+      if (arrowUpRef.current) {
+        if (arrowUpRef.current.contains(e.target)) {
+          setChooseLanguage(true);
+        } else if (!arrowUpRef.current.contains(e.target)) {
+          setChooseLanguage(false);
+        }
+      }
+      if (englishRef.current) {
+        if (englishRef.current.contains(e.target)) {
+          setChooseLanguage(false);
+          setLanguage("english");
+          setArrowUp(true);
+        }
+      }
+      if (germanRef.current) {
+        if (germanRef.current.contains(e.target)) {
+          setChooseLanguage(false);
+          setLanguage("german");
+          setArrowUp(false);
+        }
       }
     };
 
@@ -39,7 +47,7 @@ const Footer = () => {
     return () => {
       document.removeEventListener("click", click);
     };
-  }, []);
+  }, [setChooseLanguage]);
 
   const getLocalizedFooterInfo = () => {
     if (language === "english") {
@@ -49,7 +57,6 @@ const Footer = () => {
     }
   };
 
- 
   const footerInfo = getLocalizedFooterInfo();
 
   return (
@@ -57,7 +64,7 @@ const Footer = () => {
       <div className="footer-wrapper">
         <div className="media">
           <img src={brandLogo} alt="logo" />
-          {language==='english' ? (
+          {language === "english" ? (
             <p>
               Best information about the company gies here but now lorem ipsum
               is
@@ -92,14 +99,13 @@ const Footer = () => {
         <div className="get-app">
           <p>Gett app</p>
           <div className="app-icons">
-          <div>
-            <img src={apple} alt="apple-icon" />
+            <div>
+              <img src={apple} alt="apple-icon" />
+            </div>
+            <div>
+              <img src={google} alt="google-icon" />
+            </div>
           </div>
-          <div>
-            <img src={google} alt="google-icon" />
-          </div>
-          </div>
-         
         </div>
       </div>
       <div className="ecommerce-wrapper">
@@ -113,20 +119,21 @@ const Footer = () => {
             ) : (
               <img src={German} alt="flag" />
             )}
-
             {arrowUp ? <p>English</p> : <p>German</p>}
             <div>
-              {arrowUp && (
-                <div ref={arrowUpRef}>
-                  <img src={expandUp} alt="arrow" />
-                </div>
-              )}
-              {arrowDown && (
-                <div ref={arrowDownRef}>
-                  <img src={expandDown} alt="arrow" />
-                </div>
-              )}
+              <div ref={arrowUpRef}>
+                <img src={expandUp} alt="arrow" />
+              </div>
             </div>
+
+            {chooseLanguage && (
+              <div className="language-list">
+                <ul>
+                  <li ref={englishRef}>English</li>
+                  <li ref={germanRef}>German</li>
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>

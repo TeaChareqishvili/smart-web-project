@@ -21,6 +21,7 @@ function App() {
         if (appRef.current.contains(e.target)) {
           setOpen(false);
           setFlags(false)
+         
         }
       }
     };
@@ -43,7 +44,7 @@ function App() {
         <Route path="/clothing" element={<Clothing />} />
         <Route path="/cart" element={<CartPage  chosenItems={chosenItems} handleClearAll={handleClearAll} handleRemoveItem={handleRemoveItem} />} />
       </Routes>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
