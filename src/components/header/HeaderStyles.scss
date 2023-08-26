@@ -2,12 +2,12 @@
 .header-wrapper{
     display:flex;
     justify-content:space-between;
-   margin:auto;
-   align-items: center;
-   padding:22px 0 24px 0;
+    margin:auto;
+    align-items: center;
+    padding:22px 0 24px 0;
     width:82%;
     z-index:2;
-   position: relative;
+    position: relative;
    
 .mobile-menu{
     display:none;
@@ -381,9 +381,7 @@
       
 
       form {
-        .input-wrapper {
-          display: none;
-        }
+       display: none;
       }
       .icons{
         display: none;
