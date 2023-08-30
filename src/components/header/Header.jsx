@@ -124,8 +124,8 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
                   />
                   <p onClick={() => setHeader(false)}>
                     {item.title}
-                    <span className="number">({chosenItems.length})</span>
                   </p>
+                  <span className="number">({chosenItems.length})</span>
                 </NavLink>
               ) : (
                 <>

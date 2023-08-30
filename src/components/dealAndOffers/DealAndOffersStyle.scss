@@ -77,8 +77,9 @@
     .slide-wrapper{
         display:flex;
         align-items: center;
-         margin-left:63px;
+        margin-left:63px;
         z-index:0;
+        overflow: hidden;
        
       
         .tech{
