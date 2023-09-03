@@ -118,5 +118,26 @@
 @media(max-width:768px){
     .description-wrapper{
       margin:auto;
+
+      .nav-bar{
+
+        li{
+            margin-bottom:10px;
+        }
+      }
+
+      .details{
+
+        .model{
+            font-size:11px;
+            font-family:"Inter-bold";
+    
+          }
+    
+          .modelType{
+            font-size:11px;
+            font-family:"Inter-bold";
+          }
+      }
     }
 }

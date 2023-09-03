@@ -244,8 +244,24 @@
          .shipping{
              display: none;
          }  
+
+         .gadget-img{
+    
+
+            img{
+             transition: none;
+       
+            }
+            img:hover{
+                transform: scale(1);
+                transition: 0.5s;
+               
+            }
+        }
          
     }  
+
+ 
 }
 
 @media(max-width:450px){
