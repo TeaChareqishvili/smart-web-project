@@ -1,40 +1,33 @@
 import flag from "../../assets/flag.png";
 import expand from "../../assets/expand_more.png";
 import { listFlag } from "./HeaderData";
-import { useRef, useEffect, useState } from "react";
+import { useState } from "react";
 import "./HeaderStyles.scss";
 
 const DropDownList = ({ flags, setFlags }) => {
-  const flagRef = useRef(null);
-
   const [selectedFlag, setSelectedFlag] = useState(null);
 
   const handleFlagClick = (flagImage) => {
     setSelectedFlag(flagImage);
-    setFlags(false); 
+    setFlags(false);
   };
 
-  useEffect(() => {
-    const handleMenu = (e) => {
-      if (flagRef.current) {
-        if (flagRef.current.contains(e.target)) {
-          setFlags(true);
-          console.log('hhh')
-        }
-      }
-    };
-    document.addEventListener("click", handleMenu);
-
-    return () => {
-      document.removeEventListener("click", handleMenu);
-    };
-  }, [setFlags]);
+  const openMenu = () => {
+    setFlags(!flags);
+  };
 
   return (
     <div className="dropDown">
       <p>Ship to</p>
-      <img className="flag"  src={selectedFlag || flag} alt="flag" />
-      <img src={expand} alt="expand-more" ref={flagRef} />
+      <img className="flag" src={selectedFlag || flag} alt="flag" />
+      <img
+        src={expand}
+        alt="expand-more"
+        onClick={(e) => {
+          e.stopPropagation();
+          openMenu();
+        }}
+      />
       {flags && (
         <div className="list">
           {listFlag.map((item, id) => (

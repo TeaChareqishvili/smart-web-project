@@ -7,35 +7,21 @@ import { HomeSourceItems } from "./components/secondPage/secondPageForHome/HomeS
 import { Clothing } from "./components/thirdPageMain/Clothing";
 import { CartPage } from "./components/mycart/CartPage";
 import useHeartIconClick from "./components/hook/saveFavorite";
-import { useEffect, useRef,useState} from "react";
+import {useState} from "react";
 
 function App() {
 
   const [open, setOpen] = useState(false);
   const [flags, setFlags] = useState(false)
-  const appRef = useRef(null)
-  
-  useEffect(() => {
-    const handleMenu = (e) => {
-      if (appRef.current) {
-        if (appRef.current.contains(e.target)) {
-          setOpen(false);
-          setFlags(false)
-         
-        }
-      }
-    };
-    document.addEventListener("click", handleMenu);
 
-    return () => {
-      document.removeEventListener("click", handleMenu);
-    };
-  }, [setOpen]);
+   const { chosenItems, handleHeartIconClick, handleRemoveItem, handleClearAll } = useHeartIconClick();
 
-  const { chosenItems, handleHeartIconClick, handleRemoveItem, handleClearAll } = useHeartIconClick();
-
+   const searchHandling = ()=>{
+    setOpen(false);
+    setFlags(false);
+   }
   return (
-    <div className="App" ref={appRef}>
+    <div className="App" onClick={()=>searchHandling()}>
       <Header  chosenItems={chosenItems} setOpen={setOpen} open={open} flags={flags} setFlags={setFlags}/>
       <Routes>
         <Route exact path="/smart-web-project" element={<FirstPage />} />

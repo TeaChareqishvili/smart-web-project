@@ -1,11 +1,10 @@
 import "./HeaderStyles.scss";
 import brandimg from "../../assets/logo-colored.svg";
-import {  icons} from "./HeaderData";
+import { icons } from "./HeaderData";
 import { useState, useRef, useEffect } from "react";
 import { categories } from "./HeaderData";
 import menu from "../../assets/menu.svg";
 import expand from "../../assets/expand_more.png";
-// import flag from "../../assets/flag.png";
 import card from "../../assets/shopping_cart.svg";
 import person from "../../assets/person-mobile.svg";
 import search from "../../assets/mobilesearch.svg";
@@ -14,16 +13,12 @@ import { NavLink } from "react-router-dom";
 import { select } from "./HeaderData";
 import { DropDownList } from "./DropDownList";
 
-
 const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
   const [burgerMenu, setBurgerMenu] = useState(false);
   const [header, setHeader] = useState(true);
- 
 
   const menuRef = useRef(null);
-  const searchRef = useRef(null);
   const navigationRef = useRef(null);
-
 
   useEffect(() => {
     const handleMenu = (e) => {
@@ -42,13 +37,6 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
 
   useEffect(() => {
     const handleSearch = (e) => {
-      if (searchRef.current) {
-        if (searchRef.current.contains(e.target)) {
-          setOpen(true);
-          console.log('headerr')
-         
-        }
-      }
       if (navigationRef.current) {
         if (navigationRef.current.contains(e.target)) {
           setOpen(false);
@@ -62,6 +50,10 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
     };
   }, [setOpen]);
 
+  const openCategory = () => {
+    setOpen(!open);
+  };
+
   return (
     <>
       <div className="header-wrapper">
@@ -74,7 +66,13 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
         {burgerMenu && <MenuBar setBurgerMenu={setBurgerMenu} />}
         <form>
           <input className="input" type="text" placeholder="Search" />
-          <div className="search-category" ref={searchRef}>
+          <div
+            className="search-category"
+            onClick={(e) => {
+              e.stopPropagation();
+              openCategory();
+            }}
+          >
             <p> All category</p>
             <img src={expand} alt="expand" />
           </div>
@@ -122,9 +120,7 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
                     alt="icon"
                     onClick={() => setHeader(false)}
                   />
-                  <p onClick={() => setHeader(false)}>
-                    {item.title}
-                  </p>
+                  <p onClick={() => setHeader(false)}>{item.title}</p>
                   <span className="number">({chosenItems.length})</span>
                 </NavLink>
               ) : (
@@ -171,7 +167,7 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
               <p>English, USD</p>
               <img src={expand} alt="expand-more" />
             </div>
-            <DropDownList flags={flags} setFlags={setFlags}/>
+            <DropDownList flags={flags} setFlags={setFlags} />
           </div>
         </div>
       )}
