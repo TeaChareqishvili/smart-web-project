@@ -137,12 +137,19 @@
         }
 
         .number{
-            color:#FA3434;
-            font-family: "bold";
+            color:#ffffff;
+            background-color: #ca1615;
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            font-family: "Inter";
             position: absolute;
             top:-5px;
             right:-5px;
             font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     
         a{
@@ -405,9 +412,17 @@
             position: absolute;
             top:0;
             right:35%;
-            color:red;
+            color:#ffffff;
+            background-color: #ca1615;
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            font-family: "Inter";
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 16px;
-            font-family: "bold";
+           
         }
       }
     }

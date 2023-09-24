@@ -121,7 +121,7 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
                     onClick={() => setHeader(false)}
                   />
                   <p onClick={() => setHeader(false)}>{item.title}</p>
-                  <span className="number">({chosenItems.length})</span>
+                  <span className="number">{chosenItems.length}</span>
                 </NavLink>
               ) : (
                 <>
@@ -138,7 +138,7 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
             <img src={card} alt="card" />
           </NavLink>
           <img src={person} alt="person" />
-          <span className="mobile-number">({chosenItems.length})</span>
+          <span className="mobile-number">{chosenItems.length}</span>
         </div>
       </div>
       <div className="mobile-form">
