@@ -1,8 +1,29 @@
 import "./CartPageStyle.scss";
 import back from "../../assets/arrow_back.svg";
 import { NavLink } from "react-router-dom";
+import { Select } from "./Select";
+import { useState } from "react";
 
-const MyCart = ({ chosenItems, handleClearAll, handleRemoveItem }) => {
+
+const MyCart = ({
+  chosenItems,
+  handleClearAll,
+  handleRemoveItem,
+ 
+}) => {
+  const [selected, setSelected] = useState(chosenItems);
+
+  const handleSelected = (item) => {
+    
+    const updatedSelected = [...selected];
+    const index = updatedSelected.findIndex((selectedItem) => selectedItem.id === item.id);
+    if (index !== -1) {
+      updatedSelected[index].quantity = item.quantity;
+    }
+    setSelected(updatedSelected);
+   
+  };
+
   const handleRemoveButtonClick = (itemId) => {
     handleRemoveItem(itemId);
   };
@@ -10,7 +31,8 @@ const MyCart = ({ chosenItems, handleClearAll, handleRemoveItem }) => {
   const handleRemoveAllButtonClick = () => {
     handleClearAll();
   };
-console.log(chosenItems, "items")
+
+
   return (
     <div className="my-cart">
       <div className="chosenItemsNumber">
@@ -18,9 +40,9 @@ console.log(chosenItems, "items")
       </div>
       <div className="cart-wrapper">
         {chosenItems &&
-          chosenItems.map((item) => (
-            <>
-              <div key={item.id} className="cart-grid-wrapper">
+          chosenItems.map((item, id) => (
+            <div key={id}>
+              <div className="cart-grid-wrapper">
                 <div className="cart-img">
                   <img src={item.item} alt="img" />
                 </div>
@@ -39,15 +61,20 @@ console.log(chosenItems, "items")
                 </div>
                 <div className="cart-price">
                   <div>
-                    <p>${item.price}.00</p>
+                    <p>
+                      $
+                      {(
+                        item.price * (item.quantity ? item.quantity : 1)
+                      ).toFixed(2)}
+                    </p>
                   </div>
                   <div>
-                    <input type="number" className="cart" placeholder="Pcs 1" />
+                    <Select item={item} chosenItems={chosenItems}  handleSelected={handleSelected}/>
                   </div>
                 </div>
               </div>
               <div className="cart-border"></div>
-            </>
+            </div>
           ))}
         <div className="cart-btn">
           <NavLink to="/second">
