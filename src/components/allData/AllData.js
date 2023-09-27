@@ -1,23 +1,23 @@
-import blender from "../../assets/blender.png";
-import chair from "../../assets/chair.png";
-import dishes from "../../assets/dishes.png";
-import homeAppliance from "../../assets/homeappliance.png";
-import lamp from "../../assets/lamp.png";
-import mixer from "../../assets/mixer.png";
-import plant from "../../assets/plants.png";
-import dish from "../../assets/3.png";
+import blender from "../../assets/blender.WebP";
+import chair from "../../assets/chair.WebP";
+import dishes from "../../assets/dishes.WebP";
+import homeAppliance from "../../assets/homeappliance.WebP";
+import lamp from "../../assets/lamp.WebP";
+import mixer from "../../assets/mixer.WebP";
+import plant from "../../assets/plants.WebP";
+import dish from "../../assets/3.WebP";
 import chair2 from "../../assets/armchair.png";
-import coffesMaker from "../../assets/coffemaker.png";
+import coffesMaker from "../../assets/coffemaker.WebP";
 import sourceHeadphones from "../../assets/wholedataheadphones.png";
  import sourceMobile from "../../assets/wholedatamobileblack.png";
  import sourceMobile2 from "../../assets/wholedataredmobile.png";
- import mobile3 from "../../assets/mobile3.png";
+ import mobile3 from "../../assets/mobile3.WebP";
  import mobile1 from "../../assets/wholedatamobile.png";
-import camera from "../../assets/camera.png";
- import headPhones from "../../assets/headphones.png";
- import leptop from "../../assets/leptop.png";
- import mobile from "../../assets/mobile.png";
- import watch from "../../assets/watch.png";
+import camera from "../../assets/camera.WebP";
+ import headPhones from "../../assets/headphones.WebP";
+ import leptop from "../../assets/leptop.WebP";
+ import mobile from "../../assets/mobile.WebP";
+ import watch from "../../assets/watch.WebP";
 
 import favorite from "../../assets/favorite_border.png";
 

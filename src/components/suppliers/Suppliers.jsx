@@ -1,5 +1,5 @@
 import "../suppliers/SuppliersStyle.scss";
-import supply from "../../assets/supply.png";
+import supply from "../../assets/supply.WebP";
 
 
 const Suppliers = () => {

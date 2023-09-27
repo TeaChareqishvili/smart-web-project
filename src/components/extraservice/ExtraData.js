@@ -1,7 +1,7 @@
-import extraimg from "../../assets/image333.png";
-import extraimg2 from "../../assets/image 106.png";
-import extraimg3 from "../../assets/image 107.png";
-import extraimg4 from "../../assets/image 108.png";
+import extraimg from "../../assets/image333.WebP";
+import extraimg2 from "../../assets/image 106.WebP";
+import extraimg3 from "../../assets/image 107.WebP";
+import extraimg4 from "../../assets/image 108.WebP";
 import search from "../../assets/search.svg";
 import security from "../../assets/security.svg";
 import send from "../../assets/send.svg";

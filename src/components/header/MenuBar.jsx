@@ -1,6 +1,6 @@
 import "./HeaderStyles.scss";
 import avatar from "../../assets/Avatar.png";
-import clear from "../../assets/clear.png";
+import clear from "../../assets/clear.svg";
 import { userMenu, userMenuAdd } from "./HeaderData";
 import { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";

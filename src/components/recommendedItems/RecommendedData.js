@@ -1,14 +1,14 @@
 
-import item from "../../assets/item.png";
-import item1 from "../../assets/item2.png";
-import item3 from "../../assets/item3.png";
-import item4 from "../../assets/item4.png";
-import item5 from "../../assets/item5.png";
-import item7 from "../../assets/item7.png";
-import item8 from "../../assets/item8.png";
-import item9 from "../../assets/item9.png";
-import item10 from "../../assets/item11.png";
-import item11 from '../../assets/item10.png';
+import item from "../../assets/item.WebP";
+import item1 from "../../assets/item2.WebP";
+import item3 from "../../assets/item3.WebP";
+import item4 from "../../assets/item4.WebP";
+import item5 from "../../assets/item5.WebP";
+import item7 from "../../assets/item7.WebP";
+import item8 from "../../assets/item8.WebP";
+import item9 from "../../assets/item9.WebP";
+import item10 from "../../assets/item11.WebP";
+import item11 from '../../assets/item10.WebP';
 
 const items = [
    {

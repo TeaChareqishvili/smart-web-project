@@ -1,6 +1,6 @@
 import "./BannerStyle.scss";
 import { list } from "./BannerData";
-import banner from "../../assets/banner.png";
+import banner from "../../assets/banner.WebP";
 import user from "../../assets/user-avatar.png";
 import { useState } from "react";
 import { JoinPopUp } from "./popup/JoinPopUp";

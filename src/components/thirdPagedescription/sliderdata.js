@@ -1,15 +1,15 @@
-import suit from "../../assets/image 30.png";
-import greenShirt from "../../assets/shirt.png";
-import coat from "../../assets/2 1.png";
-import blueShirt from "../../assets/image 25.png";
-import wallet from "../../assets/24.png";
-import bag from "../../assets/image 26.png";
+import suit from "../../assets/image 30.WebP";
+import greenShirt from "../../assets/shirt.WebP";
+import coat from "../../assets/2 1.WebP";
+import blueShirt from "../../assets/image 25.WebP";
+import wallet from "../../assets/24.WebP";
+import bag from "../../assets/image 26.WebP";
 // import trousers from "../../assets/27.png";
-import leptop from "../../assets/leptop.png";
-import watch from "../../assets/watch.png";
-import headPhones from "../../assets/headphones.png";
-import coffesMaker from "../../assets/10.png";
-import chair from "../../assets/7.png";
+import leptop from "../../assets/leptop.WebP";
+import watch from "../../assets/watch.WebP";
+import headPhones from "../../assets/headphones.WebP";
+import coffesMaker from "../../assets/10.WebP";
+import chair from "../../assets/7.WebP";
 
 const slider = [
   {

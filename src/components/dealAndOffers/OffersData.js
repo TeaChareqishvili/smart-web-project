@@ -1,9 +1,9 @@
 
-import camera from "../../assets/camera.png";
-import headPhones from "../../assets/headphones.png";
-import leptop from "../../assets/leptop.png";
-import mobile from "../../assets/mobile.png";
-import watch from "../../assets/watch.png";
+import camera from "../../assets/camera.WebP";
+import headPhones from "../../assets/headphones.WebP";
+import leptop from "../../assets/leptop.WebP";
+import mobile from "../../assets/mobile.WebP";
+import watch from "../../assets/watch.WebP";
 
 
 
