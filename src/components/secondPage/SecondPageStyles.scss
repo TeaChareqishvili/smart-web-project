@@ -133,6 +133,7 @@
             border: 2px solid #BDBDBD;
             border-radius: 6px;
             position: relative;
+             margin-right:10px;
           }
           
           input[type="checkbox"]::before {
@@ -143,7 +144,6 @@
             transform: translate(-50%, -50%);
             width: 14px;
             height: 14px;
-          
             background-color: transparent;
           }
           
@@ -158,13 +158,42 @@
         label{
             color:#1C1C1C;
             font-family: "Inter";
-            font-size:16px;
-            margin-left:10px;
+            font-size:16px;  
             cursor: pointer;
+            display: flex;
+            align-items: center;
+           
         }
         label:hover{
             color:#0D6EFD;
         }
+        input[type="radio"]{
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            -o-appearance: none;
+            border: 2px solid #BDBDBD;
+            position: relative;
+             margin-right:10px;
+             border-radius:50%;
+          }
+          input[type="radio"]::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 14px;
+            height: 14px;  
+            background-color: transparent;
+          }
+          input[type="radio"]:checked::before{
+            background-color: #0D6EFD;
+            border-radius: 50%;
+          }
     
     }
 }
@@ -197,7 +226,6 @@
         transform: translate(-50%, -50%);
         width: 14px;
         height: 14px;
-      
         background-color: transparent;
       }
       
@@ -205,7 +233,7 @@
         background-color: #0D6EFD;
         border-radius: 6px;
       }
-      
+  
       
 
     input{

@@ -68,9 +68,8 @@ const CategoryList = ({ handleItemClick }) => {
         </div>
         {brand &&
           listCheckBox.map((item, id) => (
-            <div key={id} className="checkbox">
-              <input type="checkbox" onClick={() => handleItemClick(item)} />
-              <label onClick={() => handleItemClick(item)}>{item.title}</label>
+            <div key={id} className="checkbox">    
+              <label onClick={() => handleItemClick(item)}> <input type="checkbox" onClick={() => handleItemClick(item)} />{item.title} </label>
             </div>
           ))}
         <span>see all</span>
@@ -81,9 +80,8 @@ const CategoryList = ({ handleItemClick }) => {
         </div>
         {feature &&
           featureList.map((item, id) => (
-            <div key={id} className="checkbox">
-              <input type="checkbox" onClick={() => handleItemClick(item)} />
-              <label onClick={() => handleItemClick(item)}>{item.title}</label>
+            <div key={id} className="checkbox">      
+              <label onClick={() => handleItemClick(item)}>  <input type="checkbox" onClick={() => handleItemClick(item)} />{item.title}</label>
             </div>
           ))}
         <span>see all</span>
@@ -99,12 +97,11 @@ const CategoryList = ({ handleItemClick }) => {
         {condition &&
           conditionLits.map((item, id) => (
             <div key={id} className="checkbox">
-              <input
+              <label onClick={() => handleItemClick(item)}>  <input
                 type="radio"
                 name="condition"
                 onClick={() => handleItemClick(item)}
-              />
-              <label onClick={() => handleItemClick(item)}>{item.title}</label>
+              />{item.title}</label>
             </div>
           ))}
         <div className="border-list"></div>
