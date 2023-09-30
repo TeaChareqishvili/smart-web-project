@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/smart-web-project/static/css/main.20c331c4.css",
+    "main.css": "/smart-web-project/static/css/main.36f2e93c.css",
     "main.js": "/smart-web-project/static/js/main.ef8f3198.js",
     "static/media/supply.WebP": "/smart-web-project/static/media/supply.fc1550002da88531459d.WebP",
     "static/media/Inter-Bold.ttf": "/smart-web-project/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
@@ -112,11 +112,11 @@
     "static/media/sort.svg": "/smart-web-project/static/media/sort.f8fc1e08ac6b79fa5909a2fd6c2e249b.svg",
     "static/media/listview.svg": "/smart-web-project/static/media/listview.f8c3952853f0e3a8c6418476e093ebf6.svg",
     "static/media/menu.svg": "/smart-web-project/static/media/menu.019cae188ce8acde22dfc85b46979776.svg",
-    "main.20c331c4.css.map": "/smart-web-project/static/css/main.20c331c4.css.map",
+    "main.36f2e93c.css.map": "/smart-web-project/static/css/main.36f2e93c.css.map",
     "main.ef8f3198.js.map": "/smart-web-project/static/js/main.ef8f3198.js.map"
   },
   "entrypoints": [
-    "static/css/main.20c331c4.css",
+    "static/css/main.36f2e93c.css",
     "static/js/main.ef8f3198.js"
   ]
 }
