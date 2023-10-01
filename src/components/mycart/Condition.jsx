@@ -8,7 +8,7 @@ const Conditions = ()=>{
         <div className="condition-wrapper">
              <div className="conditions">
                 <div>
-                    <img src={lock} alt="icon"/>
+                    <img width="48px" height="48px" src={lock} alt="icon"/>
                 </div>
                 <div>
                     <p>Secure payment</p>
@@ -17,7 +17,7 @@ const Conditions = ()=>{
              </div>
              <div className="conditions">
                 <div>
-                    <img src={messageicon} alt="icon"/>
+                    <img width="48px" height="48px" src={messageicon} alt="icon"/>
                 </div>
                 <div>
                     <p>Customer support</p>
@@ -26,7 +26,7 @@ const Conditions = ()=>{
              </div>
              <div className="conditions">
                 <div>
-                    <img src={delivery} alt="icon"/>
+                    <img  width="48px" height="48px" src={delivery} alt="icon"/>
                 </div>
                 <div>
                     <p>Free delivery</p>

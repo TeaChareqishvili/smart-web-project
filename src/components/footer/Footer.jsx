@@ -63,7 +63,7 @@ const Footer = () => {
     <>
       <div className="footer-wrapper">
         <div className="media">
-          <img src={brandLogo} alt="logo" />
+          <img width="150px" height="46px" src={brandLogo} alt="logo" />
           {language === "english" ? (
             <p>
               Best information about the company gies here but now lorem ipsum
@@ -79,7 +79,7 @@ const Footer = () => {
             {link.map((item, id) => (
               <div key={id} className="icons">
                 <a href={item.link} target="_blank" rel="noreferrer">
-                  <img src={item.icon} alt="media-icon" />
+                  <img width="32px" height="32px" src={item.icon} alt="media-icon" />
                 </a>
               </div>
             ))}
@@ -100,10 +100,10 @@ const Footer = () => {
           <p>Gett app</p>
           <div className="app-icons">
             <div>
-              <img src={apple} alt="apple-icon" />
+              <img width="124px" height="42px" src={apple} alt="apple-icon" />
             </div>
             <div>
-              <img src={google} alt="google-icon" />
+              <img  width="124px" height="42px" src={google} alt="google-icon" />
             </div>
           </div>
         </div>

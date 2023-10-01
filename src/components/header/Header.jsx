@@ -60,7 +60,7 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
         <div className="logo">
           <img ref={menuRef} className="mobile-menu" src={menu} alt="menu" />
           <NavLink to="smart-web-project">
-            <img width="100%" height="auto" src={brandimg} alt="brand" onClick={() => setHeader(true)} />
+            <img width="100%" height="46px" src={brandimg} alt="brand" onClick={() => setHeader(true)} />
           </NavLink>
         </div>
         {burgerMenu && <MenuBar setBurgerMenu={setBurgerMenu} />}
@@ -116,6 +116,7 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
               {item.title === "My cart" ? (
                 <NavLink to="/cart">
                   <img
+                   width="20px" height="19px"
                     src={item.icon}
                     alt="icon"
                     onClick={() => setHeader(false)}
@@ -125,7 +126,7 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
                 </NavLink>
               ) : (
                 <>
-                  <img src={item.icon} alt="icon" />
+                  <img width="20px" height="19px" src={item.icon} alt="icon" />
                   <p>{item.title}</p>
                 </>
               )}
@@ -135,9 +136,9 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
 
         <div className="mobile-icons">
           <NavLink to="/cart">
-            <img src={card} alt="card" />
+            <img width="24px" height="24px" src={card} alt="card" />
           </NavLink>
-          <img src={person} alt="person" />
+          <img width="24px" height="24px" src={person} alt="person" />
           <span className="mobile-number">{chosenItems.length}</span>
         </div>
       </div>

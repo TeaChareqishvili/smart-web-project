@@ -13,13 +13,13 @@ const SavedLater = () => {
           {related.map((item, id) => (
             <div key={id} className="related">
               <div>
-                <img width="100%" height="auto"  src={item.image} alt="item" />
+                <img width="100%" height="146px"  src={item.image} alt="item" />
                 <div className="cover"></div>
               </div>
               <p>{item.title}</p>
               <span>{item.price}</span>
               <button className="move">
-                <img src={cart} alt="cart-icon" />
+                <img width="22px" height="22px" src={cart} alt="cart-icon" />
                 Move to cart
               </button>
             </div>
