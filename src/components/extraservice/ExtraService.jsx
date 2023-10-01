@@ -11,9 +11,9 @@ const ExtraService = ()=>{
            <div className="extra-wrapper">
             {extra.map((item,id)=>(
                 <div key={id} className="extra">
-                <img className="img" src={item.image} alt="img"/>
+                <img width="100%" height="auto"  className="img" src={item.image} alt="img"/>
                 <p>{item.title}</p>
-                <img className="icon" src={item.icon} alt="icon"/>
+                <img  className="icon" src={item.icon} alt="icon"/>
               </div>
             ))}
              

@@ -72,7 +72,7 @@ const DealAndOffers = () => {
       >
         {offers.map((item,id) => (
           <SwiperSlide key={id} className="tech">
-            <img src={item.image} alt="tech" />
+            <img width="100%" height="auto" src={item.image} alt="tech" />
             <p>{item.title}</p>
             <span>{item.price}</span>
           </SwiperSlide>

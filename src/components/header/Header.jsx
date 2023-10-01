@@ -60,7 +60,7 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
         <div className="logo">
           <img ref={menuRef} className="mobile-menu" src={menu} alt="menu" />
           <NavLink to="smart-web-project">
-            <img src={brandimg} alt="brand" onClick={() => setHeader(true)} />
+            <img width="100%" height="auto" src={brandimg} alt="brand" onClick={() => setHeader(true)} />
           </NavLink>
         </div>
         {burgerMenu && <MenuBar setBurgerMenu={setBurgerMenu} />}

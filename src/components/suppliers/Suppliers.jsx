@@ -5,7 +5,7 @@ import supply from "../../assets/supply.WebP";
 const Suppliers = () => {
   return (
     <div className="supply-wrapper">
-      <img src={supply} alt="supply" />
+      <img width="100%" height="auto"  src={supply} alt="supply" />
       <div className="overlay"></div>
       <div className="supply-text">
         <h2>An easy way to send requests to all suppliers</h2>

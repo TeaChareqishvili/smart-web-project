@@ -13,7 +13,7 @@ const ElectorinicsSource = () => {
   return (
     <div className="home-offer-wrapper">
       <div className="main-img">
-        <img src={electronics} alt="home" />
+        <img width="100%" height="auto" src={electronics} alt="home" />
         <div className="home-text">
           <h4>Home and outdoor</h4>
           <NavLink to="/second">
@@ -33,7 +33,7 @@ const ElectorinicsSource = () => {
             </p>
           </div>
           <div className="item-imgs-wrapper">
-            <img className="item-imgs" src={item.image} alt="item" />
+            <img width="100%" height="auto" className="item-imgs" src={item.image} alt="item" />
           </div>
         </div>
       ))}
@@ -42,7 +42,7 @@ const ElectorinicsSource = () => {
         <Swiper slidesPerView="auto" className="mobile-slide">
           {mobileElectronic.map((item, id) => (
             <SwiperSlide key={id} className="mobile-item"  onClick={() => navigate('/second')}>
-              <img src={item.image} alt="furniture" />
+              <img width="100%" height="auto" src={item.image} alt="furniture" />
               <p className="title">{item.title}</p>
               <p className="price">from {item.price}</p>
             </SwiperSlide>
@@ -50,7 +50,7 @@ const ElectorinicsSource = () => {
         </Swiper>
         <div className="source">
           <p>Source now</p>
-          <img src={arrowRight} alt="arrow" />
+          <img  src={arrowRight} alt="arrow" />
         </div>
       </div>
     </div>

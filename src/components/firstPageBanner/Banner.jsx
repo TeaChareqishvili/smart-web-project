@@ -48,7 +48,7 @@ const Banner = () => {
       </Swiper>
       <div className="banner-img">
         <div className="banner">
-          <img src={banner} alt="banner" />
+          <img width="100%" height="auto" src={banner} alt="banner" />
         </div>
         <div className="banner-text">
           <h2>Latest trending</h2>

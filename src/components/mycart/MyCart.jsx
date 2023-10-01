@@ -44,7 +44,7 @@ const MyCart = ({
             <div key={id}>
               <div className="cart-grid-wrapper">
                 <div className="cart-img">
-                  <img src={item.item} alt="img" />
+                  <img  width="100%" height="auto" src={item.item} alt="img" />
                 </div>
                 <div className="cart-description">
                   <p className="cart-title">{item.title}</p>

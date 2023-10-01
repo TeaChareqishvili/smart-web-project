@@ -13,7 +13,7 @@ const SavedLater = () => {
           {related.map((item, id) => (
             <div key={id} className="related">
               <div>
-                <img src={item.image} alt="item" />
+                <img width="100%" height="auto"  src={item.image} alt="item" />
                 <div className="cover"></div>
               </div>
               <p>{item.title}</p>
