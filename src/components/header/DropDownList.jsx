@@ -21,6 +21,8 @@ const DropDownList = ({ flags, setFlags }) => {
       <p>Ship to</p>
       <img className="flag" src={selectedFlag || flag} alt="flag" />
       <img
+        width="24px"
+        height="24px"
         src={expand}
         alt="expand-more"
         onClick={(e) => {
@@ -33,7 +35,7 @@ const DropDownList = ({ flags, setFlags }) => {
           {listFlag.map((item, id) => (
             <ul key={id}>
               <li onClick={() => handleFlagClick(item.image)}>
-                <img src={item.image} alt="flag" />
+                <img width="22px" height="16px" src={item.image} alt="flag" />
               </li>
             </ul>
           ))}

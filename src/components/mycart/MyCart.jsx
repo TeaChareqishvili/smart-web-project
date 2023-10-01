@@ -79,7 +79,7 @@ const MyCart = ({
         <div className="cart-btn">
           <NavLink to="/second">
             <button className="back">
-              <img src={back} alt="back" /> Back to Shop
+              <img width="22px" height="22px" src={back} alt="back" /> Back to Shop
             </button>
           </NavLink>
           <button

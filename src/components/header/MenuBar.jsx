@@ -44,17 +44,17 @@ const MenuBar = ({ setBurgerMenu }) => {
       <div className="menu-wrapper" ref={wrapperRef}>
         <div className="avatar">
           <div>
-            <img src={avatar} alt="avatar" />
+            <img width="24px" height="24px" src={avatar} alt="avatar" />
             <p>Sign in | Register</p>
           </div>
           <div>
-            <img ref={imgRef} src={clear} alt="clear" />
+            <img width="24px" height="24px" ref={imgRef} src={clear} alt="clear" />
           </div>
         </div>
         <div className="menu-list" ref={menuRef}>
           {userMenu.map((item, id) => (
             <div key={id} className="list">
-              <img src={item.icon} alt="icon" />
+              <img width="24px" height="24px" src={item.icon} alt="icon" />
               {item.id === 1 ? (
                 <NavLink to="/smart-web-project">
                   <p>{item.title}</p>
@@ -81,7 +81,7 @@ const MenuBar = ({ setBurgerMenu }) => {
         <div className="menu-list">
           {userMenuAdd.map((item, id) => (
             <div key={id} className="list">
-              <img src={item.icon} alt="icon" />
+              <img width="24px" height="24px" src={item.icon} alt="icon" />
               <p>{item.title}</p>
             </div>
           ))}

@@ -74,7 +74,7 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
             }}
           >
             <p> All category</p>
-            <img src={expand} alt="expand" />
+            <img width="24px" height="24px" src={expand} alt="expand" />
           </div>
           <button className="search-button">Search</button>
           {open && (
@@ -153,7 +153,7 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
       {header && (
         <div className="category-wrapper">
           <div className="categories">
-            <img src={menu} alt="menu" />
+            <img width="24px" height="24px" src={menu} alt="menu" />
             {categories.map((item, id) => (
               <div className="category" key={id}>
                 <ul>
@@ -161,12 +161,12 @@ const Header = ({ chosenItems, setOpen, open, flags, setFlags }) => {
                 </ul>
               </div>
             ))}
-            <img src={expand} alt="expand-more" />
+            <img width="24px" height="24px" src={expand} alt="expand-more" />
           </div>
           <div className="countries">
             <div>
               <p>English, USD</p>
-              <img src={expand} alt="expand-more" />
+              <img  width="24px" height="24px" src={expand} alt="expand-more" />
             </div>
             <DropDownList flags={flags} setFlags={setFlags} />
           </div>
