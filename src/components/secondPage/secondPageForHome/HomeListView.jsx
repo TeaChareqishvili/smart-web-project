@@ -36,12 +36,12 @@ const HomeListView = ({handleHeartIconClick}) => {
       {randomElectroData.map((item, id) => (
         <div className="gadget-wrapper" key={id}>
           <div className="gadget-img">
-            <img src={item.item} alt="elecctronic-img" />
+            <img width="100%" height="182px" src={item.item} alt="elecctronic-img" />
           </div>
           <div className="gadget-info">
             <div className="gadget-title">
               <p>{item.title}</p>
-              <img
+              <img width="24px" height="24px"
                 onClick={() => handleHeartIconClick(item)}
                 src={item.favorite}
                 alt="heart-icon"

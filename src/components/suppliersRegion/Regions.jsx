@@ -11,7 +11,7 @@ const Regions = () => {
         {region.map((item, id) => (
           <div key={id} className="reg">
             <div className="region">
-              <img width="100%" height="auto"  src={item.image} alt="flag" />
+              <img width="28px" height="20px"  src={item.image} alt="flag" />
               <div>
                 <p className="country-name">{item.country}</p>
                 <a href={item.link}>
@@ -20,7 +20,7 @@ const Regions = () => {
               </div>
             </div>
             <div className="region">
-              <img width="100%" height="auto"  src={item.image2} alt="flag" />
+              <img width="28px" height="20px"  src={item.image2} alt="flag" />
               <div>
                 <p className="country-name">{item.country2}</p>
                 <a href={item.link2}>

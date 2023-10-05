@@ -8,7 +8,7 @@ const Items = () => {
       <div className="wrapper">
         {items.map((item, id) => (
           <div key={id} className="cloth-items">
-            <img width="100%" height="auto"  src={item.image} alt="cloth" />
+            <img width="100%" height="171px"  src={item.image} alt="cloth" />
             <div className='description'>
               <span>{item.price}</span>
               <p>{item.description}</p>

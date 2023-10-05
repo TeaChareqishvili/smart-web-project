@@ -36,7 +36,7 @@ const HomeGridView = ({handleHeartIconClick}) => {
         {randomElectroData.map((item, id) => (
           <div key={id} className="item-wrapper">
             <div className="image">
-              <img src={item.item} alt="item" />
+              <img width="100%" height="182px" src={item.item} alt="item" />
             </div>
             <div className="about-item-main">
               <div className="about-item">
@@ -56,7 +56,7 @@ const HomeGridView = ({handleHeartIconClick}) => {
                 </div>
               </div>
               <div className="favorite-grid">
-                <img
+                <img width="24px" height="24px"
                   onClick={() => handleHeartIconClick(item)}
                   src={item.favorite}
                   alt="favorite"

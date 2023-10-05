@@ -45,7 +45,7 @@ const HomeAndOutdoor = () => {
        </Swiper>
        <div className="source">
            <p>Source now</p>
-           <img  src={arrowRight} alt="arrow"/>
+           <img  width="22px" height="22px"  src={arrowRight} alt="arrow"/>
         </div>
       </div>
     </div>

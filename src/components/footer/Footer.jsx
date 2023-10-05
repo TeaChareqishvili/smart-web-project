@@ -115,14 +115,14 @@ const Footer = () => {
           </div>
           <div className="language">
             {arrowUp ? (
-              <img src={Usa} alt="flag" />
+              <img width="24px" height="17px" src={Usa} alt="flag" />
             ) : (
               <img src={German} alt="flag" />
             )}
             {arrowUp ? <p>English</p> : <p>German</p>}
             <div>
               <div ref={arrowUpRef}>
-                <img src={expandUp} alt="arrow" />
+                <img  width="22px" height="22px"  src={expandUp} alt="arrow" />
               </div>
             </div>
 
