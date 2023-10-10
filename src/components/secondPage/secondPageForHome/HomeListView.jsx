@@ -41,7 +41,7 @@ const HomeListView = ({handleHeartIconClick}) => {
           <div className="gadget-info">
             <div className="gadget-title">
               <p>{item.title}</p>
-              <img width="24px" height="24px"
+              <img 
                 onClick={() => handleHeartIconClick(item)}
                 src={item.favorite}
                 alt="heart-icon"

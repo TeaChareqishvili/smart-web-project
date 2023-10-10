@@ -1,59 +1,33 @@
 import "./SecondPageStyles.scss";
 import { FaStar } from "react-icons/fa";
-import { useState } from "react";
 
 const StarRating = () => {
-
-
- 
+  const numColumns = 4;
+  const totalStars = 5;
 
   return (
     <div>
-    <div className="rating-wrapper">
-      <input type="checkbox" name="rating" />
-      <div className="stars">
-        {[...Array(5)].map((_, id) => {
-          return (
-            <label key={id}>
-              <input
-                type="radio"
-                name="rating"
-                className="radio"
-              />
-              <FaStar
-                style={{
-                  color: "#FF9017",
-                }}
-                size={18}
-              />
-            </label>
-          );
-        })}
+      <div className="rating-columns">
+        {[...Array(numColumns)].map((_, columnIndex) => (
+          <div key={columnIndex} className="rating-column">
+            <input
+              type="radio"
+              name={`rating-${columnIndex}`}
+              className="radio"
+            />
+            {[...Array(totalStars)].map((_, starIndex) => (
+              <label key={starIndex}>
+                <FaStar
+                  style={{
+                    color: starIndex >= totalStars - columnIndex ? "#808080" : "#FF9017",
+                  }}
+                  size={18}
+                />
+              </label>
+            ))}
+          </div>
+        ))}
       </div>
-    </div>
-
-    <div className="rating-wrapper">
-      <input type="checkbox" name="rating" />
-      <div className="stars">
-        {[...Array(5)].map((_, id) => {
-          return (
-            <label key={id}>
-              <input
-                type="radio"
-                name="rating"
-                className="radio"
-              />
-              <FaStar
-                style={{
-                  color: "#FF9017",
-                }}
-                size={18}
-              />
-            </label>
-          );
-        })}
-      </div>
-    </div>
     </div>
   );
 };

@@ -56,7 +56,7 @@ const HomeGridView = ({handleHeartIconClick}) => {
                 </div>
               </div>
               <div className="favorite-grid">
-                <img width="24px" height="24px"
+                <img 
                   onClick={() => handleHeartIconClick(item)}
                   src={item.favorite}
                   alt="favorite"

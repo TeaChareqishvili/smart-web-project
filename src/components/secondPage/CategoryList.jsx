@@ -6,14 +6,13 @@ import { featureList } from "./ListData";
 import { conditionLits } from "./ListData";
 import { StarRating } from "./StarRating";
 import { PriceRange } from "./PriceRange";
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 
 const CategoryList = ({ handleItemClick }) => {
-  const categoryRef = useRef(null);
-  const brandRef = useRef(null);
-  const featureRef = useRef(null);
-  const conditionRef = useRef(null);
-  const starRef = useRef(null);
+ 
+  const [seeAllCategory, setSeeAllCategory] = useState(false)
+  const [seeAllBrands, setSeeAllBrands] = useState(false)
+  const [seeAllFeatures, setSeeAllFeatures] = useState(false)
 
   const [visible, setVisible] = useState(true);
   const [brand, setBrand] = useState(true);
@@ -21,29 +20,35 @@ const CategoryList = ({ handleItemClick }) => {
   const [condition, setCondition] = useState(true);
   const [star, setStar] = useState(true);
 
-  useEffect(() => {
-    const refsAndStates = [
-      { ref: categoryRef, stateSetter: setVisible },
-      { ref: brandRef, stateSetter: setBrand },
-      { ref: featureRef, stateSetter: setFeature },
-      { ref: conditionRef, stateSetter: setCondition },
-      {ref: starRef, stateSetter: setStar},
-    ];
+  const handleCategory = ()=>{
+    setSeeAllCategory(true)
+    setVisible(false)
+  }
 
-    const handleVisible = (e) => {
-      refsAndStates.forEach(({ ref, stateSetter }) => {
-        if (ref.current && ref.current.contains(e.target)) {
-          stateSetter((prevState) => !prevState);
-        }
-      });
-    };
+  const handleSeeMoreCategory = ()=>{
+    setSeeAllCategory(false)
+    setVisible(true)
+  }
 
-    document.addEventListener("click", handleVisible);
+  const handleBrands = ()=>{
+    setSeeAllBrands(true)
+    setBrand(false)
+  }
 
-    return () => {
-      document.removeEventListener("click", handleVisible);
-    };
-  }, [categoryRef, brandRef, featureRef, conditionRef]);
+  const handleSeeBrands = ()=>{
+    setSeeAllBrands(false)
+    setBrand(true)
+  }
+
+  const handleFeatures =()=>{
+    setFeature(false)
+    setSeeAllFeatures(true)
+  }
+
+  const handleSeeFeatures =()=>{
+    setFeature(true)
+    setSeeAllFeatures(false)
+  }
 
   return (
     <div className="category-list-wrapper">
@@ -51,7 +56,7 @@ const CategoryList = ({ handleItemClick }) => {
         <div className="border-list"></div>
         <div className="category-title">
           <h6>Category</h6>
-          <img src={expandLess} alt="arrow" ref={categoryRef} />
+          <img src={expandLess} alt="arrow" onClick={()=>handleCategory()} />
         </div>
 
         {visible &&
@@ -60,11 +65,12 @@ const CategoryList = ({ handleItemClick }) => {
               <p onClick={() => handleItemClick(item)}>{item.title}</p>
             </div>
           ))}
-        <span>see all</span>
+          {seeAllCategory &&   <span onClick={()=>handleSeeMoreCategory()} >see all</span> }
+      
         <div className="border-list"></div>
         <div className="category-title">
           <h6>Brands</h6>
-          <img src={expandLess} alt="arrow" ref={brandRef} />
+          <img src={expandLess} alt="arrow"onClick={()=>handleBrands()}/>
         </div>
         {brand &&
           listCheckBox.map((item, id) => (
@@ -72,11 +78,12 @@ const CategoryList = ({ handleItemClick }) => {
               <label onClick={() => handleItemClick(item)}> <input type="checkbox" onClick={() => handleItemClick(item)} />{item.title} </label>
             </div>
           ))}
-        <span>see all</span>
+          {seeAllBrands &&  <span onClick={()=>handleSeeBrands()}>see all</span>}
+       
         <div className="border-list"></div>
         <div className="category-title">
           <h6>Features</h6>
-          <img src={expandLess} alt="arrow" ref={featureRef} />
+          <img src={expandLess} alt="arrow" onClick={()=>handleFeatures()} />
         </div>
         {feature &&
           featureList.map((item, id) => (
@@ -84,7 +91,8 @@ const CategoryList = ({ handleItemClick }) => {
               <label onClick={() => handleItemClick(item)}>  <input type="checkbox" onClick={() => handleItemClick(item)} />{item.title}</label>
             </div>
           ))}
-        <span>see all</span>
+          {seeAllFeatures &&  <span onClick={()=>handleSeeFeatures()} >see all</span>}
+       
         <div className="border-list"></div>
         <div>
           <PriceRange />
@@ -92,7 +100,7 @@ const CategoryList = ({ handleItemClick }) => {
         <div className="border-list"></div>
         <div className="category-title">
           <h6>Condition</h6>
-          <img src={expandLess} alt="arrow" ref={conditionRef} />
+          <img src={expandLess} alt="arrow" onClick={()=>setCondition((prevState) => !prevState)} />
         </div>
         {condition &&
           conditionLits.map((item, id) => (
@@ -107,7 +115,7 @@ const CategoryList = ({ handleItemClick }) => {
         <div className="border-list"></div>
         <div className="category-title">
           <h6>Ratings</h6>
-          <img src={expandLess} alt="arrow" ref={starRef} />
+          <img src={expandLess} alt="arrow" onClick={()=>setStar((prevState) => !prevState)} />
         </div>
         {star && (
           <div>
