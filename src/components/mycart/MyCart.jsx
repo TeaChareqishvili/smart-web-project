@@ -9,6 +9,7 @@ const MyCart = ({
   chosenItems,
   handleClearAll,
   handleRemoveItem,
+  
  
 }) => {
   const [selected, setSelected] = useState(chosenItems);

@@ -120,9 +120,6 @@ const CategoryList = ({ handleItemClick }) => {
         {star && (
           <div>
             <StarRating />
-            {/* <StarRating />
-            <StarRating />
-            <StarRating /> */}
           </div>
         )}
       </div>

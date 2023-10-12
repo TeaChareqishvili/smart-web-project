@@ -83,7 +83,7 @@ margin-right:10px;
                  border-radius:6px;
             }
 
-            //TODO gassotrebeli stili 
+          
             .cart-description{
     
                 .cart-title{
@@ -170,9 +170,6 @@ margin-right:10px;
                 max-width:123px;
                 padding:8px;
                 margin-left:8px;  
-                background-image: url("../../assets/expand_more.png");
-                background-repeat: no-repeat;
-                background-position: calc(100% - 10px);
                 cursor: pointer;
                 font-size: 16px;
                 font-family: 'Inter';
@@ -180,6 +177,7 @@ margin-right:10px;
                 outline: none;
                 border: none;
                 border:1px solid #DEE2E7;
+             
               
                 
             }

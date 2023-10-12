@@ -6,11 +6,12 @@ import visa from "../../assets/Logo2.svg";
 import pay from "../../assets/image 21.png";
 
 const CheckOut = ({ chosenItems }) => {
+
+  
   if (chosenItems.length === 0) {
     return null;
   }
-  const totalPrice = chosenItems.reduce((total, item) => total + item.price, 0);
-
+  const totalPrice = chosenItems.reduce((total, item) => total + item.price * (item.quantity || 1), 0);
   const discount = totalPrice - 60.0;
   const total = discount + 14.0;
 

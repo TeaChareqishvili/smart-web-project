@@ -15,7 +15,7 @@ const Select = ({ item,  handleSelected }) => {
       name="number"
       onChange={(e) => handleChange(e, item.id)}
       value={selectedValue}
-      className="select"
+      className="cart"
     >
       <option value="1">Qty:1</option>
       <option value="2">Qty:2</option>
