@@ -14,6 +14,7 @@ const StarRating = () => {
               type="radio"
               name={`rating-${columnIndex}`}
               className="radio"
+             
             />
             {[...Array(totalStars)].map((_, starIndex) => (
               <label key={starIndex}>
@@ -21,7 +22,7 @@ const StarRating = () => {
                   style={{
                     color: starIndex >= totalStars - columnIndex ? "#808080" : "#FF9017",
                   }}
-                  size={18}
+                  size={20}
                 />
               </label>
             ))}

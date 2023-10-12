@@ -198,7 +198,7 @@
     }
 }
 
-.rating-wrapper{
+.rating-column{
      display: flex;
      align-items: center;
      justify-content: flex-start;
@@ -241,7 +241,7 @@
     }
 
     .radio{
-        display: none;
+       cursor:pointer;
     }
     
     .star{
